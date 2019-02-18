@@ -97,12 +97,11 @@ pplar axes
 	matplotlib.pyplot.grib() 切换网格显示状态，控制参数：
 	which: 指定绘制的网格刻度类型、(major、 minor、 both)
 	axis: 指定绘制哪组网格线、(both x y)
-坐标轴的内部实现上由几个Python类表示。
+坐标轴的内部实现上由几个Python类表示:
 	其中一个父类，matplotlib.axis.Axes 包含操作坐标轴的大多方法
 	单独一个坐标轴由 matplotlib.axis.Axis 表示，
 	matplotlib.axis.XAxis
 	matplotlib.axis.YAxis y轴
-
 
 设置图表的线型、属性、格式化字符串
 ---------------------------------------------------------
