@@ -7,17 +7,6 @@ Matplotlib 绘制并定制化图表
 柱状图、线状图、堆积柱状图
 ----------------------------------------------------
 '01'
-plot([1,2,3,4,3,2,1])
-绘制基本图表
-
-plot()的值为y轴的值；plot()为x轴提供默认值
-
-'02'
-plot([4,3,2,1],[1,2,3,4])
-
-注释：
-	调用 hold(False) 可以关闭 hold属性；打开 hold() 属性，则接下来所有图表都绘制在相同的坐标轴下。这是 IPython 的pylab模式的默认行为。————在编写常规Oython脚本中，hold 属性默认是关闭。
-'03'
 from matplotlib.pyplot import *
 
 x = [1,2,3,4]
@@ -36,7 +25,7 @@ bar(x, y)
 subplot(233) #horizontal bar-charts
 barh(x, y) 
 
-subpl0t(234)
+subplot(234)
 bar(x, y)
 
 y1 = [7,8,5,3]	#we need more data for stacked bar charts
@@ -49,7 +38,7 @@ boxplot(x)
 subplot(236)
 scatter(x,y)
 
-show
+show()
 
 
 绘制正余弦图像
