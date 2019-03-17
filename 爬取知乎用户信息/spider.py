@@ -1,11 +1,10 @@
-# -*- coding: utf-8 -*-
+0# -*- coding: utf-8 -*-
 #import scrapy
 #直接引入 Spider Request
 import json
 from scrapy import Spider, Request
-#from items import UserItem
 import re
-
+#
 import sys
 sys.path.append(r"E:\Python学习\Python Projects\爬取知乎用户信息_Scrapy 框架\user\user")
 from items import *
@@ -49,6 +48,7 @@ class ZhihuSpider(Spider):
         if "data" in results.keys():
             for result in results.get("data"):
                 yield Request(self.user_url.format(user=result.get("url_token"), include=self.user_query), self.parse_user)
+                yield Request(self.followers_url.format(user=result.get("url_token"), include=self.followers_query), self.parse_follows)
 
 
         #直接提取 next 链接，无法访问；需要自己构造 next_page
