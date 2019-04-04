@@ -11,7 +11,7 @@ from lxml import etree
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
-#pandas 函数
+#pandas 函数，设置第一行为数据名称
 df = pd.DataFrame(columns=['name','url', 'brief', 'play_counts', 'message_counts','Date', 'period'])
 
 
@@ -33,18 +33,17 @@ async def parser(html):
     root = etree.HTML(html)
     #print (root)
     one_vedios = root.xpath("//li[@class='video matrix']")
-    print (one_vedios)
-    print (type(one_vedios))
-    print (len(one_vedios))
+    #print (one_vedios) 直接打印的？？
+    #xpath获取结果是列表，求列表长度可以判断获取对象是否正确
+    #print (len(one_vedios))
+    #先转字符串，再解码
     result = etree.tostring(one_vedios[0]).decode()
-    #print (result)
-    #for item in one_vedios:
-       # result = etree.tostring(item).decode()
-       # print (result)
-
-    #print(one_vedios[0])
+    #打印单个li标签内容
+    print (result)
+    
     for i in range(20):
-        name=root.xpath("//li[@class='video matrix']/a[@title]/@title")[i]
+        #增加属性，来确保获取的是目标对象；注意层级关系
+        name=root.xpath("//li[@class='video matrix']/a[@title]/@title")[i].strip()
         #print (len(name))
         url=root.xpath("//li[@class='video matrix']/a[@title]/@href")[i]
         #print (url)
@@ -54,9 +53,10 @@ async def parser(html):
         Date = root.xpath("//li[@class='video matrix']/div[@class='info']/div[@class='tags']/span[3]/text()")[i]
         period=root.xpath("//li[@class='video matrix']/a/div[@class='img']/span/text()")[i]
         print (period.strip())
-
+        
+        #df.shape[0]获取行数；每次新增一行；df.shape[1]获取列数
         df.loc[df.shape[0] + 1] = [name,url, brief, play_counts, message_counts,Date,period]
-
+    #输出“行数  视频名称”
     logger.info(str(df.shape[0]) + '\t' + name)
 
 
