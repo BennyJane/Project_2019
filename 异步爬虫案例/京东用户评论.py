@@ -5,7 +5,6 @@ import asyncio
 import pandas as pd
 import logging
 import json
-import time
 import random
 
 # 设置日志格式
@@ -93,6 +92,7 @@ if __name__=="__main__":
 
     i=0
     for url in urls:
+        row_nums=df.shape[0]+1
         #替换页面符号
         url=url.replace('page=0', 'page=%d')
         urls=[url %i for i in range(0,max_pages[i])]
@@ -102,9 +102,10 @@ if __name__=="__main__":
         tasks = [asyncio.ensure_future(download(sem, url)) for url in urls]
         tasks = asyncio.gather(*tasks)
         loop.run_until_complete(tasks)
-
+        
+        NewDf=pd.DataFrame(df.loc[row_nums:,:])
         PathName = r"E:\Dada\%s_%s.csv'" %(item_name, Names[i])
-        df.to_csv(PathName)
+        NewDf.to_csv(PathName)
         print("第%s部分已爬完" %Names[i] )
         i=i+1
 
