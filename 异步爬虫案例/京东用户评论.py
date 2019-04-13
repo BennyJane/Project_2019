@@ -105,7 +105,7 @@ if __name__=="__main__":
 
         PathName = r"E:\Dada\%s_%s.csv'" %(item_name, Names[i])
         df.to_csv(PathName)
-        print("第%s部分已爬完" %Names[] )
+        print("第%s部分已爬完" %Names[i] )
         i=i+1
 
     #记录总时间
