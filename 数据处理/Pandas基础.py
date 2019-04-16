@@ -9,41 +9,47 @@ first_break_point=0
 #series 类型
 end_num=Mean_df.shape[0]
 for i in range(1, end_num):
-    Current_Process=Mean_df.iloc[:i]
-    #Current_Process=Mean_df[:i]
-    first_max_price=Current_Process.max()
-    first_min_price=Current_Process.min()
-    last_price=Current_Process.iloc[i]
-    result=compute(first_max_price,first_min_price)
-    if result < 0.001:
+    #切片，最后一个i位不输出
+    Current_Process = Mean_df.iloc[:i]
+    # Current_Process=Mean_df[:i]
+    # print(Current_Process)
+    first_max_price = Current_Process.max()
+    first_min_price = Current_Process.min()
+    last_price = Current_Process.iloc[i-1]
+    result = compute(first_max_price, first_min_price)
+    if result < 0.003:
         continue
     else:
-         first_break_point=i
-    #>=0.001
-    #找到第一组最值
-    #判断升降
-        if last_price ==first_max_pirce:
-            k=k+1
-            #找出最小值所在的行，注意保存的先后顺序
-            min_id=Mean_df.idxmin()
-            max_id=Mean_df.idxmax()
-            #选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并
-            Left_df.loc[Left_df.shape[0]] = df.iloc[min_id, 1:]#只取出时间和价格
-            Right_df.loc[Right_df.shape[0]] = df.iloc[max_id, 1:]#只取出时间和价格\
-            
-            #先完成一段数据的查找
-            break
-            
-        else:
-            #找出最小值所在的行，注意保存的顺序
-            max_id=Mean_df.idxmax()
-            min_id=Mean_df.idxmin()
-            #选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并
-            Left_df.loc[Left_df.shape[0]] = df.iloc[max_id, 1:]#只取出时间和价格
-            Right_df.loc[Right_df.shape[0]] = df.iloc[min_id, 1:]#只取出时间和价格
-            
-            #先完成一段数据的查找
-            break
+        first_break_point = i
+        # >=0.001
+        # 找到第一组最值
+        # 判断升降
+    if last_price == first_max_price:
+        k = k + 1
+        print(last_price, first_max_price)
+        # 找出最小值所在的行，注意保存的先后顺序
+        min_id = Current_Process.idxmin()
+        max_id = Current_Process.idxmax()
+        print(min_id, max_id)
+        # 选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并
+        Left_df.loc[Left_df.shape[0]] = df.iloc[min_id, 1:]  # 只取出时间和价格
+        Right_df.loc[Right_df.shape[0]] = df.iloc[max_id, 1:]  # 只取出时间和价格
+
+        # 先完成一段数据的查找
+        break
+
+    else:
+        # print(last_price, first_min_price)
+        # 找出最小值所在的行，注意保存的顺序
+        max_id = Current_Process.idxmax()
+        min_id = Current_Process.idxmin()
+        print(max_id, min_id)
+        # 选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并
+        Left_df.loc[Left_df.shape[0]] = df.iloc[max_id, 1:]  # 只取出时间和价格
+        Right_df.loc[Right_df.shape[0]] = df.iloc[min_id, 1:]  # 只取出时间和价格
+
+        # 先完成一段数据的查找
+        break
 #从第一段数据结尾，继续第二段数据，起始位向后+1
 n=first_break_point+1
 for j in range(n,end_num):
