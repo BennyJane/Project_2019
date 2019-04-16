@@ -1,13 +1,39 @@
-#构造储存的表
-Left_df=pd.DataFrame(columns=['exchange_time','bid/ask_price'])
-Right_df=pd.DataFrame(columns=['exchange_time','bid/ask_price'])
+from pprint import pprint
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import time
 
-#利用k值的奇偶性，来记录数值变化趋势
-#上一个k为奇数代表降，下一个找升；上一个k偶数代表上升，下一个要找降
-k=1
-first_break_point=0
-#series 类型
-end_num=Mean_df.shape[0]
+# 统计该爬虫的消耗时间
+print('*' * 50)
+t3 = time.time()
+
+#目标将所有带处理文件合并
+# 需要将待处理的CSV文件全部放到一个文件夹内
+#用自己本地文件路径更换下列
+FirstResult_filepath="E:/编程接单/2019-4-14/first_result.csv"
+df=pd.read_csv(FirstResult_filepath)
+# print(df)
+
+#提取单独的均值列
+Mean_df=df['bid/ask_price']
+# print(Mean_df.info)
+
+def compute(num1,num2):
+    result=(num1-num2)/num2
+    return result
+
+# 构造储存的表
+Left_df = pd.DataFrame(columns=['exchange_time', 'bid/ask_price'])
+Right_df = pd.DataFrame(columns=['exchange_time', 'bid/ask_price'])
+
+# 利用k值的奇偶性，来记录数值变化趋势
+# 上一个k为奇数代表降，下一个找升；上一个k偶数代表上升，下一个要找降
+k = 1
+first_break_point = 0
+# series 类型
+end_num = Mean_df.shape[0]
+#从第二个数据开始读取
 for i in range(1, end_num):
     #切片，最后一个i位不输出
     Current_Process = Mean_df.iloc[:i]
@@ -17,7 +43,7 @@ for i in range(1, end_num):
     first_min_price = Current_Process.min()
     last_price = Current_Process.iloc[i-1]
     result = compute(first_max_price, first_min_price)
-    if result < 0.003:
+    if result < 0.001:
         continue
     else:
         first_break_point = i
@@ -50,65 +76,70 @@ for i in range(1, end_num):
 
         # 先完成一段数据的查找
         break
-#从第一段数据结尾，继续第二段数据，起始位向后+1
-n=first_break_point+1
-for j in range(n,end_num):
+
+n=first_break_point
+j=first_break_point
+while True :
     j = j+1
-    #先判断第一段是升 or 降
-    if (k % 2)==0:
-        #上一个K为偶数，下一个找下降
-        #保证可以取到2个数以上
-        N_Process=Mean_df.iloc[n:j]
-        #？？需要检测N_Process的索引号，如果从0开始了，下方的Max_id就需要加上 （breakpoint + 1）
-        #可以通过判断last_price 与 找出来的最值的索引号是否相等来判断
-        N_max_price=N_Process.max()
-        N_min_price=N_Process.min()
-        last_price=N_Process.iloc[j]
-        result=compute(first_max_price,first_min_price)
-        if result < 0.001:
-            continue
+    if j <end_num:
+        #先判断第一段是升 or 降
+        if (k % 2)==0:
+            #上一个K为偶数，下一个找下降
+            #保证可以取到2个数以上
+            N_Process=Mean_df.iloc[n:j]
+            # print(n,j)
+            N_max_price = N_Process.max()
+            N_min_price = N_Process.min()
+            # print(type(N_Process))
+            # print(N_Process.index)
+            last_price = N_Process.loc[j-1]
+            result = compute(N_max_price, N_min_price)
+            if result >= 0.001:
+                # 最后一个极值必须是最小值
+                if last_price == N_min_price:
+                    # print(j)
+                    k = k + 1
+                    n = j
+                    # 找出最大值所在的行，注意保存的顺序
+                    # print(last_price,N_max_price, N_min_price)
+                    max_id = N_Process.idxmax()
+                    min_id = j-1
+                    # print(max_id, min_id)
+                    # 选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并到一张表中
+                    Left_df.loc[Left_df.shape[0]] = df.iloc[max_id, 1:]  # 只取出时间和价格
+                    Right_df.loc[Right_df.shape[0]] = df.iloc[min_id, 1:]  # 只取出时间和价格
+                    # 完成一段数据的查找
+                    print('完成了一对极值的查找：%s' % k)
+
         else:
-            #最后一个极值必须是最小值
-            if last_price ==N_max_pirce:
-                pass
-            else:
-                k=k+1
-                n = j + 1
-                #找出最大值所在的行，注意保存的顺序
-                max_id=N_Process.idxmax()
-                min_id=N_Process.idxmin()
-                #选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并到一张表中
-                Left_df.loc[Left_df.shape[0]] = df.iloc[max_id, 1:]#只取出时间和价格
-                Right_df.loc[Right_df.shape[0]] = df.iloc[min_id, 1:]#只取出时间和价格
-                #完成一段数据的查找
-                print('完成了一对极值的查找：%s' %k)
-                #continue
+            #上一个K为奇数，下一个要找升
+            #保证可以取到2个数以上
+            N_Process=Mean_df.iloc[n:j]
+            N_max_price=N_Process.max()
+            N_min_price=N_Process.min()
+            last_price=N_Process.loc[j-1]
+            result=compute(N_max_price,N_min_price)
+            if result >= 0.001:
+                #最后一个极值必须是最大值
+                if last_price ==N_max_price:
+                    k=k+1
+                    n = j
+                    # print(last_price, N_min_price, N_max_price)
+                    #找出最小值所在的行，注意保存的顺序
+                    max_id=j-1
+                    min_id=N_Process.idxmin()
+                    # print(min_id,max_id)
+                    #选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并到一张表中
+                    Left_df.loc[Left_df.shape[0]] = df.iloc[min_id, 1:]#只取出时间和价格
+                    Right_df.loc[Right_df.shape[0]] = df.iloc[max_id, 1:]#只取出时间和价格
+                    #先完成一段数据的查找
+                    print('完成了一对极值的查找：%s' % k)
+                    #break
     else:
-        #上一个K为奇数，下一个要找升
-        #保证可以取到2个数以上
-        N_Process=Mean_df.iloc[n:j]
-        #？？需要检测N_Process的索引号，如果从0开始了，下方的Max_id就需要加上 （breakpoint + 1）
-        N_max_price=N_Process.max()
-        N_min_price=N_Process.min()
-        last_price=N_Process.iloc[j]
-        result=compute(first_max_price,first_min_price)
-        if result < 0.001:
-            continue
-        else:
-            #最后一个极值必须是最大值
-            if last_price ==N_max_pirce:
-                k=k+1
-                n = j + 1
-                #找出最小值所在的行，注意保存的顺序
-                max_id=N_Process.idxmax()
-                min_id=N_Process.idxmin()
-                #选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并到一张表中
-                Left_df.loc[Left_df.shape[0]] = df.iloc[min_id, 1:]#只取出时间和价格
-                Right_df.loc[Right_df.shape[0]] = df.iloc[max_id, 1:]#只取出时间和价格
-                #先完成一段数据的查找
-                continue
-            else:
-                continue
+        break
+
+# print(Left_df)
+# print(Right_df)
 
 #将两张表合并
 Newdf=pd.concat([Left_df,Right_df],axis=1)
