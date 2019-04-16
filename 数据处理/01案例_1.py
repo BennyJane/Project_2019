@@ -61,4 +61,4 @@ print(all_data_order)
 
 #修改表头，并输出
 all_data_order.rename(columns={0:'bid/ask_price'},inplace=True)
-all_data_order.to_csv("E:/编程接单/2019-4-14/实验.csv")
+all_data_order.to_csv("E:/编程接单/2019-4-14/实验.csv",index=None)
