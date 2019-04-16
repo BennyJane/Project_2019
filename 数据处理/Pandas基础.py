@@ -97,31 +97,19 @@ for j in range(n,end_num):
                 max_id=N_Process.idxmax()
                 min_id=N_Process.idxmin()
                 #选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并到一张表中
-                Left_df.loc[Left_df.shape[0]] = df.iloc[max_id, 1:]#只取出时间和价格
-                Right_df.loc[Right_df.shape[0]] = df.iloc[min_id, 1:]#只取出时间和价格
+                Left_df.loc[Left_df.shape[0]] = df.iloc[min_id, 1:]#只取出时间和价格
+                Right_df.loc[Right_df.shape[0]] = df.iloc[max_id, 1:]#只取出时间和价格
                 #先完成一段数据的查找
                 continue
             else:
                 continue
 
+#将两张表合并
+Newdf=pd.concat([Left_df,Right_df],axis=1)
+#print(Newdf)
 
+#重新命名表的列名称
+Newdf.rename(columns={'exchange_time':'extreme point', 'bid/ask_price':'Start_price', 'exchange_time':'confirm point','bid/ask_price':'End_price'}, inplace = True)
+Newdf.to_csv("E:/编程接单/2019-4-14/Second_data.csv")
 
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    #end
+#end
