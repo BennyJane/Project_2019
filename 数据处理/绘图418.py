@@ -9,13 +9,6 @@ from datetime import datetime
 import matplotlib.dates as mdates
 from dateutil import parser
 
-                #读取数据，提取数据
-
-
-
-
-
-
 #控制图片大小、分辨率；只设置一个子图
 plt.figure(figsize=(13,8), dpi=80)
 plt.subplot(1,1,1)
@@ -64,13 +57,28 @@ for i in range(0,nums):
     Simple_Col = Simple_Col.append(Left_df.iloc[i,:], ignore_index=True)
     Simple_Col = Simple_Col.append(Right_df.iloc[i,:], ignore_index=True)
 
+#选取时间、均值作为横纵坐标
+data02_date_str = Simple_Col.iloc[:, 0] #选择单一列数据
+data02_date = list(map(parser.parse, data02_date_str))
+#提取第二段数据的均值序列
+data02_mean=Simple_Col.iloc[:, 1]
+#查看选取出来的数据类型
+print(type(data02_mean))
+
 Simple_nums=Simple_Col.shape[0]
+x=[]
+y=[]
 for j in range(0,Simple_nums):
-  
-
-
-
-
+    #每次读取两个数据，组成两个点
+    x=data02_date[j:j+1]
+    y=data02_mean[j:j+1]
+    if (j%2)==0:
+        plt.plot(data02_date, data02_mean, color='r', linewidth=1, label='Overshoot')
+    else:
+        plt.plot(data02_date, data02_mean, color='g', linewidth=1, label='Overshoot')
+    del x[:]
+    del y[:]
+          
 
 # 显示图示
 plt.legend()
