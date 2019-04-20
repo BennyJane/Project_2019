@@ -6,11 +6,14 @@ import pandas as pd
 #将第二段段代码生成的文件（包含4列的文件）路径拷贝到下方
 #该文件包含了圆点-三角形点的时间和价格
 FirstResult_filepath="E:/编程接单/2019-4-14/Second_data02.csv"
+
+#设置最后文件保存路径
+filename="E:/编程接单/2019-4-14/Sales.csv"
+
+#----------------------------------------------------------------------
 df=pd.read_csv(FirstResult_filepath)
-# print(df)
 
 Sales=pd.DataFrame(columns=["exchange_day","income"])
-
 
 #求总收益，每2行一组，需要判断第一行为买进操作，还是卖出操作
 sum=0
@@ -76,3 +79,5 @@ for i in range(0, nums, 2):
 
 #sales 求的是当前时间之前的累计收益；每一天的最后一条信息里的金额，就是当天的总收益
 print(Sales)
+Sales.to_csv(finalpath)
+
