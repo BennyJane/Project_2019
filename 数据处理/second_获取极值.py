@@ -58,7 +58,7 @@ for i in range(1, end_num):
     # Current_Process=Mean_df[:i]
     # print(Current_Process)
     first_max_price = Current_Process.max()
-    first_min_price = Current_Process.min()
+    first_min_price = Current_Process.min() #只有最值，没有索引号
     last_price = Current_Process.iloc[i-1]
     result = compute(first_max_price, first_min_price)
     if result < The_Limition:
