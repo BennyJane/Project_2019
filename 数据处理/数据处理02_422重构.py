@@ -32,12 +32,13 @@ for i in range(0, end_num):
     df .iloc[i, 1] = df .iloc[i, 1][0:19]
 # print(df)
 
-#提取单独的均值列
-Mean_df=df['bid/ask_price']
-# print(Mean_df.info)
-
 #求变化率
-def compute(num1,num2):
+#下降
+def compute01(num1,num2):
+    result=(num1-num2)/num2
+    return result
+
+  def compute02（num1,num2):
     result=(num1-num2)/num2
     return result
 
@@ -54,8 +55,7 @@ end_num = Mean_df.shape[0]
 #从第二个数据开始读取
 for i in range(1, end_num):
     #切片，最后一个i位不输出
-    Current_Process = Mean_df.iloc[:i]
-    # Current_Process=Mean_df[:i]
+    Current_Process =df.iloc[:i,"means"]  #带有索引号
     # print(Current_Process)
     first_max_price = Current_Process.max()
     first_min_price = Current_Process.min() #只有最值，没有索引号
