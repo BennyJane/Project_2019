@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
                          #变量调整
 
 #将第一段代码文件路径拷贝到下方
-FirstResult_filepath="E:/编程接单/2019-4-14/提取数据1704.csv"
+FirstResult_filepath="E:/编程接单/2019-4-14/提取数据16.csv"
 #变化的比率调整
 The_Limition=0.001
 #最后文件保存的位置及文件名
@@ -63,7 +63,7 @@ for i in range(1, endnum):
     print(first_max_price,first_min_price, "\t",last_price,"\t",)
     if min_id < i:
         #up
-        result = compute02(first_max_price, first_min_price)
+        result = compute02(last_price, first_min_price)
         print(result)
         if result >= The_Limition:
             first_break_point = i
@@ -84,7 +84,7 @@ for i in range(1, endnum):
 
     elif max_id<i:
         #down
-        result = compute01(first_max_price, first_min_price)
+        result = compute01(first_max_price,last_price)
         print(result)
         if result >= The_Limition:
             first_break_point = i
