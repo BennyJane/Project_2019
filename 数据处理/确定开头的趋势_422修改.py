@@ -1,6 +1,10 @@
 #!/user/bin/env Python
 #coding=utf-8
 
+#最后一位不一定是最值。
+
+
+
 from pprint import pprint
 import pandas as pd
 import numpy as np
@@ -52,10 +56,12 @@ for i in range(1, endnum):
     print(Current_Process)
     # print(Current_Process)
     first_max_price = Current_Process.max()
+    max_id = Current_Process.idxmax()
     first_min_price = Current_Process.min() #只有最值，没有索引号
+    min_id = Current_Process.idxmin()
     last_price = Current_Process.iloc[i]
     print(first_max_price,first_min_price, "\t",last_price,"\t",)
-    if last_price == first_max_price:
+    if min_id < i:
         #up
         result = compute02(first_max_price, first_min_price)
         print(result)
@@ -70,13 +76,13 @@ for i in range(1, endnum):
             MAX_MIN_List.append(max_id)
             print(MAX_MIN_List)
             # 选出整行数据储存，保留索引，输出的时候再考虑删除多余数据，考虑合并
-            Left_df.loc[Left_df.shape[0]] = df.iloc[min_id]
-            Right_df.loc[Right_df.shape[0]] = df.iloc[max_id]
+            Left_df=Left_df.append(df.iloc[min_id])
+            Right_df=Right_df.append(df.iloc[max_id])
             # 先完成一段数据的查找
             print("该数据以UP趋势开头")
             break
 
-    elif last_price ==first_min_price:
+    elif max_id<i:
         #down
         result = compute01(first_max_price, first_min_price)
         print(result)
@@ -92,8 +98,8 @@ for i in range(1, endnum):
             MAX_MIN_List.append(min_id)
             print(MAX_MIN_List)
             # 选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并
-            Left_df=Left_df.append(df.iloc[max_id])  # 只取出时间和价格
-            Right_df=Right_df.append(df.iloc[min_id])  # 只取出时间和价格
+            Left_df=Left_df.append(df.iloc[max_id])
+            Right_df=Right_df.append(df.iloc[min_id])
             print("该数据以DOWN趋势开头")
             # 先完成一段数据的查找
             break
