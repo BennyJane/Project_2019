@@ -31,11 +31,11 @@ MAX_MIN_List=[]
 #求变化率
 #下降
 def compute01(num1,num2):
-    result=(num1-num2)/num2
+    result=(num1-num2)/num1
     return result
 #上升
 def compute02(num1,num2):
-    result=(num1-num2)/num1
+    result=(num1-num2)/num2
     return result
 
 end_num = df .shape[0]
@@ -57,7 +57,7 @@ for i in range(1, endnum):
     print(first_max_price,first_min_price, "\t",last_price,"\t",)
     if last_price == first_max_price:
         #up
-        result = compute01(first_max_price, first_min_price)
+        result = compute02(first_max_price, first_min_price)
         print(result)
         if result >= The_Limition:
             first_break_point = i
@@ -78,7 +78,7 @@ for i in range(1, endnum):
 
     elif last_price ==first_min_price:
         #down
-        result = compute02(first_max_price, first_min_price)
+        result = compute01(first_max_price, first_min_price)
         print(result)
         if result >= The_Limition:
             first_break_point = i
