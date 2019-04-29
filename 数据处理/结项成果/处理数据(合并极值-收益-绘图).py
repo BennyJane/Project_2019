@@ -1,33 +1,35 @@
 #!/user/bin/env Python
 #coding=utf-8
 
+#4-29调整，每天数据重新判断开始的趋势。
+#代码完成寻找极值，绘制图像，计算收益功能，并能保存图片，与收益表
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtk
 
 
-                         #极值相关变量调整
+                         #待输入的数据
 #将第一段代码生成的文件路径拷贝到下方
-FirstResult_filepath="E:/编程接单/2019-4-14/提取数据18_01-04.csv"
+FirstResult_filepath="E:/编程任务/2019-4-14/结项整理/代码重构/First_data_01-04.csv"
 #变化的比率调整
-The_Limition=0.001
-#
-Final_filename="E:/编程接单/2019-4-14/Second_four_data1802_01-04.csv"
+The_Limition=0.003
+
+                        #保存极值列表
+Final_filename="E:/编程任务/2019-4-14/Second_four_data429_01-04.csv"
+SimpleCoul_filename = "E:/编程任务/2019-4-14/Simple_Col429_01-04.csv"
 
                         # 图像相关变量调整
 #设置图片最后储存位置
-filepath="E:/编程接单/2019-4-14/Photo1802_01-04.png"
+filepath="E:/编程任务/2019-4-14/Photo429_01-04.png"
 #设置图片标题
 Picture_title="Photo Title:0.001"
 xlabel=The_Limition
 
                         # 收益相关变量调整
 #收益文件储存位置，包含极值数据。
-Sales_filepath="E:/编程接单/2019-4-14/Sales1802_01-04.csv"
-
-
-
+Sales_filepath="E:/编程任务/2019-4-14/Sales429_0304.csv"
 
 
 #-----------------------------------------------------------------------------------------------------------------------
@@ -35,13 +37,6 @@ df=pd.read_csv(FirstResult_filepath)
 df.rename(columns={"bid/ask_price":"means"},inplace=True)
 # print(df)
 # print(df.info())
-
-Left_df = pd.DataFrame()
-Right_df = pd.DataFrame()
-
-
-#储存最值索引号为列表，用于画图
-MAX_MIN_List=[]
 
 #求变化率
 #下降
@@ -53,128 +48,190 @@ def compute02(num1,num2):
     result=(num1-num2)/num2
     return result
 
-# 利用k值的奇偶性，来记录数值变化趋势
-# 上一个k为奇数代表降，下一个找升；上一个k偶数代表上升，下一个要找降
-k = 1
-first_break_point = 0
-# series 类型
-endnum =df.shape[0]
-print("待处理数据数量为：",endnum)
-#从第二个数据开始读取
-for i in range(1, endnum):
-    Current_Process =df.loc[0:i,"means"]  #带有索引号
-    # print(Current_Process)
-    # print(Current_Process)
-    first_max_price = Current_Process.max()
-    max_id = Current_Process.idxmax()
-    first_min_price = Current_Process.min() #只有最值，没有索引号
-    min_id = Current_Process.idxmin()
-    last_price = Current_Process.iloc[i]
-    # print(first_max_price,first_min_price, "\t",last_price,"\t",)
-    if min_id < i:
-        #up
-        result = compute02(last_price, first_min_price)
-        # print(result)
-        if result >= The_Limition:
-            first_break_point = i
-            k = k + 1
-            # print(last_price, first_max_price)
-            # 找出最值所在行的索引，注意保存的先后顺序
-            MAX_MIN_List.append(min_id)
-            MAX_MIN_List.append(max_id)
-            # print(MAX_MIN_List)
-            # 选出整行数据储存，保留索引，输出的时候再考虑删除多余数据，考虑合并
-            Left_df = Left_df.append(df.iloc[min_id])
-            Right_df = Right_df.append(df.iloc[max_id])
-            # 先完成一段数据的查找
-            print("该数据以UP趋势开头")
-            break
+#将不同的日期的数据分割开
+def get_eachday(data):
+    startday=0
+    oneday = []
+    EachDay_list=[]
+    for i in range(data.shape[0]-1):
+        now_day=data.iloc[i,1]
+        # print(now_day[5:11])
+        Previous_day=data.iloc[i+1,1]
+        if now_day[5:11]!=Previous_day[5:11]:
+            endday=i
+            EachDay_list.append([startday,endday])
+            startday=i+1
+    EachDay_list.append([startday,data.shape[0]])
+    return EachDay_list
 
-    elif max_id<i:
-        #down
-        result = compute01(first_max_price,last_price)
-        # print(result)
-        if result >= The_Limition:
-            first_break_point = i
-            # print(first_break_point)
-            k = k + 1
-            #print(last_price, first_min_price)
-            # 找出最小值所在的行，注意保存的顺序
-            max_id = Current_Process.idxmax()
-            min_id = i
-            MAX_MIN_List.append(max_id)
-            MAX_MIN_List.append(min_id)
-            # print(MAX_MIN_List)
-            # 选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并
-            Left_df=Left_df.append(df.iloc[max_id])  # 只取出时间和价格
-            Right_df=Right_df.append(df.iloc[min_id])  # 只取出时间和价格
-            print("该数据以DOWN趋势开头")
-            # 先完成一段数据的查找
-            break
-    else:
-        continue
+def Get_ExtremeValues(data,start_num,end_num):
+    # 储存起始点
+    Left_df = pd.DataFrame()
+    Right_df = pd.DataFrame()
 
-n=first_break_point
-j=first_break_point
-while True :
-    j = j+1
-    if j <endnum:
-        if (k % 2)==0:
-            #上一个K为偶数，下一个找下降,Down
-            #保证可以取到2个数以上
-            N_Process=df.loc[n:j, "means"]
-            # print(N_Process)
-            N_max_price = N_Process.max()
-            max_id = N_Process.idxmax()
-            last_price = N_Process.loc[j]
-            # 最后一个极值必须是最小值
-            if max_id<j:
-                result = compute01(N_max_price,last_price)
-                # print(result)
-                if result >= The_Limition:
-                    # print(j)
-                    k = k + 1
-                    n = j
-                    # 找出最大值所在的行，注意保存的顺序
-                    max_id = N_Process.idxmax()
-                    min_id = j
-                    MAX_MIN_List.append(max_id)
-                    MAX_MIN_List.append(min_id)
-                    # print(MAX_MIN_List)
-                    # 选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并到一张表中
-                    Left_df = Left_df.append(df.iloc[max_id])
-                    Right_df = Right_df.append(df.iloc[min_id])
-                    # 完成一段数据的查找
-                    print('完成了一对极值的查找：%s' %k)
+    # 储存最值索引号为列表，用于画图
+    MAX_MIN_List = []
+
+    # 输入第一段代码处理的数据结果
+    k = 1
+    first_break_point = 0
+
+    # 从第二个数据开始读取
+    for i in range(start_num, end_num):
+        Current_Process = data.loc[start_num:i, "means"]  # 带有索引号
+        # print(Current_Process)
+        # print(Current_Process)
+        first_max_price = Current_Process.max()
+        max_id = Current_Process.idxmax()
+        first_min_price = Current_Process.min()  # 只有最值，没有索引号
+        min_id = Current_Process.idxmin()
+        last_price = Current_Process.loc[i]
+        # print(first_max_price,first_min_price, "\t",last_price,"\t",)
+        if min_id < i:
+            # up
+            result = compute02(last_price, first_min_price)
+            # print(result)
+            if result >= The_Limition:
+                first_break_point = i
+                k = k + 1
+                # print(last_price, first_max_price)
+                # 找出最值所在行的索引，注意保存的先后顺序
+                MAX_MIN_List.append(min_id)
+                MAX_MIN_List.append(max_id)
+                # print(MAX_MIN_List)
+                # 选出整行数据储存，保留索引，输出的时候再考虑删除多余数据，考虑合并
+                Left_df = Left_df.append(data.loc[min_id])
+                Right_df = Right_df.append(data.loc[max_id])
+                # 先完成一段数据的查找
+                print("该数据以UP趋势开头: 0")
+                break
+
+        elif max_id < i:
+            # down
+            result = compute01(first_max_price, last_price)
+            # print(result)
+            if result >= The_Limition:
+                first_break_point = i
+                # print(first_break_point)
+                k = k
+                # print(last_price, first_min_price)
+                # 找出最小值所在的行，注意保存的顺序
+                MAX_MIN_List.append(max_id)
+                MAX_MIN_List.append(min_id)
+                # print(MAX_MIN_List)
+                # 选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并
+                Left_df = Left_df.append(data.loc[max_id])  # 只取出时间和价格
+                Right_df = Right_df.append(data.loc[min_id])  # 只取出时间和价格
+                print("该数据以DOWN趋势开头: 0")
+                # 先完成一段数据的查找
+                break
+        else:
+            continue
+
+    n = first_break_point
+    j = first_break_point
+    while True:
+        j = j + 1
+        if j < end_num:
+            if (k % 2) == 0:
+                # 上一个K为偶数，下一个找下降,Down
+                # 保证可以取到2个数以上
+                N_Process = df.loc[n:j, "means"]
+                # print(N_Process)
+                N_max_price = N_Process.max()
+                max_id = N_Process.idxmax()
+                last_price = N_Process.loc[j]
+                # 最后一个极值必须是最小值
+                if max_id < j:
+                    result = compute01(N_max_price, last_price)
+                    # print(result)
+                    if result >= The_Limition:
+                        # print(j)
+                        k = k + 1
+                        n = j
+                        # 找出最大值所在的行，注意保存的顺序
+                        max_id = N_Process.idxmax()
+                        min_id = j
+                        MAX_MIN_List.append(max_id)
+                        MAX_MIN_List.append(min_id)
+                        # print(MAX_MIN_List)
+                        # 选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并到一张表中
+                        Left_df = Left_df.append(df.loc[max_id])
+                        Right_df = Right_df.append(df.loc[min_id])
+                        # 完成一段数据的查找
+                        print('完成了一对极值的查找：%s' %(k-1))
+
+            else:
+                # 上一个K为奇数，下一个要找升
+                # 保证可以取到2个数以上
+                N_Process = df.loc[n:j, "means"]
+                # print(N_Process)
+                N_min_price = N_Process.min()
+                min_id = N_Process.idxmin()
+                last_price = N_Process.loc[j]
+                if min_id < j:
+                    result = compute02(last_price, N_min_price)
+                    if result >= The_Limition:
+                        k = k + 1
+                        n = j
+                        # print(last_price, N_min_price, N_max_price)
+                        # 找出最小值所在的行，注意保存的顺序
+                        max_id = j
+                        min_id = N_Process.idxmin()
+                        MAX_MIN_List.append(min_id)
+                        MAX_MIN_List.append(max_id)
+                        # print(MAX_MIN_List)
+                        # 选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并到一张表中
+                        Left_df = Left_df.append(df.loc[min_id])
+                        Right_df = Right_df.append(df.loc[max_id])
+                        # 先完成一段数据的查找
+                        print('完成了一对极值的查找：%s' %(k-1))
 
         else:
-            #上一个K为奇数，下一个要找升
-            #保证可以取到2个数以上
-            N_Process=df.loc[n:j, "means"]
-            # print(N_Process)
-            N_min_price=N_Process.min()
-            min_id = N_Process.idxmin()
-            last_price=N_Process.loc[j]
-            if min_id<j:
-                result = compute02(last_price,N_min_price)
-                if result >= The_Limition:
-                    k=k+1
-                    n = j
-                    # print(last_price, N_min_price, N_max_price)
-                    #找出最小值所在的行，注意保存的顺序
-                    max_id=j
-                    min_id=N_Process.idxmin()
-                    MAX_MIN_List.append(min_id)
-                    MAX_MIN_List.append(max_id)
-                    # print(MAX_MIN_List)
-                    #选出时间和价格，分别保存到起、终点的dataframe中，最后再考虑合并到一张表中
-                    Left_df = Left_df.append(df.iloc[min_id])
-                    Right_df = Right_df.append(df.iloc[max_id])
-                    #先完成一段数据的查找
-                    print('完成了一对极值的查找：%s' % k)
+            break
 
-    else:
-        break
+    return MAX_MIN_List,Left_df,Right_df
+
+def Get_FinalData(extreme_list,data1,data2):
+    Extremes_df = df.iloc[extreme_list, [1, 2]]
+    # print(Extremes_df)
+    # Extremes_df.to_csv(SimpleCoul_filename)
+
+    # 将两张表合并,需要先去掉原来的索引号，这样“1”号的索引与另一个“1”号索引合并。
+    data1 = data1.reset_index()
+    data1 = data1.iloc[:, [1, 3]]
+
+    data2 = data2.reset_index()
+    data2 = data2.iloc[:, [1, 3]]
+
+    Newdf = pd.concat([data1, data2], axis=1)
+    return Extremes_df , Newdf
+
+#······························求每天极值·························
+
+EachDay_list = get_eachday(df)
+print("当前正在处理%s天的数据！" %len(EachDay_list))
+print("每天数据起始索引号：",EachDay_list)
+MAX_MIN_List=[]
+Extremes_1cols=pd.DataFrame()
+Extremes_4cols=pd.DataFrame()
+for i in EachDay_list:
+    S=i[0]
+    E=i[1]
+    print(S,E)
+    max_min_list, left_df, right_df=Get_ExtremeValues(df,S,E)
+    extremes_1cols, extremes_4cols =Get_FinalData(max_min_list, left_df, right_df)
+    MAX_MIN_List=MAX_MIN_List+max_min_list
+    Extremes_1cols=pd.concat([Extremes_1cols,extremes_1cols])
+    Extremes_4cols=pd.concat([Extremes_4cols,extremes_4cols])
+
+# print(MAX_MIN_List,Extremes_1cols,"\n", Extremes_4cols)
+#重新命名表的列名称,每行4条数据
+Extremes_4cols.columns=['Extremity','Start_price', 'confirm_point','End_price']
+Newdf=Extremes_4cols
+# Newdf.to_csv(Final_filename,index=None)
+# print(Newdf)
+
 
 # print(Left_df,"\n",Right_df)
 Simple_Col=df.iloc[MAX_MIN_List,[1,2]]
@@ -256,34 +313,14 @@ for j in range(0, Simple_nums):
     np.delete(B_list,(0,1),0)
     np.delete(Indes_two, (0, 1), 0)
 
-# 配置横坐标
-plt.gcf().autofmt_xdate()  # 自动旋转日期标记
-plt.title(Picture_title)
-# plt.ylabel(r"price",fontsize=20)
-# plt.xlabel(xlabel,fontsize=20)
-#图片储存
-plt.savefig(filepath)
-plt.show()
-
-#······························极值导出·························
-
-#将两张表合并,需要先去掉原来的索引号，这样“1”号的索引与另一个“1”号索引合并。
-Left_df=Left_df.reset_index()
-Left_df=Left_df.iloc[:,[1,3]]
-
-Right_df=Right_df.reset_index()
-Right_df=Right_df.iloc[:,[1,3]]
-
-# Left_df=Left_df.append(Right_df,axis=1)
-
-Newdf=pd.concat([Left_df,Right_df],axis=1)
-# print(Newdf)
-
-
-#重新命名表的列名称,每行4条数据
-Newdf.columns=['Extremity','Start_price', 'confirm_point','End_price']
-# Newdf.to_csv(Final_filename,index=None)
-# print(Newdf)
+# # 配置横坐标
+# plt.gcf().autofmt_xdate()  # 自动旋转日期标记
+# plt.title(Picture_title)
+# # plt.ylabel(r"price",fontsize=20)
+# # plt.xlabel(xlabel,fontsize=20)
+# #图片储存
+# plt.savefig(filepath)
+# plt.show()
 
 
 #······························收益数据导出·······················
@@ -367,8 +404,20 @@ while True:
     else:
         break
 
+
+
+#······························文件输出·······················
+
+# 配置横坐标
+plt.gcf().autofmt_xdate()  # 自动旋转日期标记
+plt.title(Picture_title)
+# plt.ylabel(r"price",fontsize=20)
+# plt.xlabel(xlabel,fontsize=20)
+#图片储存
+# plt.savefig(filepath)
+plt.show()
+
 #sales 求的是当前时间之前的累计收益；每一天的最后一条信息里的金额，就是当天的总收益
-print(Sales)
 Newdf02=pd.merge(Newdf, Sales, how="left",on="confirm_point")
 print(Newdf02)
-Newdf02.to_csv(Sales_filepath,index=None)
+# Newdf02.to_csv(Sales_filepath,index=None)
