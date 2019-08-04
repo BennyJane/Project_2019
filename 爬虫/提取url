@@ -1,0 +1,263 @@
+# -*- coding: utf-8 -*-
+from copy import deepcopy
+from curses.ascii import isupper
+
+import scrapy
+from scrapy import Request
+from Demo.items import DemoItem
+
+import re
+
+import pymysql
+from dateutil.parser import parse
+
+pymysql.install_as_MySQLdb()
+import pymysql.connections
+
+# 从数据库获取数据
+connect = pymysql.connect(host='192.168.1.124', user='root', password='123456', db='bin_db', port=3306)
+cursor = connect.cursor()
+
+cursor.execute(''' select link, meeting_id from common_activity_copy where en_title="" limit 50''')
+all_urls = cursor.fetchall()
+
+print(all_urls)
+
+class AllconfSpider(scrapy.Spider):
+    name = 'allconf'
+    allowed_domains = ['www.allconfs.org']
+    start_urls = all_urls
+
+    def start_requests(self):
+        for url in self.start_urls:
+            if 'http://' not in url[0]:
+                new_url = 'http://' + url[0]
+                # if '.com' not in new_url:
+                #     new_url=new_url+'.coom'
+
+            else:
+                new_url = url[0]
+                # http://www.ipsogc.org/index.html
+
+            yield Request(url=new_url, meta={'meeting_id':url[1]} ,callback=self.parse)
+
+    def parse(self, response):
+        link = response.url
+        meeting_id = response.meta['meeting_id']
+        print(link)
+
+        allconf = DemoItem()
+
+        allconf['meeting_id'] =meeting_id
+        allconf['link'] =link
+
+        """获取en_title
+            * 获取缩写
+        """
+
+        try:
+            #ICCRT2019丨Phuket, Thailand  ==>  ICCRT2019丨Phuket,
+
+             brief_title = response.xpath('/html/head/title/text()').get()
+             print(brief_title)
+             if ' ' in brief_title:
+                title = brief_title.split(' ')[0]
+             else:
+                title = re.search(r'(\D*)?\d', brief_title)[1]
+            # allconf["en_title"] = en_title
+        except Exception as e:
+            # allconf["en_title"] = ''
+            title = ''
+            print(e)
+        print('缩写title', '\n', title)
+
+        # -------------------------------------------- 获取所有文本内容--------------------------------------------------#
+        try:
+            # 页面布局分类
+            # http://meeting.sciencenet.cn/index.php?s=/Category/reading_display&rid=13800
+            # http://meeting.sciencenet.cn//index.php?s=/Category/reading_display&rid=14046
+            # //div[@class='text618']//text()
+            # //*[@id="body"]
+
+            try:
+                all_contents_lists = response.xpath(r"//body/div[1]//text()").extract()
+            except Exception as e:
+                all_contents_lists =''
+                print('content1', e)
+
+            if len(all_contents_lists) < 100:
+                try:
+                    all_contents_lists = response.xpath(
+                        r"//bady/div[@class='main_wrapper']//text()").extract()
+                except Exception as e:
+                    # all_contents_lists = ''
+                    print('content2', e)
+            if len(all_contents_lists) < 100:
+                try:
+                    all_contents_lists = response.xpath(
+                        r"/html/body/div[2]//text()").extract()
+                except Exception as e:
+                    # all_contents_lists = ''
+                    print('content2', e)
+
+            if len(all_contents_lists) < 100:
+                try:
+                    all_contents_lists = response.xpath(r"/html/body//text()").extract()
+                except Exception as e:
+                    # all_contents_lists = ''
+                    print('content3', e)
+
+            if len(all_contents_lists) < 100:
+                try:
+                    all_contents_lists = response.xpath(r"//*[@id='aspnetForm']/div[4]//text()").extract()
+                except Exception as e:
+                    # all_contents_lists = ''
+                    print('content3', e)
+            # print(all_contents_lists)
+
+            if len(all_contents_lists)>15:
+                # 删除每行的空白与换行符号，保留空行作为各部分的分区   ==> 分离的文本片段， list格式
+                long_text = []
+                for i in all_contents_lists:
+                    text = i.strip().replace('\r\n', '')
+                    text_deled = re.sub('[\']', '"', text)      # mysql 中不能出现 ‘ 单引号
+                    # print(type(text_deled))
+                    long_text.append(text_deled)
+                # print('long_text:','\n', long_text)
+
+                # 去除换行符，空格；直接将字符串合并   ==> 连续的文本
+                content = []
+                for item in long_text:
+                    if len(item) != 0:
+                        content.append(item)
+                # content = ''.join(content)
+                # print('contents:', '\n', contents)
+
+        except Exception as e:
+            all_contents = '未抓取到数据：　%s' % response.url
+            content = ''
+            print(all_contents, e)
+
+        allconf['content'] =content
+        if len(content) <10:
+            print('content:未抓取到数据', content )
+        # print(content)
+
+
+
+
+        # -------------------------------------------- 逐项检索目标字段--------------------------------------------------#
+
+        '''
+            提取完整的会议英文名称。
+            1、识别句子中包含的缩写单词，需要切片操作
+            2、从web页面的底部中获取 Copyright © 2017 Int'l Conference on Foreign Language Education and Linguistics . All rights reserved.
+            
+            *
+        '''
+
+        en_title = ''
+
+        def get_title(brief_word, obj_list):
+            min_id = 0
+            max_id = 0
+            length = len(brief_word)
+            brief_word.reverse()        # 返学操作 不需要 重新赋值
+            copy_obj = deepcopy(obj_list)
+            # print(length)
+            # print(len(brief_word))
+
+
+            for j, item in enumerate(brief_word):
+                status = False
+                i = -1
+                while len(obj_list)>0:
+                    # print(type(obj_list))
+                    # print(len(obj_list))
+                    capital = obj_list.pop()
+                    if item == capital:
+                        status = True
+                        if j == 0:
+                            max_id = i
+                            i = i - 1
+                            break
+                        elif j == (length-1):
+                            min_id = i
+                            i = i - 1
+                            break
+                        else:
+                            break
+                    else:
+                        i = i - 1
+                if status != True:
+                    break
+            if min_id != 0:
+                # 考虑简写中不包含 年份 左侧区间向左移动2位
+                # print(type(copy_obj))
+                min_id = min_id
+                print(min_id, max_id)
+                try:
+                    return copy_obj[min_id:max_id]
+                except Exception as e:
+                    print('get_data:', e)
+            else:
+                return ''
+
+        title_list = [x for x in title]
+        print(title_list)
+        try:
+
+            for item in content:
+                # 先删除 缩写字母本身，最大限度的减少误差， 避免提供第一个首字母
+                try:
+                    res_item = re.sub(title, '', item)
+                    first_capitals = []
+
+                    for word in res_item.split(' '):
+                        if len(word)>0:
+                            first_capitals.append(word[0])
+                except Exception as e:
+                    print('en_title2:', e)
+
+                # F_word = ''.join(first_capitals)
+                if len(title_list) != 0 and len(first_capitals) > 5:
+                    # print(title, '\n', first_capitals)
+                    # print(type(title), '\n', type(first_capitals))
+                    try:
+                        en_title = get_title(title_list, first_capitals)
+                    except Exception as e:
+                        print('en_title1:', e )
+                if len(en_title) != 0:
+                    break
+                    # status = True
+                    # for capital in title:
+                    #     # 考虑获取单词所在的位置，切片操作，准确提取会议名称
+                    #     # 考虑缩写字母的排列顺序
+                    #     if capital in F_word:
+                    #         continue
+                    #     else:
+                    #         status = False
+                    #         break
+                    # if status ==True:
+                    #     en_title = item
+        except Exception as e:
+            en_title = ''
+            print('en_title:', e)
+        if len(en_title) >0:
+            en_title = re.sub('[\']', '"', en_title)
+
+        allconf['en_title'] =en_title
+        if len(en_title) ==0:
+            print('en_title is None!')
+        else:
+            print(en_title)
+
+        # try:
+        #     cursor.execute(''' insert into link_content(link, meeting_id, content, title, en_title) values ("{}","{}","{}","{}","{}")'''.format(link, meeting_id,content,title, en_title))
+        #     connect.commit()
+        #     cursor.close()
+        #     connect.close()
+        # except Exception as e:
+        #     print('mysql:',e)
+
+        return allconf
