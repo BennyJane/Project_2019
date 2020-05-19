@@ -8,22 +8,24 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-    <script src="dashboard.js"></script>
+    <script src="../static/js/dashboard.js"></script>
     <title>Hello, world!</title>
 </head>
 <body>
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">设置K值</a>
-    <input class="form-control form-control-dark w-100" type="text" placeholder="请输入最佳的k值" aria-label="Search">
+<form class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow" action="/category" method="post">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{{ url_for('index') }}">设置K值</a>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="请输入最佳的k值" name="k_value"
+           aria-label="Search">
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-            <a class="nav-link" href="#">运行</a>
+            <button style="color: #ffffff; background-color: #343a40; border: 0px" type="submit">运行</button>
         </li>
     </ul>
-</nav>
+</form>
 
 <div class="container-fluid">
     <div class="row">
@@ -37,36 +39,14 @@
                             聚类结果 <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="file"></span>
-                            第一类
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="shopping-cart"></span>
-                            第二类
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="users"></span>
-                            第三类
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="bar-chart-2"></span>
-                            第四类
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span data-feather="layers"></span>
-                            第五类
-                        </a>
-                    </li>
+                    {% for item in all_category %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#category-{{ item }}">
+                                <span data-feather="file"></span>
+                                第{{ orderDict[item] }}类
+                            </a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </nav>
@@ -75,142 +55,55 @@
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">SSE曲线图</h1>
                 <div class="btn-toolbar mb-2 mb-md-0">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                    <a type="button" class="btn btn-sm btn-outline-secondary"
+                       href="{{ url_for('index', action='runSee') }}">
                         生成sse曲线
-                    </button>
+                    </a>
                 </div>
             </div>
 
-            <img src="../images/see.png" class="my-4 w-100" id="myChart"/>
+            <img src="{{ seePicPath }}" class="my-4 w-100" id="myChart"/>
 
-            <h2>第一类</h2>
-            <div class="table-responsive">
-                <table class="table table-striped table-sm">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1,001</td>
-                        <td>Lorem</td>
-                        <td>ipsum</td>
-                        <td>dolor</td>
-                        <td>sit</td>
-                    </tr>
-                    <tr>
-                        <td>1,002</td>
-                        <td>amet</td>
-                        <td>consectetur</td>
-                        <td>adipiscing</td>
-                        <td>elit</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>Integer</td>
-                        <td>nec</td>
-                        <td>odio</td>
-                        <td>Praesent</td>
-                    </tr>
-                    <tr>
-                        <td>1,003</td>
-                        <td>libero</td>
-                        <td>Sed</td>
-                        <td>cursus</td>
-                        <td>ante</td>
-                    </tr>
-                    <tr>
-                        <td>1,004</td>
-                        <td>dapibus</td>
-                        <td>diam</td>
-                        <td>Sed</td>
-                        <td>nisi</td>
-                    </tr>
-                    <tr>
-                        <td>1,005</td>
-                        <td>Nulla</td>
-                        <td>quis</td>
-                        <td>sem</td>
-                        <td>at</td>
-                    </tr>
-                    <tr>
-                        <td>1,006</td>
-                        <td>nibh</td>
-                        <td>elementum</td>
-                        <td>imperdiet</td>
-                        <td>Duis</td>
-                    </tr>
-                    <tr>
-                        <td>1,007</td>
-                        <td>sagittis</td>
-                        <td>ipsum</td>
-                        <td>Praesent</td>
-                        <td>mauris</td>
-                    </tr>
-                    <tr>
-                        <td>1,008</td>
-                        <td>Fusce</td>
-                        <td>nec</td>
-                        <td>tellus</td>
-                        <td>sed</td>
-                    </tr>
-                    <tr>
-                        <td>1,009</td>
-                        <td>augue</td>
-                        <td>semper</td>
-                        <td>porta</td>
-                        <td>Mauris</td>
-                    </tr>
-                    <tr>
-                        <td>1,010</td>
-                        <td>massa</td>
-                        <td>Vestibulum</td>
-                        <td>lacinia</td>
-                        <td>arcu</td>
-                    </tr>
-                    <tr>
-                        <td>1,011</td>
-                        <td>eget</td>
-                        <td>nulla</td>
-                        <td>Class</td>
-                        <td>aptent</td>
-                    </tr>
-                    <tr>
-                        <td>1,012</td>
-                        <td>taciti</td>
-                        <td>sociosqu</td>
-                        <td>ad</td>
-                        <td>litora</td>
-                    </tr>
-                    <tr>
-                        <td>1,013</td>
-                        <td>torquent</td>
-                        <td>per</td>
-                        <td>conubia</td>
-                        <td>nostra</td>
-                    </tr>
-                    <tr>
-                        <td>1,014</td>
-                        <td>per</td>
-                        <td>inceptos</td>
-                        <td>himenaeos</td>
-                        <td>Curabitur</td>
-                    </tr>
-                    <tr>
-                        <td>1,015</td>
-                        <td>sodales</td>
-                        <td>ligula</td>
-                        <td>in</td>
-                        <td>libero</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+            {% if all_category ==[] %}
+                <h2>当前没有分类</h2>
+            {% else %}
+                {% for category in all_category %}
+                    <h2 id="category-{{ category }}">第{{ orderDict[category] }}类</h2>
+                    <img src="{{ categoryPicPath[category] }}" class="my-4 w-100" />
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                            <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>gender</th>
+                                <th>race_ethnicity</th>
+                                <th>parental level of education</th>
+                                <th>lunch</th>
+                                <th>test preparation course</th>
+                                <th>math score</th>
+                                <th>reading score</th>
+                                <th>writing score</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for each_categroy in all_category_dict[category] %}
+                                <tr>
+                                    <td>{{ loop.index }}</td>
+                                    <td>{{ each_categroy['gender'] }}</td>
+                                    <td>{{ each_categroy['race'] }}</td>
+                                    <td>{{ each_categroy['parental_education'] }}</td>
+                                    <td>{{ each_categroy['lunch'] }}</td>
+                                    <td>{{ each_categroy['test_preparation_course'] }}</td>
+                                    <td>{{ each_categroy['math'] }}</td>
+                                    <td>{{ each_categroy['reading'] }}</td>
+                                    <td>{{ each_categroy['writing'] }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endfor %}
+            {% endif %}
         </main>
     </div>
 </div>

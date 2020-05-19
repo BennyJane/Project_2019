@@ -28,12 +28,12 @@ r = pd.concat([data, pd.Series(kmodel.labels_, index = data.index)], axis = 1)  
 r.columns = list(data.columns) + [u'聚类类别'] #重命名表头
 r.to_csv(outputfile) #保存分类结果
 
-def density_plot(data): #自定义作图函数
-    p = data.plot(kind='kde', linewidth = 2, subplots = True, sharex = False)
-    [p[i].set_ylabel('density') for i in range(k)]
-    plt.legend()
-    return plt
-
-pic_output = './images' #概率密度图文件名前缀
-for i in range(k):
-    density_plot(data[r[u'聚类类别']==i]).savefig(u'%s%s.png' %(pic_output, i))
+# def density_plot(data): #自定义作图函数
+#     p = data.plot(kind='kde', linewidth = 2, subplots = True, sharex = False)
+#     [p[i].set_ylabel('density') for i in range(k)]
+#     plt.legend()
+#     return plt
+#
+# pic_output = './images' #概率密度图文件名前缀
+# for i in range(k):
+#     density_plot(data[r[u'聚类类别']==i]).savefig(u'%s%s.png' %(pic_output, i))

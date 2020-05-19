@@ -2,36 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61b9e3cf-85c4-4e82-918f-44137cd2fa46" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../bootstrap-4.4.1/bootstrap-4.4.1/site/docs/4.4/examples/dashboard/templates/dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bootstrap-4.4.1/bootstrap-4.4.1/site/docs/4.4/examples/dashboard/templates/dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bootstrap-4.4.1/bootstrap-4.4.1/site/docs/4.4/examples/dashboard/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/dealData.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/k_mean.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/k_means_core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/LAmcbzepGE_w1920_h896.jpg@.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kmeans_web_2020_05.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kmeans_web_2020_05.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/blank.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/exams.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/exams.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/dealData.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/dealData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/k_mean.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/k_mean.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/k_means_core.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/k_means_core.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/final.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/final.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/LAmcbzepGE_w1920_h896.jpg@.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/St_see.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/see.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/see.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/see_st.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,57 +30,33 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/dealData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="252">
+              <caret line="159" column="9" selection-start-line="159" selection-end-line="159" selection-end-column="9" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/k_mean.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-64">
-              <caret line="7" column="9" selection-start-line="7" selection-end-line="7" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/k_means_core.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="11" column="74" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/see_st.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/images/see.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://E:/PythonEnv/kmeans_web_2020_05/Lib/site-packages/sklearn/cluster/_kmeans.py">
+        <entry file="file://$PROJECT_DIR$/core/k_means_core.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-367">
-              <caret line="976" column="37" selection-start-line="976" selection-start-column="31" selection-end-line="976" selection-end-column="37" />
+            <state relative-caret-position="442">
+              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,13 +64,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="80" column="22" lean-forward="true" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+            <state relative-caret-position="309">
+              <caret line="69" column="50" lean-forward="true" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
               <folding>
-                <element signature="n#div#0;n#nav#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#button#0;n#li#0;n#ul#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/images/blank.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="8034" column="1" selection-start-line="8034" selection-start-column="1" selection-end-line="8034" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/images/see.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -133,12 +115,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/base.py" />
         <option value="$PROJECT_DIR$/data/exams.csv" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/static/css/dashboard.css" />
         <option value="$PROJECT_DIR$/core/dealData.py" />
+        <option value="$PROJECT_DIR$/core/k_mean.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/core/k_means_core.py" />
       </list>
     </option>
@@ -166,6 +151,12 @@
             <path>
               <item name="kmeans_web_2020_05" type="b2602c69:ProjectViewProjectNode" />
               <item name="kmeans_web_2020_05" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kmeans_web_2020_05" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kmeans_web_2020_05" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -179,22 +170,25 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/images" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static\js" />
+      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static\css" />
+      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static" />
+      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\core" />
+      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\data" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static\images" />
       <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\images" />
       <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\templates" />
       <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static" />
       <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static" />
-      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\core" />
-      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -209,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.k_means_core">
+  <component name="RunManager" selected="Flask server.Flask (app.py)">
     <configuration name="base" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="kmeans_web_2020_05" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -276,6 +270,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Flask (app.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="kmeans_web_2020_05" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="kmeans_web_2020_05" type="Python.FlaskServer">
       <module name="kmeans_web_2020_05" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -293,6 +302,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flask server.Flask (app.py)" />
         <item itemvalue="Python.k_means_core" />
         <item itemvalue="Python.dealData" />
         <item itemvalue="Python.base" />
@@ -310,25 +320,24 @@
       <option name="presentableId" value="Default" />
       <updated>1589771349547</updated>
       <workItem from="1589771389511" duration="3878000" />
-      <workItem from="1589801300493" duration="19412000" />
+      <workItem from="1589801300493" duration="19641000" />
+      <workItem from="1589889356346" duration="16127000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23290000" />
+    <option name="totallyTimeSpent" value="39646000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1862" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15371716" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16321968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="SOQL Query" />
-      <window_info anchor="bottom" id="Log Analyzer" />
-      <window_info anchor="bottom" id="Anonymous Apex" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.25055188" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49916154" visible="true" weight="0.50551873" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.25027564" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49916154" visible="true" weight="0.1907387" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -339,10 +348,13 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50083846" side_tool="true" weight="0.25607064" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49916154" weight="0.14222713" />
       <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Log Analyzer" order="13" />
+      <window_info anchor="bottom" id="SOQL Query" order="14" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.3174958" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.31693685" />
       <window_info anchor="right" id="R Graphics" order="4" weight="0.32979318" />
       <window_info anchor="right" id="R Packages" order="5" weight="0.32979318" />
       <window_info anchor="right" id="Database" order="6" />
@@ -384,18 +396,14 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/kmeans_web_2020_05$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1589928015853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/kmeans_web_2020_05$dealData.coverage" NAME="dealData Coverage Results" MODIFIED="1589814048217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/kmeans_web_2020_05$base.coverage" NAME="base Coverage Results" MODIFIED="1589806132693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/kmeans_web_2020_05$k_means_core.coverage" NAME="k_means_core Coverage Results" MODIFIED="1589846677539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/readme" />
-    <entry file="file://$PROJECT_DIR$/exams.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/exams.csv" />
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -406,106 +414,174 @@
     <entry file="file://$PROJECT_DIR$/images1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/.finalDat.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state>
           <caret column="30" selection-start-column="12" selection-end-column="30" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/final.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/exams.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="121">
-          <caret line="982" column="24" selection-start-line="982" selection-start-column="24" selection-end-line="982" selection-end-column="24" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/newDf.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state>
           <caret column="30" selection-start-column="12" selection-end-column="30" />
         </state>
       </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://E:/PythonEnv/kmeans_web_2020_05/Lib/site-packages/sklearn/cluster/_kmeans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22824">
+          <caret line="976" column="37" selection-start-line="976" selection-start-column="31" selection-end-line="976" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/PythonEnv/kmeans_web_2020_05/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="1935" selection-start-line="1935" selection-end-line="1935" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/LAmcbzepGE_w1920_h896.jpg@.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/see_st.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/St_see.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/aria.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="1024" column="22" selection-start-line="1024" selection-start-column="22" selection-end-line="1024" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/final.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret column="82" selection-start-column="75" selection-end-column="82" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/exams.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret column="133" selection-start-column="120" selection-end-column="133" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/collections/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="1087" column="10" lean-forward="true" selection-start-line="1087" selection-start-column="10" selection-end-line="1087" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/PythonEnv/kmeans_web_2020_05/Lib/site-packages/werkzeug/datastructures.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="142" column="46" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/dealData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="159" column="9" selection-start-line="159" selection-end-line="159" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imagescategory0.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/core/k_mean.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="7" column="9" selection-start-line="7" selection-end-line="7" selection-end-column="9" />
+        <state relative-caret-position="247">
+          <caret line="30" selection-start-line="30" selection-start-column="2" selection-end-line="38" selection-end-column="77" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/category2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/category1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/category0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="8034" column="1" selection-start-line="8034" selection-start-column="1" selection-end-line="8034" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="80" column="22" lean-forward="true" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+        <state relative-caret-position="309">
+          <caret line="69" column="50" lean-forward="true" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
           <folding>
-            <element signature="n#div#0;n#nav#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#button#0;n#li#0;n#ul#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/St_see.png">
+    <entry file="file://$PROJECT_DIR$/static/images/blank.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/dealData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/PythonEnv/kmeans_web_2020_05/Lib/site-packages/sklearn/cluster/_kmeans.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-367">
-          <caret line="976" column="37" selection-start-line="976" selection-start-column="31" selection-end-line="976" selection-end-column="37" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/static/images/see.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/core/k_means_core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="74" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
+        <state relative-caret-position="442">
+          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/see_st.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/see.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>
