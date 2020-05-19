@@ -1,4 +1,4 @@
-"gender","race/ethnicity","parental level of education","lunch","test preparation course","math score","reading score","writing score"
+"gender","race_ethnicity","parental level of education","lunch","test preparation course","math score","reading score","writing score"
 "female","group C","some college","standard","none","53","66","61"
 "female","group C","high school","standard","completed","70","84","82"
 "female","group E","some high school","standard","none","74","81","81"
