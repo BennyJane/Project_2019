@@ -1,28 +1,41 @@
 import os
 import shutil
+from datetime import timedelta
 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 
 from core.k_means_core import kmeansCore, SEEMethod, drawCategoryPic
 from core.dealData import deal, backText, orderDict
 
 app = Flask(__name__)
+app.config['SEND_FILE_MAX_AVG_DEFAULT'] = timedelta(seconds=1)
+
 
 originDf = deal()
 # print(originDf)
-k = 3  # 需要进行的聚类类别数
-iteration = 500  # 聚类最大循环数
+iteration = 300  # 聚类最大循环数
+
+isCalculationSee = True
 
 
 @app.route('/', methods=['GET'])
 def index():
+    global isCalculationSee
     if request.method == 'GET':
         action = request.args.get('action')
         if action == 'runSee':
-            SEEMethod(originDf, start=1, limit=8)
             seePicPath = '../static/images/see.png'
-            return render_template('index.html', all_category=[], all_category_dict={},
-                                   seePicPath=seePicPath)
+            if isCalculationSee:
+                SEEMethod(originDf, start=1, limit=8)
+                isCalculationSee = False
+
+                isCalculationSee = False
+                return render_template('index.html', all_category=[], all_category_dict={},
+                                       seePicPath=seePicPath)
+            else:
+                return render_template('index.html', all_category=[], all_category_dict={},
+                                       seePicPath=seePicPath)
+
     seePicPath = '../static/images/blank.png'
     return render_template('index.html', all_category=[], all_category_dict={},
                            seePicPath=seePicPath)
@@ -56,7 +69,7 @@ def category():
             # 绘制图片
             del_file(r"./static/images/category")
             categoryPicPath = drawCategoryPic(originDf, k_value, resDf)
-            print(categoryPicPath)
+            # print(categoryPicPath)
             return render_template('index.html', all_category=all_category, all_category_dict=all_category_dict,
                                    orderDict=orderDict, categoryPicPath=categoryPicPath,
                                    seePicPath=seePicPath)
@@ -77,5 +90,6 @@ def del_file(filepath):
         elif os.path.isdir(file_path):
             shutil.rmtree(file_path)
 
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

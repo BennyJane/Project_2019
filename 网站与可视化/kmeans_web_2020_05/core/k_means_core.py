@@ -18,6 +18,8 @@ def SEEMethod(df, start=1, limit=9):
     plt.xlabel('k', size=8)
     # plt.ylabel('SSE', size=8)
     plt.plot(X, SSE, 'o-')
+    if os.access('./static/images/see.png', os.F_OK):
+        os.remove('./static/images/see.png')
     plt.savefig('./static/images/see.png', dpi=200, bbox_inches='tight')
     # plt.show()
 
