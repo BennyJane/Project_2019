@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="../static/js/dashboard.js"></script>
+    <title>Hello, world!</title>
+</head>
+<body>
+<form class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow" action="/category" method="post">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="{{ url_for('index') }}">设置K值</a>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="请输入最佳的k值" name="k_value"
+           aria-label="Search">
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <button style="color: #ffffff; background-color: #343a40; border: 0px" type="submit">运行</button>
+        </li>
+    </ul>
+</form>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <!-- 设置最后的分类 -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <span data-feather="home"></span>
+                            聚类结果 <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    {% for item in all_category %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#category-{{ item }}">
+                                <span data-feather="file"></span>
+                                第{{ orderDict[item] }}类
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">SSE曲线图</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <a type="button" class="btn btn-sm btn-outline-secondary"
+                       href="{{ url_for('index', action='runSee') }}">
+                        生成sse曲线
+                    </a>
+                </div>
+            </div>
+
+            <img src="{{ seePicPath }}" class="my-4 w-100" id="myChart"/>
+
+            {% if all_category ==[] %}
+                <h2>当前没有分类</h2>
+            {% else %}
+                {% for category in all_category %}
+                    <h2 id="category-{{ category }}">第{{ orderDict[category] }}类</h2>
+                    <img src="{{ categoryPicPath[category] }}" class="my-4 w-100" />
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                            <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>数据结构</th>
+                                <th>操作系统</th>
+                                <th>高等数学</th>
+                                <th>软件工程</th>
+                                <th>数据库原理</th>
+                                <th>计算机网络</th>
+                                <th>C语言程序设计</th>
+                                <th>计算机导论</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for each_categroy in all_category_dict[category] %}
+                                <tr>
+                                    <td>{{ loop.index }}</td>
+                                    <td>{{ each_categroy['数据结构'] }}</td>
+                                    <td>{{ each_categroy['操作系统'] }}</td>
+                                    <td>{{ each_categroy['高等数学'] }}</td>
+                                    <td>{{ each_categroy['软件工程'] }}</td>
+                                    <td>{{ each_categroy['数据库原理'] }}</td>
+                                    <td>{{ each_categroy['计算机网络'] }}</td>
+                                    <td>{{ each_categroy['C语言程序设计'] }}</td>
+                                    <td>{{ each_categroy['计算机导论'] }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </main>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>
