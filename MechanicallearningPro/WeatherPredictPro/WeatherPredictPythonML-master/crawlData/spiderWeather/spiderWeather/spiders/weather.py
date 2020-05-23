@@ -28,6 +28,7 @@ SITE = {
     '临沂': 'linyi2'
 }
 
+
 class WeatherSpider(scrapy.Spider):
     name = 'weather'
     # allowed_domains = ['http://d1.weather.com']
@@ -39,24 +40,27 @@ class WeatherSpider(scrapy.Spider):
             for month in MONTH:
                 url = 'http://lishi.tianqi.com/{}/2020{}.html'.format(site, month)
                 yield Request(url=url, callback=self.parse)
-                break
+                # break
 
     def parse(self, response):
         weatherItme = SpiderweatherItem()
         weatherItme['site'] = self.site(response)
         weatherItme['month_mean_max_temp'] = self.month_mean_max_temp(response)
         weatherItme['month_mean_min_temp'] = self.month_mean_min_temp(response)
-        print(weatherItme)
         dayNum = self.dayNum(response)
-        for i in range(1,len(dayNum)+1):
-            self.saveItem(weatherItme, response, index=i)
-            break
-    def saveItem(self, weather_item, response, index):
-        date, week = self.date(response, index)
-        weather_item['date'] = date
-        weather_item['week'] = week
-
-        return weather_item
+        for i in range(1, len(dayNum) + 1):
+            date, week = self.date(response, i)
+            max_temp = self.max_temp(response, i)
+            min_temp = self.min_temp(response, i)
+            climate = self.climate(response, i)
+            air = self.air(response, i)
+            weatherItme['date'] = date
+            weatherItme['week'] = week
+            weatherItme['max_temp'] = max_temp
+            weatherItme['min_temp'] = min_temp
+            weatherItme['climate'] = climate
+            weatherItme['air_quality'] = air
+            return weatherItme
 
     def site(self, response):
         site = response.xpath(r'//div[@class="tian_one"]/div[1]/h3/text()').extract_first()
@@ -86,22 +90,34 @@ class WeatherSpider(scrapy.Spider):
         else:
             return '', ''
 
+    def max_temp(self, response, index):
+        res = response.xpath(f'//ul[@class="thrui"]/li[{index}]/div[2]/text()').extract_first()
+        if res:
+            res = res.replace('\r\n', '').strip()
+            return res
+        else:
+            return ''
 
-# now_date = datetime.datetime.now()
-# print(now_date)
-# #   当前时间推迟15天
-# delta_day = datetime.timedelta(days=15)
-# print(delta_day)
-#
-# n_days = now_date - delta_day
-# n_days = str(n_days)[:10]
-#
-# print(n_days)
-#
-print(time.time())
-#
-# day = time.strptime('2020-05-01', '%Y-%m-%d')
-# print(day)
-# print(time.mktime(day))
+    def min_temp(self, response, index):
+        res = response.xpath(f'//ul[@class="thrui"]/li[{index}]/div[3]/text()').extract_first()
+        if res:
+            res = res.replace('\r\n', '').strip()
+            return res
+        else:
+            return ''
 
-# print((time.mktime('2020-04-11')))
+    def climate(self, response, index):
+        res = response.xpath(f'//ul[@class="thrui"]/li[{index}]/div[4]/text()').extract_first()
+        if res:
+            res = res.replace('\r\n', '').strip()
+            return res
+        else:
+            return ''
+
+    def air(self, response, index):
+        res = response.xpath(f'//ul[@class="thrui"]/li[{index}]/div[6]/span/text()').extract_first()
+        if res:
+            res = res.replace('\r\n', '').strip()
+            return res
+        else:
+            return ''
