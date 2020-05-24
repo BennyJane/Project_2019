@@ -24,7 +24,7 @@ SITE = {
     '德州': 'dezhou',
     '聊城': 'liaocheng',
     '菏泽': 'heze',
-    '莱芜': 'shandong-laiwu',
+    '莱芜': 'laiwu',
     '临沂': 'linyi2'
 }
 
@@ -38,8 +38,12 @@ class WeatherSpider(scrapy.Spider):
     def start_requests(self):
         for site in SITE.values():
             for month in MONTH:
-                url = 'http://lishi.tianqi.com/{}/2020{}.html'.format(site, month)
-                yield Request(url=url, callback=self.parse)
+                if month == '05':
+                    # 五月份的数据需要单独抓
+                    pass
+                else:
+                    url = 'http://lishi.tianqi.com/{}/2020{}.html'.format(site, month)
+                    yield Request(url=url, callback=self.parse)
                 # break
 
     def parse(self, response):
@@ -48,24 +52,34 @@ class WeatherSpider(scrapy.Spider):
         weatherItme['month_mean_max_temp'] = self.month_mean_max_temp(response)
         weatherItme['month_mean_min_temp'] = self.month_mean_min_temp(response)
         dayNum = self.dayNum(response)
+        print('==========================================', len(dayNum))
+        all_month_day = []
         for i in range(1, len(dayNum) + 1):
             date, week = self.date(response, i)
             max_temp = self.max_temp(response, i)
             min_temp = self.min_temp(response, i)
             climate = self.climate(response, i)
             air = self.air(response, i)
-            weatherItme['date'] = date
-            weatherItme['week'] = week
-            weatherItme['max_temp'] = max_temp
-            weatherItme['min_temp'] = min_temp
-            weatherItme['climate'] = climate
-            weatherItme['air_quality'] = air
-            return weatherItme
+            weatherItme['date'] =date[:6]
+            temp ={
+                'date': date,
+                'week': week,
+                'max_temp': max_temp,
+                'min_temp': min_temp,
+                'climate': climate,
+                'air':air,
+            }
+            all_month_day.append(temp)
+        all_month_day_text = json.dumps(all_month_day, ensure_ascii=False)
+        weatherItme['month_data'] = all_month_day_text
+        return weatherItme
 
     def site(self, response):
         site = response.xpath(r'//div[@class="tian_one"]/div[1]/h3/text()').extract_first()
-        site = site.replace('历史天气', '').strip()
-        return site
+        if site:
+            site = site.replace('历史天气', '').strip()
+            return site
+        return ''
 
     def month_mean_max_temp(self, response):
         res = response.xpath(r'//div[@class="tian_twoa"][1]/text()').extract_first()

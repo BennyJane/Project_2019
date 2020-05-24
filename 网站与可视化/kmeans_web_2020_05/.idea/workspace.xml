@@ -2,8 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61b9e3cf-85c4-4e82-918f-44137cd2fa46" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../MechanicallearningPro/WeatherPredictPro/weatherWeb/data/dealData.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MechanicallearningPro/WeatherPredictPro/weatherWeb/data/final.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MechanicallearningPro/WeatherPredictPro/weatherWeb/data/temp.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../MechanicallearningPro/WeatherPredictPro/weatherWeb/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/css/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/static/js/dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/css/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/js/dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/static/js/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/templates/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/templates/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/templates/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MechanicallearningPro/WeatherPredictPro/WeatherPredictPythonML-master/crawlData/spiderWeather/spiderWeather/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../MechanicallearningPro/WeatherPredictPro/WeatherPredictPythonML-master/crawlData/spiderWeather/spiderWeather/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MechanicallearningPro/WeatherPredictPro/WeatherPredictPythonML-master/crawlData/spiderWeather/spiderWeather/spiders/weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../MechanicallearningPro/WeatherPredictPro/WeatherPredictPythonML-master/crawlData/spiderWeather/spiderWeather/spiders/weather.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webTemplates/weatherWeb/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../MechanicallearningPro/WeatherPredictPro/weatherWeb/static/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webTemplates/weatherWeb/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../MechanicallearningPro/WeatherPredictPro/weatherWeb/static/js/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../webTemplates/weatherWeb/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../webTemplates/weatherWeb/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/see.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/see.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/.finalDat.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/dealData.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/dealData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/k_means_core.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/k_means_core.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/newDf.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/final.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/final.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/category/category0.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/category/category0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/category/category1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/category/category1.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,29 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-912">
-              <caret line="7" column="40" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/dealData.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="944">
-              <caret line="159" column="9" selection-start-line="159" selection-end-line="159" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/k_means_core.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="22" column="71" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="71" />
+            <state relative-caret-position="368">
+              <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="63" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -44,15 +82,47 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/exams.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state>
-              <caret column="133" selection-start-column="120" selection-end-column="133" />
+        <entry file="file://E:/PythonEnv/kmeans_web_2020_05/Lib/site-packages/flask/wrappers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2304">
+              <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/dealData.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/k_means_core.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1248">
+              <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="872">
+              <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/images/blank.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -71,6 +141,7 @@
       <find>n_init</find>
       <find>png</find>
       <find>iteration</find>
+      <find>del_file</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -84,10 +155,11 @@
         <option value="$PROJECT_DIR$/data/exams.csv" />
         <option value="$PROJECT_DIR$/static/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/static/css/dashboard.css" />
-        <option value="$PROJECT_DIR$/core/dealData.py" />
         <option value="$PROJECT_DIR$/core/k_mean.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/core/k_means_core.py" />
+        <option value="$PROJECT_DIR$/data/final.csv" />
+        <option value="$PROJECT_DIR$/core/dealData.py" />
         <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
@@ -112,11 +184,6 @@
               <item name="kmeans_web_2020_05" type="b2602c69:ProjectViewProjectNode" />
               <item name="kmeans_web_2020_05" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="kmeans_web_2020_05" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kmeans_web_2020_05" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -128,25 +195,25 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kmeans_web_2020_05_22" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MechanicallearningPro/WeatherPredictPro/WeatherPredictPythonML-master/crawlData/spiderWeather" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static\js" />
-      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static\css" />
-      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static" />
-      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\core" />
-      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\data" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static\images" />
       <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\images" />
       <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\templates" />
       <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static" />
       <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static\js" />
+      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static\css" />
+      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\static" />
+      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\core" />
+      <recent name="E:\Python_Project_Benny\网站与可视化\kmeans_web_2020_05\data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -261,8 +328,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Flask server.Flask (app.py)" />
-        <item itemvalue="Python.k_means_core" />
         <item itemvalue="Python.dealData" />
+        <item itemvalue="Python.k_means_core" />
         <item itemvalue="Python.base" />
       </list>
     </recent_temporary>
@@ -281,21 +348,27 @@
       <workItem from="1589801300493" duration="19641000" />
       <workItem from="1589889356346" duration="22528000" />
       <workItem from="1590072918002" duration="3136000" />
+      <workItem from="1590279957598" duration="3765000" />
+      <workItem from="1590283956425" duration="21000" />
+      <workItem from="1590288126157" duration="838000" />
+      <workItem from="1590296153760" duration="17000" />
+      <workItem from="1590297535128" duration="1465000" />
+      <workItem from="1590336337866" duration="632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49183000" />
+    <option name="totallyTimeSpent" value="55921000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1862" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1860" height="1096" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15762997" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14605483" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.25027564" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49916154" weight="0.19625138" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49860102" weight="0.19840364" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -303,8 +376,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50083846" side_tool="true" weight="0.25607064" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49916154" weight="0.24696803" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.501399" side_tool="true" weight="0.18963616" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49916154" weight="0.46196252" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Log Analyzer" order="13" />
       <window_info anchor="bottom" id="SOQL Query" order="14" />
@@ -354,51 +427,17 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/kmeans_web_2020_05$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1589983495501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/kmeans_web_2020_05$dealData.coverage" NAME="dealData Coverage Results" MODIFIED="1589814048217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/kmeans_web_2020_05$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1590288343098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/kmeans_web_2020_05$dealData.coverage" NAME="dealData Coverage Results" MODIFIED="1590281219092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/kmeans_web_2020_05$base.coverage" NAME="base Coverage Results" MODIFIED="1589806132693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/kmeans_web_2020_05$k_means_core.coverage" NAME="k_means_core Coverage Results" MODIFIED="1589846677539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/readme" />
     <entry file="file://$PROJECT_DIR$/exams.csv" />
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images1.png" />
     <entry file="file://$PROJECT_DIR$/static/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/.finalDat.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="30" selection-start-column="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/newDf.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="30" selection-start-column="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/PythonEnv/kmeans_web_2020_05/Lib/site-packages/sklearn/cluster/_kmeans.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22824">
-          <caret line="976" column="37" selection-start-line="976" selection-start-column="31" selection-end-line="976" selection-end-column="37" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://E:/PythonEnv/kmeans_web_2020_05/Lib/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -425,16 +464,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/images0.png" />
-    <entry file="file://$PROJECT_DIR$/data/final.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="82" selection-start-column="75" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/collections/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
@@ -454,26 +483,6 @@
     <entry file="file://$PROJECT_DIR$/static/images/category2.png" />
     <entry file="file://$PROJECT_DIR$/static/images/category1.png" />
     <entry file="file://$PROJECT_DIR$/static/images/category0.png" />
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="7" selection-start-line="17" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/see.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1656">
-          <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/blank.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192816">
@@ -481,37 +490,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/exams.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="133" selection-start-column="120" selection-end-column="133" />
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/k_means_core.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="22" column="71" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="71" />
+        <state relative-caret-position="408">
+          <caret line="17" column="7" selection-start-line="17" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/exams.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="60" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="60" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://E:/PythonEnv/kmeans_web_2020_05/Lib/site-packages/sklearn/cluster/_kmeans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="906" column="35" selection-start-line="906" selection-start-column="25" selection-end-line="906" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/newDf.csv" />
+    <entry file="file://$PROJECT_DIR$/core/.finalDat.csv" />
+    <entry file="file://$PROJECT_DIR$/data/final.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret column="91" selection-start-column="83" selection-end-column="91" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/see.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/category/category1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/category/category0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.finalDat.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="63" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/dealData.py">
+    <entry file="file://E:/PythonEnv/kmeans_web_2020_05/Lib/site-packages/flask/wrappers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="944">
-          <caret line="159" column="9" selection-start-line="159" selection-end-line="159" selection-end-column="9" />
+        <state relative-caret-position="2304">
+          <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/core/dealData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-912">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="40" />
+        <state relative-caret-position="96">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/k_means_core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/blank.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="872">
+          <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
         </state>
       </provider>
     </entry>

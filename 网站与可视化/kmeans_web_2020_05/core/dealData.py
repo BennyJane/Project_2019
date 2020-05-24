@@ -22,6 +22,7 @@ df = pd.read_csv(inputfile)  # 读取数据
 # print(test_preparation)
 
 
+
 def gender(x):
     if x == 'female':
         return 1
@@ -117,7 +118,7 @@ def test_preparation_back(x):
 
 
 def deal():
-    # 将文本类数据转化为数值类
+    # todo  将文本类数据转化为数值类
     newDf = df.loc[:, :]
     # print('newDf:  ', newDf.info())
     newDf['gender'] = df.apply(lambda x: gender(x['gender']), axis=1)
@@ -127,23 +128,9 @@ def deal():
     newDf['test preparation course'] = df.apply(lambda x: test_preparation(x['test preparation course']), axis=1)
     # print(newDf.info())
 
+    #  重命名
     newDf.columns = ['gender', 'race', 'parental_education', 'lunch', 'test_preparation_course', 'math', 'reading',
                      'writing']
-    # print(newDf.info())
-    # newDf.to_csv('./newDf.csv', index=None)
-    # print(newDf[['parental_education']])
-    # 需要对数据归一化，减少因为数值范围差异导致的误差
-    # newDf = (newDf - newDf.mean(axis=0)) / (newDf.std(axis=0))  # 简洁的语句实现了标准化变换，类似地可以实现任何想要的变换。
-
-    # newDf['gender'] = newDf['gender'].round(4)
-    # newDf['race'] = newDf['race'].round(4)
-    # newDf['parental_education'] = newDf['parental_education'].round(4)
-    # newDf['lunch'] = newDf['lunch'].round(4)
-    # newDf['test_preparation_course'] = newDf['test_preparation_course'].round(4)
-    # newDf['math'] = newDf['math'].round(4)
-    # newDf['reading'] = newDf['reading'].round(4)
-    # newDf['writing'] = newDf['writing'].round(4)
-
     newDf.to_csv('.finalDat.csv', index=None)
     return newDf
 

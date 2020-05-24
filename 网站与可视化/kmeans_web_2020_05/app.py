@@ -2,7 +2,7 @@ import os
 import shutil
 from datetime import timedelta
 
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 
 from core.k_means_core import kmeansCore, SEEMethod, drawCategoryPic
 from core.dealData import deal, backText, orderDict
@@ -18,6 +18,7 @@ iteration = 300  # 聚类最大循环数
 isCalculationSee = True
 
 
+# 首页
 @app.route('/', methods=['GET'])
 def index():
     global isCalculationSee
@@ -27,8 +28,6 @@ def index():
             seePicPath = '../static/images/see.png'
             if isCalculationSee:
                 SEEMethod(originDf, start=1, limit=8)
-                isCalculationSee = False
-
                 isCalculationSee = False
                 return render_template('index.html', all_category=[], all_category_dict={},
                                        seePicPath=seePicPath)
@@ -53,6 +52,8 @@ def category():
                 return render_template('index.html', all_category=[], all_category_dict={},
                                        seePicPath=seePicPath)
             resDf = kmeansCore(k_value, iteration, originDf)
+
+            # 获取数据, 处理成前端需要的格式的数据
             resDf = backText(resDf)
             all_category = resDf['category'].unique().tolist()
 
@@ -66,7 +67,7 @@ def category():
             # print(all_category, all_category_dict)
             all_category.sort()
 
-            # 绘制图片
+            # 绘制分类图片
             del_file(r"./static/images/category")
             categoryPicPath = drawCategoryPic(originDf, k_value, resDf)
             # print(categoryPicPath)
@@ -75,6 +76,13 @@ def category():
                                    seePicPath=seePicPath)
     return redirect(url_for('index'))
 
+
+@app.route('/data', methods=['Post', 'Get'])
+def data():
+    res = {
+        'js':'name'
+    }
+    return jsonify(res)
 
 def del_file(filepath):
     """

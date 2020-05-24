@@ -1,5 +1,4 @@
 import os
-
 import pandas as pd
 from sklearn.cluster import KMeans  # 导入K均值聚类算法
 import matplotlib.pyplot as plt
@@ -12,6 +11,7 @@ def SEEMethod(df, start=1, limit=9):
         estimator = KMeans(n_clusters=k, max_iter=500, n_jobs='deprecated')  # 构造聚类器
         estimator.fit(df)
         SSE.append(estimator.inertia_)
+    
     X = range(start, limit)
     fig = plt.figure(figsize=(6, 3))
     fig.tight_layout()
