@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Template</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<style type=text/css>
+    .round {
+        width: 300px;
+        height: 300px;
+        border: 2px solid deepskyblue;
+        border-radius: 15px;
+    }
+</style>
+
+<body background="{{ url_for('static', filename='images/teacher_backgroud.png') }}"
+    style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+    <!-- grid system -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="navbar-form navbar-right">
+
+                    <inline style="padding:20px 20px;"><button><a href="{{ url_for('index') }}">Logout</a></button>
+                    </inline>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <form action="bulletin.html" method="post" id="bulletin"></form>
+        <div class="row" style="padding:200px 200px;">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <textarea
+                    style="background-color: floralwhite; height: 400px; width: 600px; border: 2px solid deepskyblue; border-radius: 15px;"
+                    form="bulletin" class="text-center center-block">aaa</textarea>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"><button class="btn btn-default center-block" data-toggle="modal"
+                    data-target="#myModal">Submit</button></div>
+            <form action="{{ url_for('adm_allmanage') }}" method="get">
+                <div class="col-md-6"><button class="btn btn-default center-block">Back</button></div>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">Are you sure to keep it?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="document.getElementById('bulletin').submit();">Yes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+
+</html>

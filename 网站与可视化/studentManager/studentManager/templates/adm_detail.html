@@ -1,0 +1,166 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap  Template</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<style type="text/css">
+
+
+	</style>
+</head>
+
+<body background="{{ url_for('static', filename='images/teacher_backgroud.png') }}"
+    style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+                <div class="navbar-form navbar-right">
+
+                    <inline style="padding:20px 20px;"><button><a href="{{ url_for('index') }}">Logout</a></button>
+                    </inline>
+                </div>
+		</div>
+		<div class="col-md-1"></div>
+
+		<div class="dv">
+            <span style="position: absolute; top: 10%; left: 5%;"><h2>Schedule Query</h2></span>
+
+            <span >
+					<select name="op" class="form-control" style="position: absolute; top: 24%; left:11%;width:180px;length:180px">
+						<option value="0">---CHOOSE---</option>
+						<option value="1">Teacher</option>
+						<option value="3">Student</option>
+					</select>
+            </span>
+
+            <span style="position: absolute; top: 30%; left:5%;"><h4>ID ：</h4></span>
+            <span style="position: absolute; top: 30%; left: 10%;">
+                <div class="col-sm-12">
+                    <input type="ID" class="form-control" id="inputID3" >
+                </div>
+            </span>
+
+            <span style="position: absolute; top: 35%; left:5%;"><h4>Major ：</h4></span>
+            <span style="position: absolute; top: 35%; left: 10%;">
+                <div class="col-sm-12">
+                    <input type="Major" class="form-control" id="inputMajor3" >
+                </div>
+            </span>
+        </div>
+	<table class="table table-bordered"style="width:50%;float:left;position:absolute;top:10%;left:40%">
+		<thead>
+			<tr class="info">
+				<th>Time</th>
+				<th>Mon</th>
+				<th>Tue</th>
+				<th>Wed</th>
+				<th>Thu</th>
+				<th>Fri</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="active">
+				<th scope="row">8:00-8:50</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="active">
+				<th scope="row">9:00-9:50</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="active">
+				<th scope="row">10:00-10:50</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="active">
+				<th scope="row">11:00-11:50</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>		
+			<tr class="active">
+				<th scope="row">12:00-12:50</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>		
+			<tr class="active">
+				<th scope="row">13:00-13:50</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>		
+			<tr class="active">
+				<th scope="row">14:00-14:50</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>		
+			<tr class="active">
+				<th scope="row">15:00-15:50</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>		
+			<tr class="active">
+				<th scope="row">16:00-16:50</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>		
+			<tr class="active">
+				<th scope="row">17:00-17:50</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+        </div>
+    <div class="row"style="position:absolute;top:90%;left:30%">
+        <div class="col-md-6">
+            <form action="{{ url_for('adm_detail') }}" method="get">
+			    <button class="btn btn-default center-block" data-toggle="modal" data-target="#myModal">Submit</button>
+			</form>
+		</div>
+    </div>
+    <div class="row"style="position:absolute;top:90%;left:50%">
+        <div class="col-md-6">
+			<form action="{{ url_for('adm_allmanage') }}" method="get"><button class="btn btn-default center-block">Back</button></form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>

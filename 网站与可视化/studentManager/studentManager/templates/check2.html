@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Template</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<style type=text/css>
+    .round {
+        width: 300px;
+        height: 300px;
+        border: 2px solid deepskyblue;
+        border-radius: 15px;
+    }
+</style>
+
+<body background="{{ url_for('static', filename='images/teacher_backgroud.png ') }}"
+    style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+    <!-- grid system -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="navbar-form navbar-right">
+
+                    <inline style="padding:20px 20px;"><button><a href="./login.html">Logout</a></button>
+                    </inline>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row" style="padding:200px 200px;">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <div class="row" style="background-color:deepskyblue;">
+                    <h4>Student Name:</h4>
+                    <h4>Student Number:</h4>
+                </div>
+                <div class="row pre-scrollable" style="background-color:floralwhite;">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>Date</td>
+                                {% for i in date %}
+                                <td>{{ i }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                <td>Attendance</td>
+                                {% for j in attendance %}
+                                <td>{{ j }}</td>
+                                {% endfor %}
+                            </tr>
+                            <tr>
+                                <td>Reason</td>
+                                {%  for k in  %}
+                                <td>{{ k }}</td>
+                                {% endfor %}
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+        <div class="row">
+            <form action="{{ url_for('check') }}"method="post">
+                <button class="btn btn-default center-block">Back</button>
+            </form>
+        </div>
+        </form>
+    </div>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+
+</html>

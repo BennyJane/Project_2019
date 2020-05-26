@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Class Manage</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<style type="text/css">
+    .dv{width:100%;text-align:center;}
+    .dv_img{max-width:100%;height:auto;}
+	</style>
+</head>
+
+<body background="{{ url_for('static', filename='images/teacher_backgroud.png') }}"
+    style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="navbar-form navbar-right">
+                    <inline style="padding:20px 20px;">{{data.username}}</inline>
+                    <inline style="padding:20px 20px;"><button><a href="{{ url_for('index') }}">Logout</a></button>
+                    </inline>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+	<div class="dv">
+		<span style="position: absolute; top: 10%; left: 44%;"><h2>Class Manage</h2></span>
+		<span style="position: absolute; top: 30%; left: 44%;">
+			<div class="col-sm-12">
+				<input type="button" onclick='location.href=("{{ url_for('adm_createclass') }}")'value="Create new class" style="height:40px;width:170px;" />
+			</div>
+		</span>
+		<span style="position: absolute; top: 37%; left: 44%;">
+			<div class="col-sm-12">
+                <input type="button" onclick='location.href=("{{ url_for('adm_addTS') }}")'value="Add teacher/student" style="height:40px;width:170px;" />
+			</div>
+		</span>
+		<span style="position: absolute; top: 44%; left: 44%;">
+			<div class="col-sm-12">
+				<input type="button" onclick='location.href=("{{ url_for('adm_Assign') }}")'value="Assign" style="height:40px;width:170px;" />
+			</div>
+		</span>
+		<span style="position: absolute; top: 51%; left: 44%;">
+			<div class="col-sm-12">
+				<input type="button" onclick='location.href=("{{ url_for('adm_timetable') }}")'value="Add time" style="height:40px;width:170px;" />
+			</div>
+		</span>
+		<span style="position: absolute; top: 58%; left: 44%;">
+			<div class="col-sm-12">
+				<input type="button" onclick='location.href=("{{ url_for('adm_delete') }}")'value="Delete" style="height:40px;width:170px;" />
+			</div>
+			<span style="position: absolute; top: 140%; left: 0%;">
+			<div class="col-sm-12">
+				<input type="button" onclick='location.href=("{{ url_for('adm_cancellation') }}")'value="Cancellation" style="height:40px;width:170px;" />
+			</div>
+		</span>	
+		<form action="{{ url_for('Administrator_Main') }}" method="get">
+		<div class="row"style="position:absolute;top:400%;left:42%">
+			    <button class="btn btn-default center-block">Back</button>
+		</div>
+		</form>
+        </span>
+	</div>
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>

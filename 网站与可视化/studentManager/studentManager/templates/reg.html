@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Register</title>
+
+    <!-- Bootstrap -->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <script>
+        {% if re %}
+            alert("{{re}}！");
+        {% endif %}
+        {% if succ %}
+            alert("{{succ}}！");
+             location.href = "{{ url_for ('index') }}";
+        {% endif %}
+
+    </script>
+
+    <style type="text/css">
+        .dv {
+            width: 100%;
+            text-align: center;
+        }
+
+        .dv_img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+</head>
+
+<body background="{{ url_for('static', filename='images/student.png') }}"
+      style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+
+<div class="dv">
+    <img class="dv_img" src="{{ url_for('static', filename='images/menu.png') }}"/>
+    <span style="position: absolute; top: 30%; left: 48%;">
+
+			<h2>Register</h2>
+		</span>
+
+    <form action="{{ url_for ('register') }}" method="post">
+			<span style="position: absolute; top: 38%; left: 44%;">
+				<div class="col-sm-12">
+					<select name="op" class="form-control">
+						<option value="0">---CHOOSE---</option>
+						<option value="1">Teacher</option>
+						<option value="2">Administrator</option>
+						<option value="3">Student&Parents </option>
+					</select>
+				</div>
+			</span>
+
+        <span style="position: absolute; top: 44%; left: 44%;">
+				<div class="col-sm-12">
+					<input type="username" name="username" class="form-control" id="username" placeholder="Username"
+                           required>
+				</div>
+			</span>
+        <span style="position: absolute; top: 50%; left: 44%;">
+				<div class="col-sm-12">
+					<input type="password" name="password" class="form-control" id="password" placeholder="Password"
+                           required>
+				</div>
+			</span>
+        <span style="position: absolute; top: 56%; left: 44%;">
+				<div class="col-sm-12">
+					<input type="submit" class="btn btn-primary btn-lg btn-block" style="width:170px" value="Register">
+				</div>
+			</span>
+    </form>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+
+
+<script>
+ function make() {
+        location.href = "{{ url_for ('register') }}";
+    }
+</script>
+
+</html>

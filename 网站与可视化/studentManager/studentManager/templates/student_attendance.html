@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap  Template</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<style type="text/css">
+
+
+	</style>
+</head>
+
+<body background="{{ url_for('static', filename='images/student.png ') }}"
+    style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="navbar-form navbar-right">
+
+                    <inline style="padding:20px 20px;"><button><a href="{{ url_for('index') }}">Logout</a></button>
+				</inline>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+	<table class="table table-bordered"style="width:80%;float:left;position:absolute;top:40%;left:10%">
+		<thead>
+			<tr class="info">
+				<th>Date</th>
+                {% for i in date %}
+				<th>i[0]</th>
+                <th>i[1]</th>
+                <th>i[2]</th>
+                <th>i[3]</th>
+                {% endfor %}
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="active">
+				<th scope="row">Attendance</th>
+                {% for j in attendance %}
+				<td>j[0]</td>
+				<td>j[1]</td>
+				<td>j[2]</td>
+				<td>j[3]</td>
+                {% endfor %}
+			</tr>
+			<tr class="active">
+				<th scope="row">Reason</th>
+                {% for m in reason %}
+				<td>m[0]</td>
+				<td>m[1]</td>
+				<td>m[2]</td>
+				<td>m[3]</td>
+                {% endfor %}
+			</tr>
+			<tr class="active">
+				<th scope="row">Teacher</th>
+                {% for n in teacher %}
+				<td>n[0]</td>
+				<td>n[1]</td>
+				<td>n[2]</td>
+				<td>n[3]</td>
+                {% endfor %}
+			</tr>
+		</tbody>
+	</table>
+	<form action="{{ url_for('student_main') }}" method="get">
+	<div class="row"style="position:absolute;top:90%;left:50%">
+        <button class="btn btn-default center-block">Back</button>
+    </div>
+	</form>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>

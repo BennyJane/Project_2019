@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Student Bulletin</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<style type="text/css">
+
+
+	</style>
+</head>
+
+<body background="{{ url_for('static', filename='images/bulletin.png ') }}"
+    style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="navbar-form navbar-right">
+
+                    <inline style="padding:20px 20px;"><button><a href="{{ url_for('index') }}">Logout</a></button>
+				</inline>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+
+	<tr>
+	<h2 style="position:absolute;top:15%;left:42%">Bullertin Board</h2>
+	<p style="position:absolute;top:25%;left:35%">{{ s_bulletintext }}</p>
+	</tr>
+	<form action="{{ url_for('student_main') }}" method="get">
+	<div class="row"style="position:absolute;top:90%;left:50%">
+        <button class="btn btn-default center-block">Back</button>
+    </div>
+	</form>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap  Template</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+<script>
+</script>
+	<style type="text/css">
+    .round {
+    width:300px; height:300px;
+    border: 2px solid deepskyblue;
+    border-radius:15px;
+}
+
+	</style>
+</head>
+
+<body background="{{ url_for('static', filename='images/student.png ') }}"
+    style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="navbar-form navbar-right">
+
+                    <inline style="padding:20px 20px;"><button><a href="./login.html">Logout</a></button>
+                    </inline>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row" style="padding:200px 400px;">
+            <div class="col-md-6">
+                <form action="{{ url_for('student_attendance') }}" method="get"><button><img src="{{ url_for('static', filename='images/出勤记录.png ') }}" class="round center-block"></button></form>
+                <h3 class="text-center">Attendence Record</h3>
+            </div>
+            <div class="col-md-6">
+                <form action="{{ url_for('student_bulletin') }}" method="get"><button><img src="{{ url_for('static', filename='images/bulletin.png ') }}" class="round center-block"></button></form>
+                <h3 class="text-center">Bulletin Board</h3>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>

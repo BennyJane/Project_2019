@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Template</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<style type=text/css>
+    .round {
+    width:300px; height:300px;
+    border: 2px solid deepskyblue;
+    border-radius:15px;
+}
+</style>
+<body background="{{ url_for('static', filename='images/teacher_backgroud.png') }}"
+    style="background-repeat:no-repeat;background-size:100% 100%;background-attachment:fixed;">
+    <!-- grid system -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="navbar-form navbar-right">
+
+                    <inline style="padding:20px 20px;"><button><a href="{{ url_for('index') }}">Logout</a></button>
+                    </inline>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row" style="padding:200px 400px;">
+            <div class="col-md-6">
+                <form action="{{ url_for('adm_detail') }}" method="get"><button><img src="{{ url_for('static', filename='images/attendance.png ') }}" class="round center-block"></button></form>
+                <h3 class="text-center">Search for Detail</h3>
+            </div>
+            <div class="col-md-6">
+				<form action="{{ url_for('adm_bulletin') }}" method="get"><button><img src="{{ url_for('static', filename='images/bulletin.png ') }}" class="round center-block"></button></form>
+				<h3 class="text-center">Bulletin Board</h3>
+			</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+
+</html>
