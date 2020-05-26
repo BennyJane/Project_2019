@@ -5,10 +5,10 @@ import datetime
 import time
 import json
 # from spiderWeather.spiders.constant import SITE, MONTH
-from ..items import SpiderweatherItem
+from ..items import SpiderCurrentItem
 
-CURRENT_MONTH = '05'
-MONTH_DAYS_NUM = 31
+MONTH = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
+YEAR = ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020']
 SITE = {
     '济南': 'jinan',
     '青岛': 'qingdao',
@@ -25,67 +25,57 @@ SITE = {
     '德州': 'dezhou',
     '聊城': 'liaocheng',
     '菏泽': 'heze',
-    '莱芜': 'laiwu',
+    '莱芜': 'shandong-laiwu',
     '临沂': 'linyi2'
 }
 
 
-class CurrentSpider(scrapy.Spider):
+class WeatherSpider(scrapy.Spider):
     name = 'current'
     # allowed_domains = ['http://d1.weather.com']
     start_urls = ['http://d1.weather.com.cn/calendar_new/2019/101120101_201910.html']
-    base_url = 'http://lishi.tianqi.com/{}/202005{}.html'
+    base_url = 'http://lishi.tianqi.com/{}/{}{}.html'
 
     def start_requests(self):
         for site in SITE.values():
-            for day in range(MONTH_DAYS_NUM):
-                url = 'http://lishi.tianqi.com/{}/2020{}0{}.html'.format(site, CURRENT_MONTH, day)
-                yield Request(url=url, callback=self.parse)
-            break
+            for year in YEAR:
+                for month in MONTH:
+                    for day in range(1, 32):
+                        if day < 10:
+                            day = '0' + str(day)
+                        else:
+                            day = str(day)
+                        url = 'http://lishi.tianqi.com/{}/{}{}{}.html'.format(site, year, month, day)
+                        yield Request(url=url, callback=self.parse)
+                        # break
 
     def parse(self, response):
-        weatherItme = SpiderweatherItem()
+        weatherItme = SpiderCurrentItem()
         weatherItme['site'] = self.site(response)
-        weatherItme['month_mean_max_temp'] = '无'
-        weatherItme['month_mean_min_temp'] = '无'
         date = self.date(response)
         max_temp = self.max_temp(response)
         min_temp = self.min_temp(response)
         climate = self.climate(response)
-        air = self.air(response)
-        weatherItme['date'] = date[:6]
-        temp = {
-            'date': date,
-            'week': '无',
-            'max_temp': max_temp,
-            'min_temp': min_temp,
-            'climate': climate,
-            'air': air,
-        }
-        all_month_day_text = json.dumps(temp, ensure_ascii=False)
-        weatherItme['month_data'] = all_month_day_text
+        wind = self.wind(response)
+        weatherItme['date'] = date
+        weatherItme['max_temp'] = max_temp
+        weatherItme['min_temp'] = min_temp
+        weatherItme['climate'] = climate
+        weatherItme['wind'] = wind
         return weatherItme
 
     def site(self, response):
         site = response.xpath(r'//div[@class="linegraphtitle"]/text()').extract_first()
-        if site:
-            site = site.strip()
-            site = site[:2]
-            return site
-        return ''
-
-    def dayNum(self, response):
-        # /html/body/div[8]/div[1]/div[6]/ul/li[1]
-        res = response.xpath(r'//ul[@class="thrui"]/li').extract()
-        return res
+        site = site.strip('\r\n').strip()
+        site = site[:2]
+        return site
 
     def date(self, response):
-        # /html/body/div[8]/div[3]/div[1]/div/div[1]/div/select
+        # /html/body/div[8]/div[3]/div[1]/div/div[1]/div/select/option[1]
         res = response.xpath(f'//div[@class="optionbox"]/select/option[@selected="selected"]/text()').extract_first()
         if res:
-            res = res.replace('\r\n', '').strip()
-            res = res.replace('年', '0').replace('日', '').replace('月', '0')
-            return res
+            date = res.replace('\r\n', '').strip()
+            return date
         else:
             return ''
 
@@ -113,8 +103,8 @@ class CurrentSpider(scrapy.Spider):
         else:
             return ''
 
-    def air(self, response):
-        res = response.xpath(f'//ul[@class="hisdailywind"]/text()').extract_first()
+    def wind(self, response):
+        res = response.xpath(f'//div[@class="hisdailywind"]/text()').extract_first()
         if res:
             res = res.replace('\r\n', '').strip()
             return res
