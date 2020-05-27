@@ -8,20 +8,21 @@ import json
 from ..items import SpiderCurrentItem
 
 MONTH = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
-YEAR = ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020']
+# YEAR = ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020']
+YEAR = ['2019', '2020']
 SITE = {
-    '济南': 'jinan',
-    '青岛': 'qingdao',
-    '淄博': 'zibo',
-    '枣庄': 'zaozhuang',
-    '东营': 'dongying',
-    '烟台': 'yantai',
-    '潍坊': 'weifang',
-    '济宁': 'jining1',
-    '泰安': 'taian1',
-    '威海': 'weihai',
-    '日照': 'rizhao',
-    '滨州': 'binzhou',
+    # '济南': 'jinan',
+    # '青岛': 'qingdao',
+    # '淄博': 'zibo',
+    # '枣庄': 'zaozhuang',
+    # '东营': 'dongying',
+    # '烟台': 'yantai',
+    # '潍坊': 'weifang',
+    # '济宁': 'jining1',
+    # '泰安': 'taian1',
+    # '威海': 'weihai',
+    # '日照': 'rizhao',
+    # '滨州': 'binzhou',
     '德州': 'dezhou',
     '聊城': 'liaocheng',
     '菏泽': 'heze',
