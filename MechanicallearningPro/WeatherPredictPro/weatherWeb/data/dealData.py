@@ -1,4 +1,4 @@
-monthList = ['202001', '202002', '202003', '202004', '202005']
+monthList = ['2020-01', '2020-02', '2020-03', '2020-04', '2020-05']
 siteDict = {
     '济南': 'jinan',
     '青岛': 'qingdao',
@@ -36,3 +36,20 @@ def getPicData(data: list):
         }
         res.append(temp)
     return res
+
+
+import datetime
+import json
+
+
+class DateEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, datetime.datetime):
+            return obj.strftime("%Y-%m-%d")
+        else:
+            return json.JSONEncoder.default(self, obj)
+
+
+# dic = {'name': 'jack', 'create_time': datetime.datetime(2019, 3, 19, 10, 6, 6)}
+#
+# print(json.dumps(dic, cls=DateEncoder))
