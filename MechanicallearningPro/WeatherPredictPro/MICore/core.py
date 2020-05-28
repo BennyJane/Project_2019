@@ -1,7 +1,10 @@
+import warnings
+
 import pandas as pd
 import numpy as np
 import pickle
 import time
+warnings.filterwarnings('ignore')
 
 # 是否保存处理好的数据
 from cleanData import cleanFunc
@@ -75,18 +78,18 @@ def tarinModel(df, site):
         pickle.dump(rf, f)
 
 siteDict = {
-    '济南': 'jinan',
-    '青岛': 'qingdao',
-    '淄博': 'zibo',
-    '枣庄': 'zaozhuang',
-    '东营': 'dongying',
-    '烟台': 'yantai',
-    '潍坊': 'weifang',
-    '济宁': 'jining1',
-    '泰安': 'taian1',
-    '威海': 'weihai',
-    '日照': 'rizhao',
-    '滨州': 'binzhou',
+    # '济南': 'jinan',
+    # '青岛': 'qingdao',
+    # '淄博': 'zibo',
+    # '枣庄': 'zaozhuang',
+    # '东营': 'dongying',
+    # '烟台': 'yantai',
+    # '潍坊': 'weifang',
+    # '济宁': 'jining1',
+    # '泰安': 'taian1',
+    # '威海': 'weihai',
+    # '日照': 'rizhao',
+    # '滨州': 'binzhou',
 
     '德州': 'dezhou',
     '聊城': 'liaocheng',
@@ -95,11 +98,11 @@ siteDict = {
     '临沂': 'linyi2'
 }
 
-tarinModel(df, '德州')
+# tarinModel(df, '德州')
 
-# for key in siteDict.keys():
-#     try:
-#         tarinModel(df, key)
-#         time.sleep(60*2)
-#     except Exception as e:
-#         print(f'===================================== {e}')
+for key in siteDict.keys():
+    try:
+        tarinModel(df, key)
+        # time.sleep(60*2)
+    except Exception as e:
+        print(f'===================================== {e}')

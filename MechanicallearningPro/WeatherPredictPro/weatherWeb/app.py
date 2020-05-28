@@ -1,7 +1,7 @@
 import json
 import pandas as pd
 import warnings
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request, redirect, url_for
 import math
 
 from data.dealData import monthList, siteDict, getPicData, strToInt, DateEncoder, predictWeather, findLatestDay, \
@@ -11,9 +11,11 @@ warnings.filterwarnings('ignore')
 
 app = Flask(__name__)
 
+# 2020年数据展示
 originData = './data/final.csv'
 df = pd.read_csv(originData)
 
+# 天气预测数据集使用
 latest_month_path = './data/showData.csv'
 latest_df = pd.read_csv(latest_month_path)
 
@@ -121,6 +123,16 @@ def index():
                                next_climate=next_climate, latest_day_info=latest_day_info,
                                month_mean_max_temp=month_mean_max_temp,
                                month_mean_min_temp=month_mean_min_temp)
+
+
+@app.route('/predict', methods=['POST', 'GET'])
+def predict():
+    if request.method == 'POST':
+        target_date = request.form.get('target_date')
+        if not target_date:
+            return redirect(url_for('index'))
+        print(target_date)
+    return ''
 
 
 if __name__ == '__main__':

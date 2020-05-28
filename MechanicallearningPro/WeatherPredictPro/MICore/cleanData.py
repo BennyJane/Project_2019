@@ -3,7 +3,11 @@ import datetime
 import re
 
 path = './current.csv'
-df = pd.read_csv(path)
+first_df = pd.read_csv(path)
+
+second_path = './five.csv'
+second_df = pd.read_csv(second_path)
+df = pd.concat([first_df, second_df], axis=0)
 df.dropna(inplace=True)
 # print(df)
 '''
@@ -28,7 +32,7 @@ def delSign(x):
 def delTime(x):
     timeText = str(x)
     res = datetime.datetime.strptime(timeText, '%Y年%m月%d日')
-    # res = datetime.datetime.strftime(res, '%Y%m%d')
+    res = datetime.datetime.strftime(res, '%Y%m%d')
     return res
 
 
@@ -80,7 +84,7 @@ def cleanFunc(isSaved=False):
     return df
 
 
-# cleanFunc(isSaved=True)
+cleanFunc(isSaved=True)
 
 
 def showData(df):
@@ -105,4 +109,4 @@ def showData(df):
     return df
 
 
-showData(df)
+# showData(df)

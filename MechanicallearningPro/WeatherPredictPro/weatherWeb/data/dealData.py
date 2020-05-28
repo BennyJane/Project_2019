@@ -1,6 +1,8 @@
 import datetime
 import json
 
+import pandas as pd
+
 climate_type = ['暴雪', '大雪', '中雪', '小雪', '暴雨', '雷阵雨', '大雨', '中雨', '小雨', '阴', '多云', '晴']
 monthList = ['2020-01', '2020-02', '2020-03', '2020-04', '2020-05']
 siteDict = {
@@ -79,8 +81,8 @@ def findLatestDay(df, site):
     only_site_df.set_index('date', inplace=True)
     only_site_df.reset_index(inplace=True)
     # print(only_site_df.tail)
-    row_limit = only_site_df.shape[0] - 2
-    print(row_limit)
+    row_limit = only_site_df.shape[0] - 1
+    # print(row_limit)
     date = only_site_df.loc[row_limit, 'date']
     date_num = float(date.replace('-', ''))
     max_temp = only_site_df.loc[row_limit, 'max_temp']
@@ -90,3 +92,4 @@ def findLatestDay(df, site):
 
     climate = only_site_df.loc[row_limit, 'climate']
     return date,date_num,  max_temp, min_temp, climate
+

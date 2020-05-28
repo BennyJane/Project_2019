@@ -16,8 +16,17 @@
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <title>Weather, prediction!</title>
 </head>
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow"  action="/predict" method="post">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">山东省天气分析</a>
+{#    <input class="form-control form-control-dark w-100" type="text" placeholder="输入待预测的日期：20200102" name="target_date"#}
+{#           aria-label="Search">#}
+{#    <p style="display: none">{{ session['site']==currentSite }}</p>#}
+{#    <ul class="navbar-nav px-3">#}
+{#        <li class="nav-item text-nowrap">#}
+{#            <button style="color: #ffffff; background-color: #343a40; border: 0px" type="submit" data-toggle="modal"#}
+{#                            data-target="#myModal">预测</button>#}
+{#        </li>#}
+{#    </ul>#}
 </nav>
 <!-- 模态框 -->
 <div class="modal fade" id="myModal" style="top: 300px;">
@@ -33,7 +42,8 @@
             <!-- 模态框主体 -->
             <div class="modal-body">
                 <h6> {{ latest_day_info['date'] }}天气状况：</h6>
-                <strong class="text-muted">最高气温：{{ latest_day_info['max_temp'] }}; 最低气温：{{ latest_day_info['min_temp'] }}; {{ latest_day_info['climate'] }}</strong>
+                <strong class="text-muted">最高气温：{{ latest_day_info['max_temp'] }};
+                    最低气温：{{ latest_day_info['min_temp'] }}; {{ latest_day_info['climate'] }}</strong>
                 <h4 style="margin-top: 15px"> 下一天的天气状况：
                     <mark>{{ next_climate }}</mark>
                 </h4>
