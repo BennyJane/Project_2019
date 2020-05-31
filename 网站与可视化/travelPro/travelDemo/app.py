@@ -1,0 +1,114 @@
+import json
+from functools import wraps
+
+from flask import Flask, request, render_template, session, redirect, url_for, g, flash
+from flask_sqlalchemy import SQLAlchemy
+import os
+
+from datetime import timedelta
+from sqlCore import valid_login, valid_regist, addUser, getSite, getHotel, getManySite, getContent
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@127.0.0.1:3306/travel?charset=utf8'
+app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+
+# app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(seconds=1)
+app.secret_key = 'benny jane'
+db = SQLAlchemy(app)
+
+
+# 登录  ==> 闭包
+def login_required(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        # if g.user:
+        username = session.get('username')
+        print('username', username)
+        if session.get('username'):
+            return func(*args, **kwargs)
+        else:
+            return redirect(url_for('login', next=request.url))  #
+
+    return wrapper
+
+
+@app.route('/')
+def index():
+    # 首页
+    orderSite = getSite()
+    allHotel = getHotel()
+    allSite = getManySite()
+    # print(allSite)
+    return render_template('index.html', allSite=allSite, allHotel=allHotel, orderSite=orderSite, username=session.get('username'))
+
+
+@app.route('/content', methods=['GET'])
+@login_required
+def content():
+    username = session.get('username')
+    if request.method == 'GET':
+        siteId = request.args.get('id')
+        itemInfo = getContent(siteId)
+        if itemInfo:
+            itemInfo = itemInfo[0]
+            other_text = itemInfo.get('other')
+            if other_text:
+                other_text = json.loads(other_text)
+                comment_category_text = ' '.join(other_text.get('comment_category'))
+                itemInfo['comment_category'] = comment_category_text
+            else:
+                itemInfo['comment_category'] = ''
+            print(itemInfo)
+            targetList = []
+            return render_template('content.html', itemInfo=itemInfo, targetList=targetList, username=username)
+    return redirect(url_for('index'))
+
+@app.route('/top')
+@login_required
+def top():
+    # 首页
+    username = session.get('username')
+    print('top', username)
+    return render_template('top.html', username=username)
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        forntEnd = dict(request.form)
+        if valid_login(forntEnd['username'], forntEnd['password']):
+            #   保存登录状态
+            session['username'] = forntEnd.get('username')
+            return redirect(url_for('index'))
+        else:
+            error = '错误的用户名或密码！'
+        flash(error)
+    return render_template('login.html')
+
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        forntEnd = dict(request.form)
+        if forntEnd['password'] != forntEnd['password2']:
+            error = '两次密码不相同！'
+        elif valid_regist(forntEnd['username']):
+            username = forntEnd['username']
+            password = forntEnd['password']
+            addUser(username, password)
+            return redirect(url_for('login'))
+        else:
+            error = '该用户名已被注册！'
+        flash(error)
+    return render_template('register.html')
+
+
+@app.route('/logout', methods=['GET', 'POST'])
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('index'))
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

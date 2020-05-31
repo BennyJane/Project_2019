@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+
+{% block nav_head %}
+    <div class="nav-bar-menu pull-left">
+        <ul class="clearfix">
+            <li><a class="item" href="{{ url_for('index') }}">首页</a></li>
+            <li class="nav-bar-active"><a class="item" href="{{ url_for('top') }}">数据分析</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container mt20">
+        <!-- 侧边栏 -->
+        <div class="top-sidebar">
+            <h2 class="m-title" style="margin: 10px 0; text-align: center"><a href="/top/">数据分析榜</a></h2>
+            <ul class="m-list">
+                <li><a class="active" href="/top/">排行榜</a></li>
+                <li><a href="/top/tv/">客流量分布图</a></li>
+                <li><a href="/top/show/">景点类型排行</a></li>
+                <li><a href="/top/movie/">热度与价格相关图</a></li>
+            </ul>
+            </ul>
+        </div>
+        <!-- 主体区 -->
+        <div class="top-primary">
+            <div class="top-primary-wrapper">
+                <!-- 热门景点 -->
+                <div class="top-catbox">
+                    <h3 class="m-title"><a target="_blank" href="/top/">景点排行榜</a></h3>
+                    <ul class="m-list">
+                        <li class="m-list-item m-list-item-first">
+                            <i class="rank">
+                                <a class="screenshot" href="/hanju/51682.html" target="_blank">
+                                    <img class="quic lazy" src="static/picture/blank.png"
+                                         data-original="https://images.hanjutv.com/2017/0920/20170920072230127.jpg">
+                                </a>
+                                <i class="num">1</i>
+                            </i>
+                            <i class="status status-keep"></i>
+                            <a class="details" href="/hanju/51682.html" target="_blank">
+                                <span class="title">Circle：相连的两个世界</span>
+                                <span class="desc">16777215人气</span>
+                            </a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">2</i></i>
+                            <i class="status status-up"></i>
+                            <a class="details" href="/hanju/7602.html" target="_blank"><span
+                                    class="title">爱的迫降</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">3</i></i>
+                            <i class="status status-up"></i>
+                            <a class="details" href="/hanju/7247.html" target="_blank"><span
+                                    class="title">经常请吃饭的漂亮姐姐</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">4</i></i>
+                            <i class="status status-up"></i>
+                            <a class="details" href="/hanju/2923.html" target="_blank"><span class="title">当你沉睡时</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">5</i></i>
+                            <i class="status status-keep"></i>
+                            <a class="details" href="/hanju/2620.html" target="_blank"><span
+                                    class="title">孤单又灿烂的神-鬼怪</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">6</i></i>
+                            <i class="status status-up"></i>
+                            <a class="details" href="/hanju/7641.html" target="_blank"><span
+                                    class="title">梨泰院Class</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">7</i></i>
+                            <i class="status status-up"></i>
+                            <a class="details" href="/hanju/2603.html" target="_blank"><span
+                                    class="title">蓝色大海的传说</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">8</i></i>
+                            <i class="status status-down"></i>
+                            <a class="details" href="/hanju/7210.html" target="_blank"><span
+                                    class="title">花游记</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">9</i></i>
+                            <i class="status status-keep"></i>
+                            <a class="details" href="/hanju/7272.html" target="_blank"><span
+                                    class="title">金秘书为何那样</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">10</i></i>
+                            <i class="status status-up"></i>
+                            <a class="details" href="/hanju/2633.html" target="_blank"><span
+                                    class="title">翡翠恋人</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 酒店 -->
+                <div class="top-catbox">
+                    <h3 class="m-title"><a target="_blank" href="/top/">酒店排行榜</a></h3>
+                    <ul class="m-list">
+                        <li class="m-list-item m-list-item-first">
+                            <i class="rank">
+                                <a class="screenshot" href="/zongyi/2907.html" target="_blank">
+                                    <img class="quic lazy" src="static/picture/blank.png"
+                                         data-original="https://images.hanjutv.com/vod/2017-04-05/58e4adeaa6f83.jpg">
+                                </a>
+                                <i class="num">1</i>
+                            </i>
+                            <i class="status status-up"></i>
+                            <a class="details" href="/zongyi/2907.html" target="_blank">
+                                <span class="title">RunningMan</span>
+                                <span class="desc">5135905人气</span>
+                            </a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">2</i></i>
+                            <i class="status status-keep"></i>
+                            <a class="details" href="/zongyi/2861.html" target="_blank"><span class="title">新西游记</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">3</i></i>
+                            <i class="status status-down"></i>
+                            <a class="details" href="/zongyi/2873.html" target="_blank"><span class="title">超人回来了</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">4</i></i>
+                            <i class="status status-keep"></i>
+                            <a class="details" href="/zongyi/2727.html" target="_blank"><span class="title">INFINITE ShowTime</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">5</i></i>
+                            <i class="status status-down"></i>
+                            <a class="details" href="/zongyi/2895.html" target="_blank"><span class="title">无限挑战</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">6</i></i>
+                            <i class="status status-keep"></i>
+                            <a class="details" href="/zongyi/2910.html" target="_blank"><span class="title">拜托了冰箱</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">7</i></i>
+                            <i class="status status-down"></i>
+                            <a class="details" href="/zongyi/2851.html" target="_blank"><span
+                                    class="title">金炳万的丛林法则</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">8</i></i>
+                            <i class="status status-down"></i>
+                            <a class="details" href="/zongyi/2890.html" target="_blank"><span class="title">我们结婚了</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">9</i></i>
+                            <i class="status status-up"></i>
+                            <a class="details" href="/zongyi/2775.html" target="_blank"><span
+                                    class="title">PRODUCE101</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">10</i></i>
+                            <i class="status status-keep"></i>
+                            <a class="details" href="/zongyi/2755.html" target="_blank"><span
+                                    class="title">同床异梦,没关系没关系</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 评论 -->
+                <div class="top-catbox">
+                    <h3 class="m-title"><a target="_blank" href="/top/">评论排行榜</a></h3>
+                    <ul class="m-list">
+                        <li class="m-list-item m-list-item-first">
+                            <i class="rank">
+                                <a class="screenshot" href="/dianying/6.html" target="_blank">
+                                    <img class="quic lazy" src="static/picture/blank.png"
+                                         data-original="https://images.hanjutv.com/vod/2017-03-08/58bfd36fc0c8b.jpg">
+                                </a>
+                                <i class="num">1</i>
+                            </i>
+                            <i class="status status-down"></i>
+                            <a class="details" href="/dianying/6.html" target="_blank">
+                                <span class="title">熔炉</span>
+                                <span class="desc">5531520人气</span>
+                            </a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">2</i></i>
+                            <i class="status status-down"></i>
+                            <a class="details" href="/dianying/1.html" target="_blank"><span
+                                    class="title">釜山行</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">3</i></i>
+                            <i class="status status-keep"></i>
+                            <a class="details" href="/dianying/159.html" target="_blank"><span
+                                    class="title">密爱</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">4</i></i>
+                            <i class="status status-up"></i>
+                            <a class="details" href="/dianying/1005439.html" target="_blank"><span class="title">真实（real）</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">5</i></i>
+                            <i class="status status-keep"></i>
+                            <a class="details" href="/dianying/128.html" target="_blank"><span
+                                    class="title">丑女大翻身/美女的烦恼</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">6</i></i>
+                            <i class="status status-down"></i>
+                            <a class="details" href="/dianying/177.html" target="_blank"><span class="title">不眠之夜 / 婚姻夜语 / 无眠之夜</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">7</i></i>
+                            <i class="status status-up"></i>
+                            <a class="details" href="/dianying/7512.html" target="_blank"><span class="title">恶人传 / 极恶对决 / 恶霸‧魔警‧杀人狂</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">8</i></i>
+                            <i class="status status-up"></i>
+                            <a class="details" href="/dianying/7624.html" target="_blank"><span class="title">长白山 / 白头山 / 白头山：半岛浩劫</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">9</i></i>
+                            <i class="status status-keep"></i>
+                            <a class="details" href="/dianying/9.html" target="_blank"><span class="title">我的朋友他的妻子 / 吾友妻</span></a>
+                        </li>
+                        <li class="m-list-item">
+                            <i class="rank"><i class="num">10</i></i>
+                            <i class="status status-down"></i>
+                            <a class="details" href="/dianying/176.html" target="_blank"><span class="title">食物链</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

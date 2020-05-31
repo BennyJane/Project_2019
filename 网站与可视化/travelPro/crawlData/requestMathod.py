@@ -2,6 +2,7 @@ import requests
 from loguru import logger
 import pymysql
 import json
+import re
 from pprint import pprint
 import chardet
 from lxml import etree
@@ -11,9 +12,13 @@ huohu_user_agent = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:69.0) Gecko/20100
 CHROME_USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'
 
 
-def get_request_json(url):
+def get_request_text(url, isPrient=False, token=''):
     headers = {'User-Agent': CHROME_USER_AGENT,
+               "Accept":"application/json, text/javascript, */*; q=0.01",
+               'enc': 'UTF-8'
                }
+    if token:
+        headers.update(token)
     try:
         r = requests.get(url,
                          headers=headers,
@@ -22,16 +27,20 @@ def get_request_json(url):
         if r.status_code != 200:
             print('status_code', r.status_code)
             logger.debug("请求失败")
-
-        # 将字符串 ==> 字典
-        # root = etree.HTML(r.text)
+        # print(r.apparent_encoding)
+        # print(r.encoding)
+        #
+        # # 转码
+        # r.encoding = 'UTF-8'
+        # root = r.text.encode(r.encoding).decode(r.apparent_encoding)
+        # res = re.findall(r'mapponints = (\[\{.*\}\])', root)
+        # print(res)
+        if isPrient:
+            print(r.text)
         root = r.text
-        root = json.loads(root)
-        # pprint(root)
     except Exception as e:
         root = ''
         logger.debug('get_requests: ', e)
-
     return root
 
 
@@ -48,7 +57,7 @@ def get_request(url, isJson=False, isPrient=False, token=''):
         if r.status_code != 200:
             print('status_code', r.status_code)
             logger.debug("请求失败")
-        r.encoding = 'utf-8'
+        # r.encoding = 'utf-8'
         if isPrient:
             print(r.text)
         if isJson:

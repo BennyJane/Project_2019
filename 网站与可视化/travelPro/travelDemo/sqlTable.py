@@ -39,3 +39,7 @@ site_db = sqlFunc(site, **bin_db_conf)
 # 配置数据库
 hotel = pymysql.escape_string('hotel')
 hotel_db = sqlFunc(hotel, **bin_db_conf)
+
+# 配置数据库
+user = pymysql.escape_string('user')
+user_db = sqlFunc(user, **bin_db_conf)

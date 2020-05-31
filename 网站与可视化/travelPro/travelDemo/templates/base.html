@@ -1,0 +1,54 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>
+<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+<link href="../static/css/common.css" rel="stylesheet"/>
+<link href="../static/css/main.css" rel="stylesheet"/>
+<script src="../static/javascript/uaredirect.js"></script>
+<script src="../static/javascript/jquery.min.js"></script>
+<script src="../static/javascript/layer.js"></script>
+<script src="../static/javascript/common.js"></script>
+<script src="../static/javascript/main.js"></script>
+<script type="text/javascript"></script>
+{#<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">#}
+<header class="header-wrap">
+    <div class="header-inner">
+        <div class="head-bar clearfix">
+            <div class="logo-warp" style="margin-right:200px">
+                <a href="{{ url_for('index') }}" style="font-size: 20px;">兴城旅游网</a>
+            </div>
+            {% block nav_head %}
+            {% endblock %}
+
+            <div id="member_info" class="head-right pull-right">
+                <div class="user-wrap">
+                    {% if username %}
+                        <a class="hjtvui-btn hjtvui-btn-radius">{{ username }}</a>
+                        <a href="{{ url_for('logout') }}" class="hjtvui-btn hjtvui-btn-link">退出</a>
+                    {% else %}
+                        <a href="{{ url_for('login') }}" class="hjtvui-btn hjtvui-btn-radius">登录</a>
+                        <a href="{{ url_for('register') }}" class="hjtvui-btn hjtvui-btn-link">注册</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="content">
+
+    {#报错信息#}
+    {% for message in get_flashed_messages() %}
+        <div class="flash"
+             style="width: 100%; text-align: center; background: #FC4347; border: 1px solid white; font-size: 18px; height: 36px; color: white;padding-top: 6px">{{ message }}</div>
+    {% endfor %}
+    {% block content %}{% endblock %}
+
+    <!--右側返回顶部的标签-->
+    <div class="honey-feedback-floatbtn clearfix">
+        <!--右側返回頂部標簽	-->
+        <ul class="honey-feedback-list">
+            <li class="backtop">
+                <a href="" onclick="__goTop();"><span class=""></span><span class="txt">顶部</span></a>
+            </li>
+        </ul>
+    </div>
+</section>

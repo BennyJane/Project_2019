@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}Log In{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="warp">
+        <div class="container">
+            <form class="login-form" id="myform" action="" method="post">
+                <div class="mod-login">
+                    <form class="content" method="post" action="/login">
+                        <h2>帐号登录</h2>
+                        <div class="input-group" style="margin-top: 20px">
+                            <i class="iconfont icon-user1"></i>
+                            <input class="input" type="text" name="username" placeholder="用户名" datatype="m"
+                                   nullmsg="请输入用户名"
+                                   errormsg="手机号格式错误" maxlength="11">
+                            <span class="Validform_checktip"></span>
+                        </div>
+                        <div class="input-group">
+                            <i class="iconfont icon-lockopen"></i>
+                            <input class="input" type="password" name="password" placeholder="密码" placeholder="密码"
+                                   datatype="s6-18" nullmsg="请输入密码" errormsg="密码格式错误" maxlength="18">
+                        </div>
+                        <div class="option">
+                            <input id="auto-login" class="checkBox hide" name="data[auto]" value="1" type="checkbox">
+                            <label class="label" for="auto-login">自动登录</label>
+                        </div>
+                        <div class="bottom">
+                            <button type="submit" class="button">立即登录</button>
+                            <p>或</p>
+                            <a href="{{ url_for('register') }}" class="button reg">注册帐号</a>
+                        </div>
+                    </form>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
