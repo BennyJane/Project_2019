@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Posts{% endblock %}</h1>
+  {#  只有登录的用户才有添加功能#}
+  {% if g.user %}
+    <a class="action" href="{{ url_for('blog.create') }}">New</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <table border="1">
+    <tr>
+      <td>水果</td>
+      <td>水果</td>
+      <td>水果</td>
+    </tr>
+    <!-- 下面将td与tr反正写了，是不会构成表的 -->
+    <td>
+      <tr>asd</tr>
+      <tr>asd</tr>
+      <tr>asd</tr>
+      <tr>asd</tr>
+    </td>
+  </table>
+{% endblock %}
