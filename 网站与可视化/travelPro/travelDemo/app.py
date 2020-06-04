@@ -78,9 +78,23 @@ def top():
     picData = sqlBaseFunc.picData()
     if picData:
         picDataText = json.dumps(picData, ensure_ascii=False)
-    print(picDataText)
+    # print(picDataText, '\n', type(picDataText))
     return render_template('top.html', username=username, ten_site=ten_site, ten_hotel=ten_hotel,
                            ten_site_info=ten_site_info, picDataText=picDataText)
+
+
+@app.route('/top/hotel')
+@login_required
+def hotelData():
+    # 首页
+    username = session.get('username')
+    picData = sqlBaseFunc.hotelPicData()
+    if picData:
+        picDataText = json.dumps(picData, ensure_ascii=False)
+        # print(picDataText)
+    # print(picData)
+    print(picDataText, '\n', type(picDataText))
+    return render_template('topHotel.html', username=username, picDataText=picDataText)
 
 
 @app.route('/login', methods=['GET', 'POST'])
