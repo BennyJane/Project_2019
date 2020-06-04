@@ -562,3 +562,71 @@
 2020-05-31 13:25:15.212 | INFO     | sql:update_sql:106 - update is successful !
 2020-05-31 13:25:15.236 | INFO     | sql:update_sql:106 - update is successful !
 2020-05-31 13:25:15.271 | INFO     | sql:update_sql:106 - update is successful !
+2020-06-03 22:22:01.281 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_commet' in 'field list'")
+2020-06-03 22:22:01.281 | INFO     | sql:select_sql:90 - select site_name, num_commet from site order by num_coment limit 10
+2020-06-03 22:22:01.282 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'commet_num' in 'field list'")
+2020-06-03 22:22:01.282 | INFO     | sql:select_sql:90 - select hotel_name, commet_num from hotel order by commet_num limit 10
+2020-06-03 22:22:01.283 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginof' in 'field list'")
+2020-06-03 22:22:01.283 | INFO     | sql:select_sql:90 - select hotel_name, num_ginof from hotel order by num_ginof limit 10
+2020-06-03 22:22:47.543 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:22:47.544 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo limit 10
+2020-06-03 22:23:26.236 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:23:26.236 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:25:28.125 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:25:28.126 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:26:14.625 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:26:14.626 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:28:12.192 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:28:12.193 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:31:49.192 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:31:49.193 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:18.665 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:18.665 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:21.678 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:21.678 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:22.652 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:22.652 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:23.394 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:23.395 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:24.000 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:24.000 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:24.582 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:24.582 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:25.200 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:25.201 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:25.776 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:25.778 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:46.637 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:46.638 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:47.406 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:47.406 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:47.797 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:47.798 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:48.122 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:48.122 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:48.405 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:48.406 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:55.168 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:55.168 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:34:55.637 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:34:55.638 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:36:00.564 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:36:00.565 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:38:31.690 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:38:31.690 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:39:05.800 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:39:05.800 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:39:39.657 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:39:39.658 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:39:40.849 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:39:40.849 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:39:41.280 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:39:41.281 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:39:52.118 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'num_ginfo' in 'field list'")
+2020-06-03 22:39:52.119 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from hotel order by num_ginfo desc  limit 10
+2020-06-03 22:42:16.734 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'hotel_name' in 'field list'")
+2020-06-03 22:42:16.734 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from site order by num_ginfo desc  limit 10
+2020-06-03 22:44:20.605 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'hotel_name' in 'field list'")
+2020-06-03 22:44:20.606 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from site order by num_ginfo desc  limit 10
+2020-06-03 22:44:21.147 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'hotel_name' in 'field list'")
+2020-06-03 22:44:21.147 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from site order by num_ginfo desc  limit 10

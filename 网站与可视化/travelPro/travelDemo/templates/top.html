@@ -4,7 +4,7 @@
     <div class="nav-bar-menu pull-left">
         <ul class="clearfix">
             <li><a class="item" href="{{ url_for('index') }}">首页</a></li>
-            <li class="nav-bar-active"><a class="item" href="{{ url_for('top') }}">数据分析</a></li>
+            <li class="nav-bar-active"><a class="item" href="{{ url_for('top') }}">可视化展示</a></li>
         </ul>
     </div>
 {% endblock %}
@@ -13,10 +13,10 @@
     <div class="container mt20">
         <!-- 侧边栏 -->
         <div class="top-sidebar">
-            <h2 class="m-title" style="margin: 10px 0; text-align: center"><a href="/top/">数据分析榜</a></h2>
+            <h2 class="m-title" style="margin: 10px 0; text-align: center"><a href="{{ url_for('top') }}">CONTENT</a>
+            </h2>
             <ul class="m-list">
-                <li><a class="active" href="/top/">排行榜</a></li>
-                <li><a href="/top/tv/">客流量分布图</a></li>
+                <li><a class="active" href="{{ url_for('top') }}">排行榜</a></li>
                 <li><a href="/top/show/">景点类型排行</a></li>
                 <li><a href="/top/movie/">热度与价格相关图</a></li>
             </ul>
@@ -27,214 +27,264 @@
             <div class="top-primary-wrapper">
                 <!-- 热门景点 -->
                 <div class="top-catbox">
-                    <h3 class="m-title"><a target="_blank" href="/top/">景点排行榜</a></h3>
+                    <h3 class="m-title"><a target="_blank" href="/top/">景点排行榜(评论数)</a></h3>
                     <ul class="m-list">
-                        <li class="m-list-item m-list-item-first">
-                            <i class="rank">
-                                <a class="screenshot" href="/hanju/51682.html" target="_blank">
-                                    <img class="quic lazy" src="static/picture/blank.png"
-                                         data-original="https://images.hanjutv.com/2017/0920/20170920072230127.jpg">
-                                </a>
-                                <i class="num">1</i>
-                            </i>
-                            <i class="status status-keep"></i>
-                            <a class="details" href="/hanju/51682.html" target="_blank">
-                                <span class="title">Circle：相连的两个世界</span>
-                                <span class="desc">16777215人气</span>
-                            </a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">2</i></i>
-                            <i class="status status-up"></i>
-                            <a class="details" href="/hanju/7602.html" target="_blank"><span
-                                    class="title">爱的迫降</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">3</i></i>
-                            <i class="status status-up"></i>
-                            <a class="details" href="/hanju/7247.html" target="_blank"><span
-                                    class="title">经常请吃饭的漂亮姐姐</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">4</i></i>
-                            <i class="status status-up"></i>
-                            <a class="details" href="/hanju/2923.html" target="_blank"><span class="title">当你沉睡时</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">5</i></i>
-                            <i class="status status-keep"></i>
-                            <a class="details" href="/hanju/2620.html" target="_blank"><span
-                                    class="title">孤单又灿烂的神-鬼怪</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">6</i></i>
-                            <i class="status status-up"></i>
-                            <a class="details" href="/hanju/7641.html" target="_blank"><span
-                                    class="title">梨泰院Class</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">7</i></i>
-                            <i class="status status-up"></i>
-                            <a class="details" href="/hanju/2603.html" target="_blank"><span
-                                    class="title">蓝色大海的传说</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">8</i></i>
-                            <i class="status status-down"></i>
-                            <a class="details" href="/hanju/7210.html" target="_blank"><span
-                                    class="title">花游记</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">9</i></i>
-                            <i class="status status-keep"></i>
-                            <a class="details" href="/hanju/7272.html" target="_blank"><span
-                                    class="title">金秘书为何那样</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">10</i></i>
-                            <i class="status status-up"></i>
-                            <a class="details" href="/hanju/2633.html" target="_blank"><span
-                                    class="title">翡翠恋人</span></a>
-                        </li>
+                        {% for site in ten_site %}
+                            <li class="m-list-item" style="display: flex">
+                                {% if loop.index <=3 %}
+                                    <i class="rank"><i class="num"
+                                                       style="font-size: 18px; font-weight: bold">{{ loop.index }}</i></i>
+                                {% else %}
+                                    <i class="rank"><i class="num">{{ loop.index }}</i></i>
+                                {% endif %}
+                                <i class="title" style="width: 80%;">{{ site['site_name'] }}</i>
+                                <i style="align-self: flex-end">{{ site['num_comment'] }}</i>
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <!-- 酒店 -->
                 <div class="top-catbox">
-                    <h3 class="m-title"><a target="_blank" href="/top/">酒店排行榜</a></h3>
+                    <h3 class="m-title"><a target="_blank" href="/top/">酒店排行榜（评论数）</a></h3>
                     <ul class="m-list">
-                        <li class="m-list-item m-list-item-first">
-                            <i class="rank">
-                                <a class="screenshot" href="/zongyi/2907.html" target="_blank">
-                                    <img class="quic lazy" src="static/picture/blank.png"
-                                         data-original="https://images.hanjutv.com/vod/2017-04-05/58e4adeaa6f83.jpg">
-                                </a>
-                                <i class="num">1</i>
-                            </i>
-                            <i class="status status-up"></i>
-                            <a class="details" href="/zongyi/2907.html" target="_blank">
-                                <span class="title">RunningMan</span>
-                                <span class="desc">5135905人气</span>
-                            </a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">2</i></i>
-                            <i class="status status-keep"></i>
-                            <a class="details" href="/zongyi/2861.html" target="_blank"><span class="title">新西游记</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">3</i></i>
-                            <i class="status status-down"></i>
-                            <a class="details" href="/zongyi/2873.html" target="_blank"><span class="title">超人回来了</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">4</i></i>
-                            <i class="status status-keep"></i>
-                            <a class="details" href="/zongyi/2727.html" target="_blank"><span class="title">INFINITE ShowTime</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">5</i></i>
-                            <i class="status status-down"></i>
-                            <a class="details" href="/zongyi/2895.html" target="_blank"><span class="title">无限挑战</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">6</i></i>
-                            <i class="status status-keep"></i>
-                            <a class="details" href="/zongyi/2910.html" target="_blank"><span class="title">拜托了冰箱</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">7</i></i>
-                            <i class="status status-down"></i>
-                            <a class="details" href="/zongyi/2851.html" target="_blank"><span
-                                    class="title">金炳万的丛林法则</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">8</i></i>
-                            <i class="status status-down"></i>
-                            <a class="details" href="/zongyi/2890.html" target="_blank"><span class="title">我们结婚了</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">9</i></i>
-                            <i class="status status-up"></i>
-                            <a class="details" href="/zongyi/2775.html" target="_blank"><span
-                                    class="title">PRODUCE101</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">10</i></i>
-                            <i class="status status-keep"></i>
-                            <a class="details" href="/zongyi/2755.html" target="_blank"><span
-                                    class="title">同床异梦,没关系没关系</span></a>
-                        </li>
+                        {% for hotel in ten_hotel %}
+                            <li class="m-list-item" style="display: flex">
+                                {% if loop.index <=3 %}
+                                    <i class="rank"><i class="num"
+                                                       style="font-size: 18px; font-weight: bold">{{ loop.index }}</i></i>
+                                {% else %}
+                                    <i class="rank"><i class="num">{{ loop.index }}</i></i>
+                                {% endif %}
+                                <i class="title" style="width: 80%;">{{ hotel['hotel_name'] }}</i>
+                                <i style="align-self: flex-end">{{ hotel['comment_num'] }}</i>
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <!-- 评论 -->
                 <div class="top-catbox">
-                    <h3 class="m-title"><a target="_blank" href="/top/">评论排行榜</a></h3>
+                    <h3 class="m-title"><a target="_blank" href="/top/">讨论热度（游记数量）</a></h3>
                     <ul class="m-list">
-                        <li class="m-list-item m-list-item-first">
-                            <i class="rank">
-                                <a class="screenshot" href="/dianying/6.html" target="_blank">
-                                    <img class="quic lazy" src="static/picture/blank.png"
-                                         data-original="https://images.hanjutv.com/vod/2017-03-08/58bfd36fc0c8b.jpg">
-                                </a>
-                                <i class="num">1</i>
-                            </i>
-                            <i class="status status-down"></i>
-                            <a class="details" href="/dianying/6.html" target="_blank">
-                                <span class="title">熔炉</span>
-                                <span class="desc">5531520人气</span>
-                            </a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">2</i></i>
-                            <i class="status status-down"></i>
-                            <a class="details" href="/dianying/1.html" target="_blank"><span
-                                    class="title">釜山行</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">3</i></i>
-                            <i class="status status-keep"></i>
-                            <a class="details" href="/dianying/159.html" target="_blank"><span
-                                    class="title">密爱</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">4</i></i>
-                            <i class="status status-up"></i>
-                            <a class="details" href="/dianying/1005439.html" target="_blank"><span class="title">真实（real）</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">5</i></i>
-                            <i class="status status-keep"></i>
-                            <a class="details" href="/dianying/128.html" target="_blank"><span
-                                    class="title">丑女大翻身/美女的烦恼</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">6</i></i>
-                            <i class="status status-down"></i>
-                            <a class="details" href="/dianying/177.html" target="_blank"><span class="title">不眠之夜 / 婚姻夜语 / 无眠之夜</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">7</i></i>
-                            <i class="status status-up"></i>
-                            <a class="details" href="/dianying/7512.html" target="_blank"><span class="title">恶人传 / 极恶对决 / 恶霸‧魔警‧杀人狂</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">8</i></i>
-                            <i class="status status-up"></i>
-                            <a class="details" href="/dianying/7624.html" target="_blank"><span class="title">长白山 / 白头山 / 白头山：半岛浩劫</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">9</i></i>
-                            <i class="status status-keep"></i>
-                            <a class="details" href="/dianying/9.html" target="_blank"><span class="title">我的朋友他的妻子 / 吾友妻</span></a>
-                        </li>
-                        <li class="m-list-item">
-                            <i class="rank"><i class="num">10</i></i>
-                            <i class="status status-down"></i>
-                            <a class="details" href="/dianying/176.html" target="_blank"><span class="title">食物链</span></a>
-                        </li>
+                        {% for info in ten_site_info %}
+                            <li class="m-list-item" style="display: flex">
+                                {% if loop.index <=3 %}
+                                    <i class="rank"><i class="num"
+                                                       style="font-size: 18px; font-weight: bold">{{ loop.index }}</i></i>
+                                {% else %}
+                                    <i class="rank"><i class="num">{{ loop.index }}</i></i>
+                                {% endif %}
+                                <i class="title" style="width: 80%;">{{ info['site_name'] }}</i>
+                                <i style="align-self: flex-end">{{ info['num_ginfo'] }}</i>
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
         </div>
+        <!-- 图片展示 -->
+        <div id="myChart-data" style="display: none">{{ picDataText }}</div>
+        <div id="myChart" class="top-primary" style="background-color: black; height: 350px">
+        </div>
     </div>
+    <script type="text/javascript">
+        let dataNode = document.getElementById('myChart-data')
+        originData = JSON.parse(dataNode.innerText);
+        {#console.log(typeof originData)#}
+        console.log(originData)
+
+        onload = function linePic(originData) {
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('myChart'));
+
+            let bgColor = "#fff";
+            let color = [
+                "#0090FF",
+                "#36CE9E",
+                "#FFC005",
+                "#FF515A",
+                "#8B5CFF",
+                "#00CA69"
+            ];
+            let echartData = originData;
+            console.log(echartData)
+
+            let xAxisData = echartData.map(v => v.name);
+            let yAxisData1 = echartData.map(v => v.value1);
+            let yAxisData2 = echartData.map(v => v.value2);
+            const hexToRgba = (hex, opacity) => {
+                let rgbaColor = "";
+                let reg = /^#[\da-f]{6}$/i;
+                if (reg.test(hex)) {
+                    rgbaColor = `rgba(${parseInt("0x" + hex.slice(1, 3))},${parseInt(
+                        "0x" + hex.slice(3, 5)
+                    )},${parseInt("0x" + hex.slice(5, 7))},${opacity})`;
+                }
+                return rgbaColor;
+            }
+
+            option = {
+                backgroundColor: bgColor,
+                color: color,
+                legend: {
+                    right: 15,
+                    top: 15
+                },
+                tooltip: {
+                    trigger: "axis",
+                    formatter: function (params) {
+                        let html = '';
+                        params.forEach(v => {
+                            {#console.log(v)#}
+                            html += `<div style="color: #666;font-size: 14px;line-height: 24px">
+                <span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${color[v.componentIndex]};"></span>
+                ${v.seriesName}：
+                <span style="color:${color[v.componentIndex]};font-weight:700;font-size: 18px">${v.value}</span>
+               `;})
+                        return html
+                    },
+                    extraCssText: 'background: #fff; border-radius: 0;box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);color: #333;',
+                    axisPointer: {
+                        type: 'shadow',
+                        shadowStyle: {
+                            color: '#ffffff',
+                            shadowColor: 'rgba(225,225,225,1)',
+                            shadowBlur: 5
+                        }
+                    }
+                },
+                grid: {
+                    top: 50,
+                    bottom: 50,
+                    left: 20,
+                    right:70,
+                    containLabel: true
+                },
+                xAxis: [{
+                    type: "category",
+                    boundaryGap: false,
+                    axisLabel: {
+                        fontSize: 12,
+                        rotate: -30,
+                        formatter: '{value}',
+                        textStyle: {
+                            color: "#333"
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: "#D9D9D9"
+                        }
+                    },
+                    data: xAxisData
+                }],
+                yAxis: [{
+                    type: "value",
+                    name: '单位: 条目',
+                    axisLabel: {
+                        textStyle: {
+                            fontSize: 14,
+                            color: "#666"
+                        }
+                    },
+                    nameTextStyle: {
+                        color: "#666",
+                        fontSize: 14,
+                        lineHeight: 40
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            type: "dashed",
+                            color: "#E9E9E9"
+                        }
+                    },
+                    axisLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    }
+                }],
+                series: [{
+                    name: "评论数量",
+                    type: "line",
+                    smooth: true,
+                    // showSymbol: false,/
+                    symbolSize: 8,
+                    zlevel: 3,
+                    lineStyle: {
+                        normal: {
+                            color: color[0],
+                            shadowBlur: 3,
+                            shadowColor: hexToRgba(color[0], 0.5),
+                            shadowOffsetY: 8
+                        }
+                    },
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(
+                                0,
+                                0,
+                                0,
+                                1,
+                                [{
+                                    offset: 0,
+                                    color: hexToRgba(color[0], 0.3)
+                                },
+                                    {
+                                        offset: 1,
+                                        color: hexToRgba(color[0], 0.1)
+                                    }
+                                ],
+                                false
+                            ),
+                            shadowColor: hexToRgba(color[0], 0.1),
+                            shadowBlur: 10
+                        }
+                    },
+                    data: yAxisData1
+                }, {
+                    name: "游记数量",
+                    type: "line",
+                    smooth: true,
+                    // showSymbol: false,
+                    symbolSize: 8,
+                    zlevel: 3,
+                    lineStyle: {
+                        normal: {
+                            color: color[1],
+                            shadowBlur: 3,
+                            shadowColor: hexToRgba(color[1], 0.5),
+                            shadowOffsetY: 8
+                        }
+                    },
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(
+                                0,
+                                0,
+                                0,
+                                1,
+                                [{
+                                    offset: 0,
+                                    color: hexToRgba(color[1], 0.3)
+                                },
+                                    {
+                                        offset: 1,
+                                        color: hexToRgba(color[1], 0.1)
+                                    }
+                                ],
+                                false
+                            ),
+                            shadowColor: hexToRgba(color[1], 0.1),
+                            shadowBlur: 10
+                        }
+                    },
+                    data: yAxisData2
+                }]
+            };
+
+            myChart.setOption(option);
+        }
+        onload(originData)
+    </script>
 {% endblock %}

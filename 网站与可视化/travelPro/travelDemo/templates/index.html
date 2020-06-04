@@ -4,7 +4,7 @@
     <div class="nav-bar-menu pull-left">
         <ul class="clearfix">
             <li class="nav-bar-active"><a class="item" href="{{ url_for('index') }}">首页</a></li>
-            <li><a class="item" href="{{ url_for('top') }}">数据分析</a></li>
+            <li><a class="item" href="{{ url_for('top') }}">可视化展示</a></li>
         </ul>
     </div>
 {% endblock %}
@@ -136,7 +136,9 @@
                 <div class="mod pull-left" mod-size="w200">
                     <div class="rank">
                         <ul class="rank-list">
+                            <li><i>近期热门景点推荐</i></li>
                             {% for item in orderSite[:10] %}
+
                                 <li><i class="{{ 'num num%s' %loop.index }}">{{ loop.index }}</i><b><a
                                         href="{{ url_for('content', id='%s' %item['id']) }}"
                                         title="{{ item['site_name'] }}"
