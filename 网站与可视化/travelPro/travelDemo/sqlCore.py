@@ -57,6 +57,7 @@ class sqlBase:
         # 获取游记数量最多的10个地区
         ten_site_info = site_db.select_sql(['site_name', 'num_ginfo'], sqlFilter=f"order by num_ginfo desc limit 10")
         ten_site_info = sorted(ten_site_info, key=lambda x: int(x['num_ginfo']), reverse=True)
+        print(ten_site_info)
         return ten_site, ten_hotel, ten_site_info
 
     def picData(self):

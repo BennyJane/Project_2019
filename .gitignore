@@ -38,5 +38,3 @@ npm-debug.log*
 *.iml
 venv
 @eaDir/
-
-# 注释到产生的测试数据,保留原始数据
