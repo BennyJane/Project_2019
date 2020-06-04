@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 
 from datetime import timedelta
-from sqlCore import valid_login, valid_regist, addUser, getSite, getHotel, getManySite, getContent, sqlBase
+from sqlCore import valid_login, valid_regist, addUser, getSite, getHotel, getManySite, getContent
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@127.0.0.1:3306/travel?charset=utf8'
@@ -16,8 +16,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 # app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(seconds=1)
 app.secret_key = 'benny jane'
 db = SQLAlchemy(app)
-
-sqlBaseInit = sqlBase()
 
 
 # 登录  ==> 闭包
@@ -42,8 +40,7 @@ def index():
     allHotel = getHotel()
     allSite = getManySite()
     # print(allSite)
-    return render_template('index.html', allSite=allSite, allHotel=allHotel, orderSite=orderSite,
-                           username=session.get('username'))
+    return render_template('index.html', allSite=allSite, allHotel=allHotel, orderSite=orderSite, username=session.get('username'))
 
 
 @app.route('/content', methods=['GET'])
@@ -67,20 +64,13 @@ def content():
             return render_template('content.html', itemInfo=itemInfo, targetList=targetList, username=username)
     return redirect(url_for('index'))
 
-
 @app.route('/top')
 @login_required
 def top():
     # 首页
     username = session.get('username')
-    ten_site, ten_hotel, ten_site_info = sqlBaseInit.topFirst()
-    print(ten_site, ten_hotel, ten_site_info)
     print('top', username)
-
-    picData = sqlBaseInit.picData()
-    picDataText = json.dumps(picData, ensure_ascii=False)
-    return render_template('top.html', username=username, ten_site=ten_site, ten_hotel=ten_hotel,
-                           ten_site_info=ten_site_info, picDataText=picDataText)
+    return render_template('top.html', username=username)
 
 
 @app.route('/login', methods=['GET', 'POST'])
