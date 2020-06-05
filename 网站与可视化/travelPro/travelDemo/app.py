@@ -63,8 +63,8 @@ def content():
             else:
                 itemInfo['comment_category'] = ''
             print(itemInfo)
-            targetList = []
-            return render_template('content.html', itemInfo=itemInfo, targetList=targetList, username=username)
+            commentList = []
+            return render_template('content.html', itemInfo=itemInfo, commentList=commentList, username=username)
     return redirect(url_for('index'))
 
 

@@ -90,6 +90,9 @@ class sqlBase:
             res.append(temp)
         return res
 
+    def getComment(self,id):
+        sql = ""
+        site_db.execute_sql()
 
 class HotelData:
 
