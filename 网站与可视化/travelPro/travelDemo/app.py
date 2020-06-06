@@ -62,8 +62,9 @@ def content():
                 itemInfo['comment_category'] = comment_category_text
             else:
                 itemInfo['comment_category'] = ''
-            print(itemInfo)
-            commentList = []
+            # print(itemInfo)
+            commentList = sqlBaseFunc.getComment(siteId)
+
             return render_template('content.html', itemInfo=itemInfo, commentList=commentList, username=username)
     return redirect(url_for('index'))
 

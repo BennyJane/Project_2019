@@ -90,9 +90,13 @@ class sqlBase:
             res.append(temp)
         return res
 
-    def getComment(self,id):
-        sql = ""
-        site_db.execute_sql()
+    def getComment(self, id):
+        sql = "select t.id as site_id, t.site_name, c.id, c.userName, c.goal, c.publishDate, c.message from travel.siteandcomment as s join comments as c on c.id = s.comment_id join site as t on t.id = s.site_id where site_id='{}';".format(
+            id)
+        res = site_db.execute_sql(sql)
+        print(res)
+        return res
+
 
 class HotelData:
 

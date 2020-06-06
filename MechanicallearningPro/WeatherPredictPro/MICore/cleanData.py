@@ -45,7 +45,7 @@ def standardTime(x):
 
 def standardWeek(x):
     index = int(x)
-    week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六', ]
+    week = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六','星期日',  ]
     res = week[index]
     return res
 
@@ -84,13 +84,14 @@ def cleanFunc(isSaved=False):
     return df
 
 
-cleanFunc(isSaved=True)
+# cleanFunc(isSaved=True)
 
 
 def showData(df):
     # df['max_temp'] = df.apply(lambda x: delSign(x['max_temp']), axis=1)
     # df['min_temp'] = df.apply(lambda x: delSign(x['min_temp']), axis=1)
     df['date'] = df.apply(lambda x: delTime(x['date']), axis=1)
+
 
     # 添加星期几信息: 从0开始计数，0代表礼拜一，6是礼拜天。
     # 把时间列标准化时间格式
@@ -104,9 +105,9 @@ def showData(df):
     df.reset_index(inplace=True)
     print(df.head())
     new_df = df[df['date'] > '2018-12-31']
-    new_df.to_csv('./showData.csv', index=None)
+    new_df.to_csv('./showData2.csv', index=None)
     print(new_df)
     return df
 
 
-# showData(df)
+showData(df)

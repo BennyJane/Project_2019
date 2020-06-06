@@ -630,3 +630,19 @@
 2020-06-03 22:44:20.606 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from site order by num_ginfo desc  limit 10
 2020-06-03 22:44:21.147 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column 'hotel_name' in 'field list'")
 2020-06-03 22:44:21.147 | INFO     | sql:select_sql:90 - select hotel_name, num_ginfo from site order by num_ginfo desc  limit 10
+2020-06-05 22:16:34.204 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:22:46.258 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:25:16.632 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:25:32.392 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:25:37.385 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:25:42.522 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:25:46.516 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:25:50.485 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:41:22.717 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:41:31.354 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:41:42.277 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:50:37.285 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:50:42.650 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:52:26.790 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:52:33.355 | INFO     | sql:execute_sql:134 - sql is done!
+2020-06-05 22:52:38.048 | INFO     | sql:execute_sql:134 - sql is done!
