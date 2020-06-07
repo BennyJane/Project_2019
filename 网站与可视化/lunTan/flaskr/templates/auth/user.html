@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}个人资料{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <article class="post">
+        <header>
+            <div>
+                <h1>陆斌</h1>
+                <div class="about">注册时间：</div>
+            </div>
+            <a class="action" href="{{ url_for('auth.update', id=01) }}">Edit</a>
+        </header>
+        <p class="body">博客数量： ； 评论数量： 。</p>
+    </article>
+{% endblock %}

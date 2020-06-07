@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask import flash
-from flask import g
+from flask import g, session
 from flask import redirect
 from flask import render_template
 from flask import request
@@ -123,3 +123,74 @@ def delete(id):
     db.execute("DELETE FROM post WHERE id = ?", (id,))
     db.commit()
     return redirect(url_for("blog.index"))
+
+
+'''
+======================================================================
+个人帖子列表页面
+======================================================================
+'''
+@bp.route("/essay/self")
+@login_required
+def selfPage():
+    """Show all the posts, most recent first."""
+    # 当前用户id
+    user = g.user
+    userId = user['id']
+    db = get_db()
+    posts = db.execute(
+        "SELECT p.id, title, body, created, author_id, username"
+        " FROM post p JOIN user u ON p.author_id = u.id where u.id = {}"
+        " ORDER BY created DESC".format(userId)
+    ).fetchall()
+    return render_template("blog/privateBlog.html", posts=posts)
+
+
+
+
+'''
+======================================================================
+评论与回复页面
+======================================================================
+'''
+
+@bp.route("/comment/list")
+@login_required
+def commentList():
+    """Show all the posts, most recent first."""
+    # 当前用户id
+    # userId = session["user_id"]
+    user = g.user
+    userId = user['id']
+    db = get_db()
+    posts = db.execute(
+       f"SELECT p.id, title, body, created, author_id, username"
+        " FROM post p JOIN user u ON p.author_id = u.id"
+        " ORDER BY created DESC"
+    ).fetchall()
+    return render_template("blog/commentList.html", posts=posts)
+
+
+
+'''
+======================================================================
+贴子的详情页面
+======================================================================
+'''
+
+@bp.route("/content")
+@login_required
+def content():
+    """Show all the posts, most recent first."""
+    # 当前用户id
+    # userId = session["user_id"]
+    user = g.user
+    userId = user['id']
+    db = get_db()
+    posts = db.execute(
+       f"SELECT p.id, title, body, created, author_id, username"
+        " FROM post p JOIN user u ON p.author_id = u.id"
+        " ORDER BY created DESC"
+    ).fetchall()
+    conment = []
+    return render_template("blog/content.html", posts=posts)

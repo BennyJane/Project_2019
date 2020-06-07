@@ -105,7 +105,7 @@ def showData(df):
     df.reset_index(inplace=True)
     print(df.head())
     new_df = df[df['date'] > '2018-12-31']
-    new_df.to_csv('./showData2.csv', index=None)
+    new_df.to_csv('./showData.csv', index=None)
     print(new_df)
     return df
 

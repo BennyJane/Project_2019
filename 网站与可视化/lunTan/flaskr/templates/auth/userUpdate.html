@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}修改账号信息{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <article class="post">
+        <header>
+            <div>
+                <h1>陆斌</h1>
+            </div>
+        </header>
+    </article>
+    <form method="post">
+        <label for="username">用户名</label>
+        <input name="username" id="username" required>
+        <label for="password">密码</label>
+        <input type="password" name="password" id="password" required>
+    </form>
+      <hr>
+  <form action="{{ url_for('auth.update', id=01) }}" method="post">
+    <input class="danger" type="submit" value="更新" >
+  </form>
+{% endblock %}

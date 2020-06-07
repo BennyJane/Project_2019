@@ -114,3 +114,14 @@ def logout():
     """Clear the current session, including the stored user id."""
     session.clear()
     return redirect(url_for("index"))
+
+
+@bp.route("/user")
+def user():
+    # 个人主页
+    return render_template("auth/user.html")
+
+@bp.route("/user/update")
+def update():
+    # 个人主页
+    return render_template("auth/userUpdate.html")
