@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block nav_head %}
+    <div class="nav-bar-menu pull-left">
+        <ul class="clearfix">
+            <li><a class="item" href="{{ url_for('index') }}">首页</a></li>
+            <li><a class="item" href="{{ url_for('top') }}">数据分析</a></li>
+            {% if username == 'admin' %}
+                <li class="nav-bar-active"><a class="item" href="{{ url_for('crawl') }}">启动爬虫</a></li>
+            {% endif %}
+            <li><a class="item" href="{{ url_for('userList') }}">用户信息</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="warp">
+        <div class="container">
+            <form class="user-edit" action="{{ url_for('crawlStart') }}" method="GET"
+                  style="padding:0px 0px;display: flex; justify-content: center; flex-direction: column">
+                {#  触发二次弹窗确认?#}
+                <input class="danger user-edit" type="submit" value="启动爬虫">
+            </form>
+            <div class="main-inner" mod-size="w1120">
+                <!--用户列表-->
+                <div class="mod-inner mt20" mod-skin="p25">
+                    <div class="mod-main">
+                        <div id="lists" class="articleList">
+                            {% for crawl in targetList %}
+                                <div class="rec-news-item">
+                                    <div class="news-card card-type-news">
+                                        <div class="text"
+                                             style="margin-left: 0px; display: flex; justify-content: space-between">
+                                            <div>
+                                                <h4 class="title ellipsis-1">
+                                                    抓取的url： {{ crawl }}</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script language="javascript">
+        var xmlhttp;
+
+        //判断浏览器是否支持ActiveX控件
+        if (window.ActiveXObject) {
+        //支持-通过ActiveXObject的一个新实例来创建XMLHttpRequest对象
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        //不支持
+        else if (window.XMLHttpRequest) {
+            xmlHttp = new XMLHttpRequest()
+        }
+
+        function getWeather() {
+            //创建异步对象
+            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+            //加载服务器-注意URL参数的使用
+            xmlhttp.Open("GET", "http://127.0.0.1:5000/crawl", false)
+            //异步对象事件挂钩
+            xmlhttp.onreadystatechange = stateChange;
+            //发送请求-无参数
+            xmlhttp.Send(null);
+        }
+
+        function stateChange() {
+            if (xmlhttp.readystate == 4 && xmlhttp.status == 200) {
+                //获取所有返回的数据
+                var data = xmlhttp.responseText;
+                console.log(data)
+                //过滤自己需要的数据
+                {#var begin = data.indexOf("國際各別都市 start");#}
+                {#var end = data.indexOf("國際各別都市 end");#}
+                {#var weather = data.substring(begin + 15, end);#}
+                //填充天气内容
+                document.getElementById("lists").innerHTML = weather;
+                //显示结果
+                {#document.getElementById("divweather").style.visibility = "visible";#}
+            }
+        }
+
+        window.setInterval("getWeather()", 1500);
+    </script>
+
+{% endblock %}

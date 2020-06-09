@@ -5,6 +5,10 @@
         <ul class="clearfix">
             <li class="nav-bar-active"><a class="item" href="{{ url_for('index') }}">首页</a></li>
             <li><a class="item" href="{{ url_for('top') }}">数据分析</a></li>
+            {% if username == 'admin' %}
+                <li><a class="item" href="{{ url_for('crawl') }}">启动爬虫</a></li>
+            {% endif %}
+            <li><a class="item" href="{{ url_for('userList') }}">用户列表</a></li>
         </ul>
     </div>
 {% endblock %}

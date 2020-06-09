@@ -5,6 +5,10 @@
         <ul class="clearfix">
             <li><a class="item" href="{{ url_for('index') }}">首页</a></li>
             <li class="nav-bar-active"><a class="item" href="{{ url_for('top') }}">可视化展示</a></li>
+            {% if username == 'admin' %}
+                <li><a class="item" href="{{ url_for('crawl') }}">启动爬虫</a></li>
+            {% endif %}
+            <li><a class="item" href="{{ url_for('userList') }}">用户列表</a></li>
         </ul>
     </div>
 {% endblock %}
@@ -147,7 +151,7 @@
                             color: "#D9D9D9"
                         }
                     },
-                    data: [0,0,0,0,0,0,0,0,0],
+                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0],
                 }, {
                     show: false,
                     type: "category",
@@ -165,7 +169,7 @@
                             color: "#D9D9D9"
                         }
                     },
-                    data: [0,0,0,0,0,0,0,0,0],
+                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0],
                     gridIndex: 1,
                 }, {
                     type: "category",

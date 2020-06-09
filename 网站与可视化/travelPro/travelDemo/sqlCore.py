@@ -97,6 +97,34 @@ class sqlBase:
         print(res)
         return res
 
+    def getUser(self):
+        sql = "select id, username, password, update_time  from user"
+        res = site_db.execute_sql(sql)
+        return res
+
+    def getUserById(self, id):
+        sql = "select id, username, password, update_time  from user where id = {}".format(id)
+        res = site_db.execute_sql(sql)
+        return res
+
+    def getUserByName(self, name):
+        sql = "select id, username, password, update_time  from user where username = '{}'".format(name)
+        res = site_db.execute_sql(sql)
+        return res
+
+    def updateUserInfo(self, name, password, id):
+        sql = "update user set username='{}', password='{}' where id={}".format(name, password, id)
+        # print(sql)
+        res = site_db.execute_sql(sql)
+        return res
+
+    def delUserInfo(self, id):
+        sql = "delete from user where id={}".format(id)
+        print(sql)
+        res = site_db.execute_sql(sql)
+        return res
+
+
 
 class HotelData:
 

@@ -7,6 +7,8 @@ import os
 
 from datetime import timedelta
 from sqlCore import valid_login, valid_regist, addUser, getSite, getHotel, getManySite, getContent, sqlBase
+from crawlCore import crawlCore
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@127.0.0.1:3306/travel?charset=utf8'
@@ -96,6 +98,79 @@ def hotelData():
     # print(picData)
     print(picDataText, '\n', type(picDataText))
     return render_template('topHotel.html', username=username, picDataText=picDataText)
+
+
+@app.route('/userList', methods=['GET'])
+@login_required
+def userList():
+    username = session.get('username')
+    if username == 'admin':
+        userList = sqlBaseFunc.getUser()
+    else:
+        userList = sqlBaseFunc.getUserByName(username)
+    return render_template('userList.html', username=username, userList=userList)
+
+
+@app.route('/userList/eidt', methods=['GET','POST'])
+@login_required
+def userEdit():
+    error = ''
+    username = session.get('username')
+    if request.method == 'GET':
+        userId = request.args.get('id')
+        if userId:
+            targetUser = sqlBaseFunc.getUserById(userId)
+            if targetUser:
+                target_user = targetUser[0]
+                return render_template('userEdit.html', username=username, target_user=target_user)
+    if request.method == 'POST':
+        print(request.form)
+        userId = request.form.get('userId')
+        name = request.form.get('name')
+        password = request.form.get('password')
+        second_password = request.form.get('second_password')
+        print(userId, name, password)
+        if password != second_password:
+            error = '两次密码不一致'
+        if not error:
+            sqlBaseFunc.updateUserInfo(name, password, userId)
+        else:
+            flash(error)
+    return redirect(url_for('userList'))
+
+
+@app.route('/userList/delete', methods=['POST'])
+@login_required
+def userDel():
+    userId = ''
+
+    try:
+        userId = request.args.get('id')
+    except Exception:
+        pass
+    if userId:
+        sqlBaseFunc.delUserInfo(userId)
+    return redirect(url_for('userList'))
+
+
+@app.route('/crawl', methods=['GET'])
+@login_required
+def crawl():
+    username = session.get('username')
+    targetList = crawlCore.crawlUrls()
+    return render_template('crawl.html', username=username, targetList=targetList)
+
+
+from threading import Thread
+
+
+@app.route('/crawl/start', methods=['GET'])
+@login_required
+def crawlStart():
+    if not crawlCore.isCrawling:
+        crawl_task = Thread(target=crawlCore.first, args=())
+        crawl_task.start()
+    return redirect(url_for('crawl'))
 
 
 @app.route('/login', methods=['GET', 'POST'])
