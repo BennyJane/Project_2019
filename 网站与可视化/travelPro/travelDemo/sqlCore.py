@@ -1,6 +1,7 @@
 import json
-
+import pandas as pd
 from sqlTable import comments_db, site_db, relationship_db, hotel_db, user_db
+from collections import Counter
 
 
 # 登录检验（用户名、密码验证）
@@ -57,6 +58,7 @@ class sqlBase:
         # 获取游记数量最多的10个地区
         ten_site_info = site_db.select_sql(['site_name', 'num_ginfo'], sqlFilter=f"order by num_ginfo desc limit 10")
         ten_site_info = sorted(ten_site_info, key=lambda x: int(x['num_ginfo']), reverse=True)
+        print(ten_site_info)
         return ten_site, ten_hotel, ten_site_info
 
     def picData(self):
@@ -72,3 +74,81 @@ class sqlBase:
             }
             res.append(temp)
         return res
+
+    def hotelPicData(self):
+        ten_hotel = hotel_db.select_sql(['hotel_name', 'comment_num', 'price', 'hotel_score'],
+                                        sqlFilter=f"order by hotel_score desc limit 10")
+        ten_hotel = sorted(ten_hotel, key=lambda x: float(x['hotel_score']), reverse=True)
+        res = []
+        for item in ten_hotel:
+            temp = {
+                'name': item['hotel_name'],
+                'value1': item['comment_num'],
+                'value2': item['price'],
+                'value3': item['hotel_score'],
+            }
+            res.append(temp)
+        return res
+
+    def getComment(self, id):
+        sql = "select t.id as site_id, t.site_name, c.id, c.userName, c.goal, c.publishDate, c.message from travel.siteandcomment as s join comments as c on c.id = s.comment_id join site as t on t.id = s.site_id where site_id='{}';".format(
+            id)
+        res = site_db.execute_sql(sql)
+        print(res)
+        return res
+
+    def getUser(self):
+        sql = "select id, username, password, update_time  from user"
+        res = site_db.execute_sql(sql)
+        return res
+
+    def getUserById(self, id):
+        sql = "select id, username, password, update_time  from user where id = {}".format(id)
+        res = site_db.execute_sql(sql)
+        return res
+
+    def getUserByName(self, name):
+        sql = "select id, username, password, update_time  from user where username = '{}'".format(name)
+        res = site_db.execute_sql(sql)
+        return res
+
+    def updateUserInfo(self, name, password, id):
+        sql = "update user set username='{}', password='{}' where id={}".format(name, password, id)
+        # print(sql)
+        res = site_db.execute_sql(sql)
+        return res
+
+    def delUserInfo(self, id):
+        sql = "delete from user where id={}".format(id)
+        print(sql)
+        res = site_db.execute_sql(sql)
+        return res
+
+
+
+class HotelData:
+
+    def wordCloud(self):
+        word = []
+        res = hotel_db.select_sql(['keywords'], sqlFilter=f"where keywords != '[]'")
+        for item in res:
+            target = json.loads(item.get('keywords'))
+            word.extend(target)
+        # print(word)
+        for i in word:
+            print(i)
+        uniqueList = list(set(word))
+        # print('uniqueList', uniqueList)
+        word_num = []
+        for uniqueWord in uniqueList:
+            temp = {
+                'keyword': uniqueWord,
+                'num': word.count(uniqueWord)
+            }
+            word_num.append(temp)
+        # print(word_num)
+        df = pd.DataFrame(data=word_num, columns=['keyword', 'num'])
+        # print(df)
+
+# hotel = HotelData()
+# hotel.wordCloud()

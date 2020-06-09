@@ -6639,3 +6639,1597 @@
 2020-05-31 09:46:43.286 | INFO     | sql:insert_sql:124 - insert is successful !
 2020-05-31 09:46:43.309 | INFO     | sql:insert_sql:124 - insert is successful !
 2020-05-31 09:46:43.336 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:58.604 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城古城' in 'where clause'")
+2020-06-04 23:19:58.636 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城古城
+2020-06-04 23:19:58.749 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:58.816 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.108 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.150 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.200 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.250 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.290 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.340 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.394 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.440 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.482 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.549 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.590 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.694 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.774 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.876 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.945 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:19:59.992 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:20:00.016 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:20:00.049 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:20:00.072 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:20:00.099 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:20:00.122 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:20:00.149 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:20:00.172 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:20:00.198 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:20:00.240 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:20:00.264 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:20:00.290 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:20:00.314 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:20:00.340 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.054 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城古城' in 'where clause'")
+2020-06-04 23:23:14.054 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城古城
+2020-06-04 23:23:14.090 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.123 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.153 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.181 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.210 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.240 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.268 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.298 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.326 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.360 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.390 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.418 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.449 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.517 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.606 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.709 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.742 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.781 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.815 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.847 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.876 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.906 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.934 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.964 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:14.992 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:15.022 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:15.051 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:15.081 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:15.109 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:15.139 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:23:15.168 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:14.459 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城海滨国家风景名胜区' in 'where clause'")
+2020-06-04 23:24:14.519 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城海滨国家风景名胜区
+2020-06-04 23:24:14.584 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:14.625 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:14.683 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:14.751 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:14.801 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:14.858 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:14.930 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:14.981 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.057 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.114 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.159 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.227 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.275 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.318 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.376 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.426 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.467 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.498 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.526 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.578 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.628 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.667 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.703 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.742 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.779 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.832 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.858 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.889 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.917 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.947 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:24:15.975 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:07.387 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城海滨国家风景名胜区' in 'where clause'")
+2020-06-04 23:25:07.388 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城海滨国家风景名胜区
+2020-06-04 23:25:07.431 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:07.483 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:07.534 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:07.605 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:07.667 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:07.725 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:07.789 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:07.858 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:07.917 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:07.958 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.022 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.067 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.123 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.181 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.242 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.289 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.351 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.391 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.464 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.508 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.558 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.600 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.630 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.717 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.780 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.817 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.864 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.916 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:08.958 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:09.025 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:25:09.075 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.164 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴海栈道' in 'where clause'")
+2020-06-04 23:26:46.165 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴海栈道-龙回头
+2020-06-04 23:26:46.255 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.325 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.375 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.455 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.505 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.557 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.607 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.671 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.700 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.730 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.757 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.788 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.816 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.858 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.889 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.925 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.954 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:46.982 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:47.012 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:47.041 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:47.083 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:47.121 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:47.179 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:47.246 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:47.313 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:47.444 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:47.533 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:47.567 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:47.614 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:47.659 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:26:47.710 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:06.917 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城红海滩' in 'where clause'")
+2020-06-04 23:28:06.918 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城红海滩
+2020-06-04 23:28:06.960 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:07.025 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:07.087 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:07.143 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:07.195 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:07.197 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect string value: '\\xF0\\x9F\\x94\\x85' for column 'userName' at row 1")
+2020-06-04 23:28:07.532 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:07.593 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:07.663 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:07.719 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:07.782 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:07.832 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:07.877 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:07.962 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.016 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.075 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.127 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.132 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect string value: '\\xF0\\x9F\\x9A\\x80' for column 'userName' at row 1")
+2020-06-04 23:28:08.166 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.225 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.267 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.308 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.368 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.418 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.460 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.497 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.525 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.564 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.593 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.629 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:28:08.658 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:00.244 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城海滨' in 'where clause'")
+2020-06-04 23:29:00.244 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城海滨
+2020-06-04 23:29:00.283 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:00.332 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:00.390 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:00.432 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:00.482 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:00.549 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:00.612 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:00.657 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:00.707 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:00.837 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:00.937 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.004 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.046 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.074 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.104 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.132 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.162 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.190 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.221 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.249 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.295 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.328 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.357 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.386 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.428 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.456 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.487 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.545 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.573 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.603 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:29:01.632 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.339 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '首山国家级森林公园' in 'where clause'")
+2020-06-04 23:30:14.340 | INFO     | sql:select_sql:90 - select id from site where site_name = 首山国家级森林公园
+2020-06-04 23:30:14.389 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.433 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.495 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.565 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.616 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.646 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.675 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.705 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.741 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.770 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.799 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.829 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.857 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.887 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.916 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.945 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:14.974 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.003 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.048 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.100 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.132 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.161 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.190 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.220 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.248 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.278 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.307 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.336 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.368 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.403 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:15.432 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:52.422 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴海栈道' in 'where clause'")
+2020-06-04 23:30:52.423 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴海栈道
+2020-06-04 23:30:52.490 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:52.535 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:52.589 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:52.694 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:52.744 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:52.819 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:52.887 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:52.919 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:52.948 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:52.978 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.006 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.036 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.065 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.124 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.173 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.223 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.265 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.299 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.331 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.361 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.390 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.419 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.448 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.478 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.505 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.535 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.564 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.593 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.622 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.652 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:30:53.680 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:44.665 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城菊花岛度假村' in 'where clause'")
+2020-06-04 23:32:44.666 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城菊花岛度假村
+2020-06-04 23:32:44.717 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:44.786 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:44.814 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:44.844 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:44.872 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:44.914 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:44.956 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:44.986 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.014 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.044 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.073 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.103 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.131 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.161 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.189 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.219 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.247 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.278 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.306 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.308 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-04 23:32:45.308 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '9e6a6618c71cac50755adccb334cf797', '', '', '', '') ;
+2020-06-04 23:32:45.344 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.346 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-04 23:32:45.346 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'adb54957dd3d223fae185d89c1dcc728', '', '', '', '') ;
+2020-06-04 23:32:45.372 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.374 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-04 23:32:45.374 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'a4d1a8ea93a149773add214912025662', '', '', '', '') ;
+2020-06-04 23:32:45.403 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.405 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-04 23:32:45.405 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '83c72f7e60c0b0da06812c65945d6ce6', '', '', '', '') ;
+2020-06-04 23:32:45.431 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.433 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-04 23:32:45.433 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '9882907377b98edc9e2d20ccc09cb962', '', '', '', '') ;
+2020-06-04 23:32:45.461 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:32:45.462 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-04 23:32:45.462 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '0a17e6b4dbe1e70b3bd1a5128fbd95ae', '', '', '', '') ;
+2020-06-04 23:32:45.489 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:23.481 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '第二海滨浴场' in 'where clause'")
+2020-06-04 23:33:23.481 | INFO     | sql:select_sql:90 - select id from site where site_name = 第二海滨浴场
+2020-06-04 23:33:23.514 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:23.556 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:23.628 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:23.682 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:23.736 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:23.829 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:23.905 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:23.953 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:23.989 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.078 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.148 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.197 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.247 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.322 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.389 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.439 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.519 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.577 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.645 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.721 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.779 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.826 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.903 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:24.955 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:25.006 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:25.072 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:25.122 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:25.181 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:25.252 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:25.319 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:33:25.397 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.188 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '张作霖别墅' in 'where clause'")
+2020-06-04 23:34:45.188 | INFO     | sql:select_sql:90 - select id from site where site_name = 张作霖别墅
+2020-06-04 23:34:45.269 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.322 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.384 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.386 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect string value: '\\xF0\\x9F\\x98\\x94' for column 'message' at row 1")
+2020-06-04 23:34:45.413 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.447 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.497 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.538 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.580 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.627 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.663 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.693 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.722 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.752 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.780 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.810 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.838 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.868 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.897 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.926 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.955 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:45.985 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:46.013 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:46.043 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:46.072 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:46.101 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:46.130 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:46.160 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:46.188 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:46.227 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:34:46.255 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:35:15.985 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '欢乐龙湾温泉水乐园' in 'where clause'")
+2020-06-04 23:35:15.986 | INFO     | sql:select_sql:90 - select id from site where site_name = 欢乐龙湾温泉水乐园
+2020-06-04 23:36:22.645 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城菊花岛度假村' in 'where clause'")
+2020-06-04 23:36:22.645 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城菊花岛度假村
+2020-06-04 23:36:22.678 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:22.706 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:22.746 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:22.780 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:22.810 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:22.838 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:22.868 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:22.896 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:22.959 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.044 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.101 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.138 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.168 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.196 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.226 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.254 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.287 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.321 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.352 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.354 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-04 23:36:23.354 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '012eedb2243d9c87ae72821531743373', '', '', '', '') ;
+2020-06-04 23:36:23.389 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.391 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-04 23:36:23.391 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '3889e14c1760dc4398127b9d0972ec53', '', '', '', '') ;
+2020-06-04 23:36:23.418 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.421 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-04 23:36:23.421 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'da9307604acd8039e40e5d06b0c1b0e8', '', '', '', '') ;
+2020-06-04 23:36:23.447 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.449 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-04 23:36:23.449 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'fe3b0b639d55a1084d70b2d3d3987c5a', '', '', '', '') ;
+2020-06-04 23:36:23.476 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.478 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-04 23:36:23.478 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '3b254d10a78477bb3b886a12221d6a6e', '', '', '', '') ;
+2020-06-04 23:36:23.505 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:23.508 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-04 23:36:23.508 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '1d4621311bc5a434e1aefbd02f614bdb', '', '', '', '') ;
+2020-06-04 23:36:23.537 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:45.680 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '祖氏石坊' in 'where clause'")
+2020-06-04 23:36:45.681 | INFO     | sql:select_sql:90 - select id from site where site_name = 祖氏石坊
+2020-06-04 23:36:45.726 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:45.885 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.035 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.092 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.146 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.187 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.238 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.287 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.326 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.372 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.422 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.471 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.553 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.596 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.646 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.696 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.759 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.817 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.855 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.937 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:46.988 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:47.051 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:47.080 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:47.149 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:47.180 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:47.209 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:47.239 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:47.267 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:47.298 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:47.342 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:36:47.380 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:56.368 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '菊花女雕像' in 'where clause'")
+2020-06-04 23:37:56.369 | INFO     | sql:select_sql:90 - select id from site where site_name = 菊花女雕像
+2020-06-04 23:37:56.395 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:56.463 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:56.520 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:56.562 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:56.616 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:56.682 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:56.750 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:56.808 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:56.879 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:56.946 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:56.988 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.071 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.129 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.170 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.221 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.271 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.313 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.371 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.450 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.451 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect string value: '\\xF0\\x9F\\x8C\\x8A\\xE4\\xB8...' for column 'message' at row 1")
+2020-06-04 23:37:57.516 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.561 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.612 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.661 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.708 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.766 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.812 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.841 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.870 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.899 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:37:57.929 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:49.228 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城古城' in 'where clause'")
+2020-06-04 23:55:49.228 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城古城
+2020-06-04 23:55:49.281 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:49.354 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:49.401 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:49.448 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:49.515 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:49.592 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:49.659 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:49.717 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:49.801 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:49.859 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:49.917 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:49.970 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.039 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.081 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.160 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.266 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.320 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.349 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.398 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.462 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.500 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.595 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.653 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.719 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.797 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.858 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.890 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.958 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:50.998 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:51.032 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:55:51.118 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:53.425 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城海滨国家风景名胜区' in 'where clause'")
+2020-06-04 23:56:53.425 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城海滨国家风景名胜区
+2020-06-04 23:56:53.484 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:53.534 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:53.609 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:53.735 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:53.834 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:53.893 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:53.951 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.015 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.083 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.124 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.235 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.289 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.323 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.389 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.447 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.480 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.554 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.611 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.641 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.702 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.765 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.824 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.869 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.923 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:54.982 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:55.039 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:55.082 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:55.166 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:55.214 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:55.255 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:56:55.292 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:20.860 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴海栈道' in 'where clause'")
+2020-06-04 23:57:20.861 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴海栈道-龙回头
+2020-06-04 23:57:21.022 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.073 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.126 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.181 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.214 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.260 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.309 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.356 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.414 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.456 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.534 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.606 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.639 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.691 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.739 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.792 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.848 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.903 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:21.968 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:22.033 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:22.086 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:22.134 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:22.173 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:22.224 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:22.265 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:22.310 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:22.349 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:22.399 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:22.439 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:22.501 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:22.530 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:58.245 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城红海滩' in 'where clause'")
+2020-06-04 23:57:58.245 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城红海滩
+2020-06-04 23:57:58.404 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:58.448 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:58.489 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:58.544 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:58.572 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:58.575 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect string value: '\\xF0\\x9F\\x94\\x85' for column 'userName' at row 1")
+2020-06-04 23:57:58.631 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:58.687 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:58.755 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:58.828 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:58.869 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:58.938 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.012 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.063 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.102 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.159 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.242 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.251 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect string value: '\\xF0\\x9F\\x9A\\x80' for column 'userName' at row 1")
+2020-06-04 23:57:59.310 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.368 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.432 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.490 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.531 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.584 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.649 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.714 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.766 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.809 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.856 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.897 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:57:59.949 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:43.460 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城海滨' in 'where clause'")
+2020-06-04 23:58:43.460 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城海滨
+2020-06-04 23:58:43.575 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:43.621 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:43.693 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:43.755 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:43.809 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:43.847 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:43.914 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:43.967 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.005 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.071 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.126 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.155 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.210 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.255 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.306 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.338 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.398 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.451 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.490 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.549 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.610 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.668 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.719 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.774 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.876 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:44.946 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:45.009 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:45.055 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:45.132 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:45.190 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:58:45.238 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.235 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城古城' in 'where clause'")
+2020-06-04 23:59:16.235 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城古城
+2020-06-04 23:59:16.272 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.304 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.349 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.404 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.445 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.471 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.507 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.541 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.582 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.613 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.646 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.671 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.696 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.721 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.749 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.803 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.859 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.900 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.941 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:16.974 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:17.004 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:17.038 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:17.075 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:17.104 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:17.129 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:17.166 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:17.199 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:17.238 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:17.274 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:17.304 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:17.338 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:56.060 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '首山国家级森林公园' in 'where clause'")
+2020-06-04 23:59:56.060 | INFO     | sql:select_sql:90 - select id from site where site_name = 首山国家级森林公园
+2020-06-04 23:59:56.146 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:56.227 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:56.276 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:56.335 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:56.407 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:56.476 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:56.582 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:56.662 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:56.818 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:56.976 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:57.124 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:57.238 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:57.335 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:57.475 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:57.596 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:57.801 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:57.943 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:58.182 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:58.437 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:58.551 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:58.631 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:58.713 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:58.797 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:58.947 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:59.109 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:59.212 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:59.291 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:59.519 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:59.608 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:59.717 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-04 23:59:59.842 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:38.588 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '首山国家级森林公园' in 'where clause'")
+2020-06-05 00:00:38.588 | INFO     | sql:select_sql:90 - select id from site where site_name = 首山国家级森林公园
+2020-06-05 00:00:38.710 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:38.787 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:38.862 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:38.928 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:39.012 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:39.083 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:39.190 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:39.274 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:39.391 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:39.482 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:39.562 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:39.649 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:39.729 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:39.807 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:39.874 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:39.958 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:40.038 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:40.125 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:40.199 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:40.300 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:40.398 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:40.499 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:40.562 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:40.666 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:40.753 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:40.900 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:40.995 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:41.075 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:41.129 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:41.216 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:41.315 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:00:59.990 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴海栈道' in 'where clause'")
+2020-06-05 00:00:59.991 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴海栈道
+2020-06-05 00:01:00.050 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.109 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.168 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.208 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.308 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.366 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.397 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.448 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.505 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.593 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.659 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.713 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.766 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.827 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.890 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:00.943 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.010 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.059 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.106 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.152 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.207 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.298 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.356 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.411 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.446 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.476 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.512 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.571 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.612 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.647 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:01.696 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:28.732 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城菊花岛度假村' in 'where clause'")
+2020-06-05 00:01:28.733 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城菊花岛度假村
+2020-06-05 00:01:28.891 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:28.929 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:28.991 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.027 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.151 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.224 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.284 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.385 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.431 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.575 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.629 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.696 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.745 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.787 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.840 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.895 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:29.990 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:30.029 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:30.091 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:30.092 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 00:01:30.093 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'cedf5c5420727bce1b922bcb62ee2f79', '', '', '', '') ;
+2020-06-05 00:01:30.133 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:30.135 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 00:01:30.135 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '20f48789be20ed2c3a5123547967a1e3', '', '', '', '') ;
+2020-06-05 00:01:30.178 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:30.180 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 00:01:30.180 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'e5cd222311f6738d5ad2d786bef759f6', '', '', '', '') ;
+2020-06-05 00:01:30.237 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:30.239 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 00:01:30.239 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'e070e182afda1c30c251717ba7e1ef70', '', '', '', '') ;
+2020-06-05 00:01:30.304 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:30.305 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 00:01:30.305 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '2f35955cabbf85387a66ffb4f0732758', '', '', '', '') ;
+2020-06-05 00:01:30.349 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:01:30.351 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 00:01:30.351 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '9a238e102a1002ec75199407e48baf58', '', '', '', '') ;
+2020-06-05 00:01:30.420 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.221 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '第二海滨浴场' in 'where clause'")
+2020-06-05 00:02:16.222 | INFO     | sql:select_sql:90 - select id from site where site_name = 第二海滨浴场
+2020-06-05 00:02:16.257 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.280 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.307 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.349 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.383 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.405 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.433 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.454 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.483 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.504 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.533 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.554 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.583 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.613 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.641 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.663 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.696 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.724 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.745 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.773 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.820 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.848 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.870 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.898 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.920 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.948 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:16.982 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:17.016 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:17.056 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:17.137 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:17.174 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:40.904 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '张作霖别墅' in 'where clause'")
+2020-06-05 00:02:40.905 | INFO     | sql:select_sql:90 - select id from site where site_name = 张作霖别墅
+2020-06-05 00:02:40.949 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:40.995 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.054 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.056 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect string value: '\\xF0\\x9F\\x98\\x94' for column 'message' at row 1")
+2020-06-05 00:02:41.104 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.139 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.172 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.224 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.271 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.312 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.376 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.457 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.524 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.564 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.641 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.684 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.724 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.789 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.848 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.925 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:41.973 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:42.024 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:42.071 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:42.120 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:42.184 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:42.234 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:42.280 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:42.341 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:42.380 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:42.432 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:02:42.471 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:04.511 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '欢乐龙湾温泉水乐园' in 'where clause'")
+2020-06-05 00:03:04.512 | INFO     | sql:select_sql:90 - select id from site where site_name = 欢乐龙湾温泉水乐园
+2020-06-05 00:03:33.655 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '兴城菊花岛度假村' in 'where clause'")
+2020-06-05 00:03:33.656 | INFO     | sql:select_sql:90 - select id from site where site_name = 兴城菊花岛度假村
+2020-06-05 00:03:33.747 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:33.842 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:33.879 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:33.936 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:33.981 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.039 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.188 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.249 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.287 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.367 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.395 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.448 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.499 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.528 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.579 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.616 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.673 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.714 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.762 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.764 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 00:03:34.764 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '4af0cc2412709212f6dc90193db8b61a', '', '', '', '') ;
+2020-06-05 00:03:34.849 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.851 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 00:03:34.851 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'c3de531ac7a48ea4f3490f73a3b725cb', '', '', '', '') ;
+2020-06-05 00:03:34.904 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.906 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 00:03:34.906 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '866c98cdd725beeb6184e5f9d8bcacb8', '', '', '', '') ;
+2020-06-05 00:03:34.938 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:34.939 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 00:03:34.940 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'f784a574ef77a34d6e486aeb38197924', '', '', '', '') ;
+2020-06-05 00:03:35.004 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:35.005 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 00:03:35.005 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'e9c1d0d5cb36b58447a92c1374ae3fc7', '', '', '', '') ;
+2020-06-05 00:03:35.054 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:03:35.055 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 00:03:35.055 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '9c18517886a3bfa5aa72b036c9f07e27', '', '', '', '') ;
+2020-06-05 00:03:35.123 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:02.278 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '祖氏石坊' in 'where clause'")
+2020-06-05 00:04:02.278 | INFO     | sql:select_sql:90 - select id from site where site_name = 祖氏石坊
+2020-06-05 00:04:02.577 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:02.826 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:02.938 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:03.056 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:03.164 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:03.280 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:03.390 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:03.480 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:03.582 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:03.730 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:03.843 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:03.936 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:04.039 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:04.153 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:04.252 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:04.361 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:04.465 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:04.570 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:04.670 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:04.804 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:04.888 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:04.971 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:05.068 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:05.224 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:05.410 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:05.494 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:05.724 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:05.931 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:06.062 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:06.173 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:06.256 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:29.252 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '菊花女雕像' in 'where clause'")
+2020-06-05 00:04:29.408 | INFO     | sql:select_sql:90 - select id from site where site_name = 菊花女雕像
+2020-06-05 00:04:29.623 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:29.958 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:30.141 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:30.365 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:30.533 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:30.710 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:30.899 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:31.083 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:31.274 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:31.475 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:31.706 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:31.910 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:32.175 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:32.435 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:32.736 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:32.949 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:33.388 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:33.619 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:33.893 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:33.900 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect string value: '\\xF0\\x9F\\x8C\\x8A\\xE4\\xB8...' for column 'message' at row 1")
+2020-06-05 00:04:35.415 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:35.640 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:35.798 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:35.932 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:36.122 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:36.564 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:36.822 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:37.186 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:37.529 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:37.902 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:04:38.119 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:18:13.293 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '菊花女雕像' in 'where clause'")
+2020-06-05 00:18:13.692 | INFO     | sql:select_sql:90 - select id from site where site_name = 菊花女雕像
+2020-06-05 00:18:14.327 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:19:40.610 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '菊花女雕像' in 'where clause'")
+2020-06-05 00:19:40.892 | INFO     | sql:select_sql:90 - select id from site where site_name = 菊花女雕像
+2020-06-05 00:19:41.217 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:21:05.919 | DEBUG    | sql:select_sql:89 - (1054, "Unknown column '菊花女雕像' in 'where clause'")
+2020-06-05 00:21:06.175 | INFO     | sql:select_sql:90 - select id from site where site_name = 菊花女雕像
+2020-06-05 00:22:33.165 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:24:19.877 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:18.074 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:18.290 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:18.429 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:18.629 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:18.814 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:19.031 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:19.155 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:19.463 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:19.661 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:19.872 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:19.980 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:20.133 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:20.325 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:20.423 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:20.525 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:20.675 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:20.847 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:21.003 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:21.005 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect string value: '\\xF0\\x9F\\x8C\\x8A\\xE4\\xB8...' for column 'message' at row 1")
+2020-06-05 00:26:23.349 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:23.465 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:23.554 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:23.658 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:23.724 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:23.799 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:23.881 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:24.027 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:24.157 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:24.247 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:26:24.364 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:55.638 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:55.705 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:55.746 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:55.804 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:55.846 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:55.890 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:55.931 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:55.971 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.015 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.057 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.098 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.146 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.190 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.232 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.281 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.332 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.373 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.423 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.473 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.515 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.556 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.598 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.638 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.697 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.738 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.788 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.848 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.899 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.947 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:27:56.999 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:57.165 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:57.300 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:57.374 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:57.425 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:57.521 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:57.598 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:57.661 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:57.731 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:57.797 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:57.885 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:58.008 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:58.184 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:58.341 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:58.428 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:58.563 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:58.645 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:58.729 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:58.808 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:58.953 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:59.045 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:59.146 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:59.239 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:59.391 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:59.496 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:59.606 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:59.685 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:59.754 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:59.802 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:59.846 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:28:59.905 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:58.532 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:58.615 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:58.656 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:58.716 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:58.791 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:58.857 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:58.913 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:58.972 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.030 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.089 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.165 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.214 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.283 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.339 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.396 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.464 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.513 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.590 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.726 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.807 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.862 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.921 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:29:59.988 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:30:00.038 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:30:00.104 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:30:00.171 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:30:00.238 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:30:00.299 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:30:00.346 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:30:00.397 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:23.531 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:23.926 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:24.184 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:24.427 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:24.433 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect string value: '\\xF0\\x9F\\x94\\x85' for column 'userName' at row 1")
+2020-06-05 00:31:26.473 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:26.597 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:26.722 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:26.844 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:26.939 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:27.082 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:27.153 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:27.255 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:27.356 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:27.421 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:27.516 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:27.527 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect string value: '\\xF0\\x9F\\x9A\\x80' for column 'userName' at row 1")
+2020-06-05 00:31:27.680 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:27.779 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:27.858 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:27.963 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:28.053 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:28.129 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:28.213 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:28.261 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:28.349 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:28.413 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:28.498 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:28.571 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:31:28.672 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:39.848 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:40.105 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:40.224 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:40.321 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:40.468 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:40.562 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:40.720 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:40.837 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:40.946 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:41.072 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:41.187 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:41.320 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:41.524 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:41.736 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:41.913 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:42.047 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:42.157 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:42.402 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:42.597 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:42.711 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:42.822 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:42.941 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:43.072 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:43.163 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:43.255 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:43.374 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:43.474 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:43.554 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:43.647 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:32:43.767 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:19.127 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:19.501 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:19.681 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:19.862 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:20.116 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:20.281 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:20.427 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:20.663 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:20.803 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:20.927 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:21.051 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:21.230 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:21.386 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:21.497 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:21.597 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:21.732 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:21.830 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:21.926 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:22.020 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:22.085 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:22.186 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:22.302 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:22.426 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:22.547 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:22.679 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:22.868 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:23.098 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:23.261 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:23.411 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:34:23.471 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:37.524 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:37.728 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:37.882 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:38.139 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:38.376 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:38.483 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:38.613 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:38.747 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:38.918 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:39.059 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:39.163 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:39.318 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:39.771 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:40.015 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:40.250 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:40.442 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:40.611 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:40.700 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:40.802 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:40.911 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:41.012 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:41.076 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:41.203 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:41.279 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:41.371 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:41.457 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:41.539 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:41.602 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:41.660 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 00:36:41.727 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:34.965 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:35.239 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:35.346 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:35.462 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:35.522 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:35.612 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:35.682 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:35.745 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:35.820 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:35.943 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.018 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.097 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.136 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.194 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.253 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.286 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.383 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.448 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.511 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.581 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.649 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.703 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.753 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.801 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.843 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.906 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:36.965 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:37.015 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:37.071 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:48:37.119 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:31.230 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:31.289 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:31.329 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:31.381 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:31.452 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:31.511 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:31.561 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:31.626 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:31.678 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:31.709 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:31.803 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:31.842 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:31.946 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.008 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.084 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.135 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.177 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.234 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.310 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.360 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.402 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.477 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.532 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.570 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.611 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.652 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.712 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.784 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:32.924 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:51:33.007 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:50.701 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:50.729 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:50.776 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:50.802 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:50.836 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:50.860 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:50.894 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:50.944 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:50.977 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.020 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.052 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.076 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.111 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.160 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.194 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.242 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.283 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.310 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.345 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.369 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.403 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.427 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.460 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.494 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.556 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.627 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.660 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.685 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.719 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:53:51.744 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:57.454 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:57.505 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:57.602 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:57.657 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:57.697 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:57.766 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:57.835 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:57.933 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:57.999 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.078 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.128 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.177 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.308 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.476 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.526 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.593 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.634 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.677 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.685 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 07:56:58.686 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '2673a1ce87c1a71a69d193e5d59840e1', '', '', '', '') ;
+2020-06-05 07:56:58.743 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.751 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 07:56:58.752 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '7bc8cb1a0ddfe410afa03e908e464b34', '', '', '', '') ;
+2020-06-05 07:56:58.791 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.797 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 07:56:58.797 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'bfeb34dfb3839321cf9081e3ecd7d77b', '', '', '', '') ;
+2020-06-05 07:56:58.843 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.846 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 07:56:58.846 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'cd48c5820b166bd0cdf35aa896dfd478', '', '', '', '') ;
+2020-06-05 07:56:58.902 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:58.913 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 07:56:58.914 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'bbb71082dc31bb9c29f1c5e881b0826c', '', '', '', '') ;
+2020-06-05 07:56:59.020 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:56:59.024 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 07:56:59.025 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'a4f0fb1e92f2b90a63311af2a4368dc2', '', '', '', '') ;
+2020-06-05 07:56:59.112 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:03.200 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:03.350 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:03.512 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:03.679 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:03.764 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:03.885 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:04.061 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:04.151 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:04.230 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:04.359 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:04.467 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:04.599 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:04.743 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:04.819 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:04.969 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:05.166 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:05.314 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:05.456 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:05.619 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:05.700 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:05.830 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:05.924 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:06.067 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:06.158 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:06.278 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:06.407 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:06.533 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:06.636 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:06.783 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:58:06.917 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:34.106 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:34.204 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:34.213 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect string value: '\\xF0\\x9F\\x98\\x94' for column 'message' at row 1")
+2020-06-05 07:59:34.812 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:34.902 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.008 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.069 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.117 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.184 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.226 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.277 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.349 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.407 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.449 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.490 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.576 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.615 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.675 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.705 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.732 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.755 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.782 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.805 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.848 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.882 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.905 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.932 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.955 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:35.982 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 07:59:36.005 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.098 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.138 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.141 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:21.141 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '40c413c9759453ed7cdc763f878e06a2', '', '', '', '') ;
+2020-06-05 08:02:21.205 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.208 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:21.208 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '0f814eb6952f9c084e9e02ccec7757d7', '', '', '', '') ;
+2020-06-05 08:02:21.298 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.304 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:21.305 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '4c966e34a75460c44ee8f8a3e694cd07', '', '', '', '') ;
+2020-06-05 08:02:21.358 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.365 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:21.366 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '4aa71f41e65f5edbf91ff85ed8cec934', '', '', '', '') ;
+2020-06-05 08:02:21.432 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.439 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:21.440 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '9b1dc24fce9a0ae51a692f785a946eab', '', '', '', '') ;
+2020-06-05 08:02:21.515 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.524 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:21.525 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '3b6a004f40fa583afd23f94087a1504a', '', '', '', '') ;
+2020-06-05 08:02:21.632 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.635 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:21.635 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'c98806f4411d18ee30621b9ae6eeb1ce', '', '', '', '') ;
+2020-06-05 08:02:21.672 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.676 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:21.676 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'dc974e213d293592af6b2d3d8b8ad3e6', '', '', '', '') ;
+2020-06-05 08:02:21.756 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.759 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:21.759 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '9182fbf0bfc9dab9e2ee8928cd856fec', '', '', '', '') ;
+2020-06-05 08:02:21.830 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.833 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:21.833 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'c736a669f10c22cfe81c116130921b9e', '', '', '', '') ;
+2020-06-05 08:02:21.905 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.908 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:21.908 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '5aed2ea8e27ce30a7bbeb99972ee8a91', '', '', '', '') ;
+2020-06-05 08:02:21.988 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:21.993 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:21.993 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '2877b1d203c7901764577fadb15d406a', '', '', '', '') ;
+2020-06-05 08:02:22.037 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:22.041 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:22.041 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'e958bc7690d12e778c6d728b27450b1b', '', '', '', '') ;
+2020-06-05 08:02:22.071 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:22.074 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:22.074 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'bbfd7b9497c09aefa40acef7c0b15233', '', '', '', '') ;
+2020-06-05 08:02:22.148 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:49.377 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:49.440 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:49.531 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:49.623 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:49.672 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:49.731 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:49.781 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:49.828 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:49.897 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:49.937 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.014 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.055 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.147 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.197 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.280 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.364 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.429 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.497 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.499 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:50.500 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '120eddd2a4cffbd8e0dc4762bb893496', '', '', '', '') ;
+2020-06-05 08:02:50.584 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.587 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:50.587 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '2b7e74f4ae07cd6494618cbcff53ea45', '', '', '', '') ;
+2020-06-05 08:02:50.647 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.649 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:50.649 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '6f767b87c254432a063d33fc9ec773db', '', '', '', '') ;
+2020-06-05 08:02:50.714 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.716 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:50.716 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '70e14f888ddaaad9a253ee4b3c5089d9', '', '', '', '') ;
+2020-06-05 08:02:50.776 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.778 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:50.778 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( '2a29e00e96d4a00cc52356b4ca28d7b2', '', '', '', '') ;
+2020-06-05 08:02:50.838 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:02:50.840 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect integer value: '' for column 'goal' at row 1")
+2020-06-05 08:02:50.840 | INFO     | sql:insert_sql:127 - insert into comments(id, userName, goal, publishDate, message) values ( 'e76ddc35b94577f171b3e0931d38c930', '', '', '', '') ;
+2020-06-05 08:02:50.897 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.016 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.056 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.125 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.206 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.255 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.315 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.376 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.430 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.507 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.548 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.607 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.664 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.713 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.754 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.815 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.874 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.915 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:40.963 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:41.032 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:41.062 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:41.122 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:41.164 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:41.206 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:41.265 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:41.322 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:41.382 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:41.438 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:41.489 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:41.540 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:04:41.579 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.390 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.432 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.462 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.490 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.522 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.547 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.570 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.597 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.620 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.663 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.705 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.765 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.807 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.889 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.920 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.947 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.971 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:12.998 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:13.003 | DEBUG    | sql:insert_sql:126 - (1366, "Incorrect string value: '\\xF0\\x9F\\x8C\\x8A\\xE4\\xB8...' for column 'message' at row 1")
+2020-06-05 08:05:13.040 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:13.089 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:13.122 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:13.146 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:13.172 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:13.197 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:13.225 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:13.257 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:13.290 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:13.321 | INFO     | sql:insert_sql:124 - insert is successful !
+2020-06-05 08:05:13.347 | INFO     | sql:insert_sql:124 - insert is successful !

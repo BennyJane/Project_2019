@@ -5,6 +5,10 @@
         <ul class="clearfix">
             <li class="nav-bar-active"><a class="item" href="{{ url_for('index') }}">首页</a></li>
             <li><a class="item" href="{{ url_for('top') }}">可视化展示</a></li>
+            {% if username == 'admin' %}
+                <li><a class="item" href="{{ url_for('crawl') }}">启动爬虫</a></li>
+            {% endif %}
+            <li><a class="item" href="{{ url_for('userList') }}">用户列表</a></li>
         </ul>
     </div>
 {% endblock %}
@@ -18,21 +22,21 @@
                         <div class="slide-container">
                             <ul class="clearfix">
                                 <li class="slider-item"><!---->
-                                    <a href="" title="title" target="_blank">
+                                    <a href="{{ url_for('content', id='29173') }}" title="title" target="_blank">
                                         <img _src="https://b1-q.mafengwo.net/s1/M00/C0/BF/wKgBm04ZNYCM9X5HAAE_Y1_biG817.jpeg?imageView2%2F2%2Fw%2F420%2Fh%2F220%2Fq%2F90">
                                         <div class="mask"></div>
                                         <div class="title"><b class="ellipsis-1">兴城的余辉</b></div>
                                     </a>
                                 </li>
                                 <li class="slider-item">
-                                    <a href="" title="title" target="_blank">
+                                    <a href="{{ url_for('content', id='6496369') }}" title="title" target="_blank">
                                         <img _src="https://n1-q.mafengwo.net/s6/M00/64/B4/wKgB4lOcGb6AVxH5AAFrlkNj06w60.jpeg?imageMogr2%2Fthumbnail%2F%21690x450r%2Fgravity%2FCenter%2Fcrop%2F%21690x450%2Fquality%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cHM6Ly9wMS1xLm1hZmVuZ3dvLm5ldC9zOC9NMDAvNjIvNzkvd0tnQnBWaHVDekNBSWt0SEFBQU5HOEw5QlFNMTYwLnBuZw%3D%3D%2Fgravity%2FNorthWest%2Fdx%2F20%2Fdy%2F21">
                                         <div class="mask"></div>
                                         <div class="title"><b class="ellipsis-1">海边</b></div>
                                     </a>
                                 </li>
                                 <li class="slider-item">
-                                    <a href="" title="title" target="_blank">
+                                    <a href="{{ url_for('content', id='29173') }}" title="title" target="_blank">
                                         <img _src="https://b1-q.mafengwo.net/s7/M00/37/DE/wKgB6lPDda6AbklcAAb-qLZVGl058.jpeg?imageMogr2%2Fthumbnail%2F%21690x450r%2Fgravity%2FCenter%2Fcrop%2F%21690x450%2Fquality%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cHM6Ly9wMS1xLm1hZmVuZ3dvLm5ldC9zOC9NMDAvNjIvNzkvd0tnQnBWaHVDekNBSWt0SEFBQU5HOEw5QlFNMTYwLnBuZw%3D%3D%2Fgravity%2FNorthWest%2Fdx%2F20%2Fdy%2F21">
                                         <div class="mask"></div>
                                         <div class="title"><b class="ellipsis-1">再见兴城</b></div>
@@ -58,7 +62,8 @@
                     <div class="m-list-inner">
                         <ul class="m-list" mod-width="w440">
                             <li class="m-item">
-                                <a class="thumb" href="" title="title" target="_blank">
+                                <a class="thumb" href="{{ url_for('content', id='29173') }}" title="title"
+                                   target="_blank">
                                     <img class="quic lazy"
                                          data-original="http://dimg04.c-ctrip.com/images/300m12000000s91wq9446_C_200_150.jpg">
                                     <span class="tips">旅游路线</span>
@@ -67,7 +72,8 @@
                                 </a>
                             </li>
                             <li class="m-item">
-                                <a class="thumb" href="" title="title" target="_blank">
+                                <a class="thumb" href="{{ url_for('content', id='7690103') }}" title="title"
+                                   target="_blank">
                                     <img class="quic lazy"
                                          data-original="http://dimg04.c-ctrip.com/images/300d1g000001h3fuiFD98_C_200_150.jpg">
                                     <span class="tips">旅游路线</span>
@@ -82,7 +88,8 @@
                     <div class="m-list-inner">
                         <ul class="m-list mt-20" mod-width="w440">
                             <li class="m-item">
-                                <a class="thumb" href="" title="title" target="_blank">
+                                <a class="thumb" href="{{ url_for('content', id='29173') }}" title="title"
+                                   target="_blank">
                                     <img class="quic lazy"
                                          data-original="https://p1-q.mafengwo.net/s3/M00/1E/38/wKgIDVxb3IaALRe1ACDwZ8c-4Lw64.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100">
                                     <i class="mask"></i>
@@ -90,7 +97,8 @@
                                 </a>
                             </li>
                             <li class="m-item">
-                                <a class="thumb" href="" title="title" target="_blank">
+                                <a class="thumb" href="{{ url_for('content', id='30296') }}" title="title"
+                                   target="_blank">
                                     <img class="quic lazy"
                                          data-original="https://n1-q.mafengwo.net/s14/M00/D3/76/wKgE2l1nXryALSeeABVGmbeDuVg33.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100">
                                     <i class="mask"></i>
@@ -98,7 +106,8 @@
                                 </a>
                             </li>
                             <li class="m-item">
-                                <a class="thumb" href="" title="title" target="_blank">
+                                <a class="thumb" href="{{ url_for('content', id='6630786') }}" title="title"
+                                   target="_blank">
                                     <img class="quic lazy"
                                          data-original="https://b1-q.mafengwo.net/s14/M00/FA/4A/wKgE2l0gqAGAe-9uABB4upe_ayw98.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100">
                                     <i class="mask"></i>
@@ -106,7 +115,8 @@
                                 </a>
                             </li>
                             <li class="m-item">
-                                <a class="thumb" href="" title="title" target="_blank">
+                                <a class="thumb" href="{{ url_for('content', id='7690103') }}" title="title"
+                                   target="_blank">
                                     <img class="quic lazy"
                                          data-original="https://b1-q.mafengwo.net/s12/M00/BD/11/wKgED1ubXCWAZuJnAEFN4mvBaNU68.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100">
                                     <i class="mask"></i>
@@ -114,7 +124,8 @@
                                 </a>
                             </li>
                             <li class="m-item">
-                                <a class="thumb" href="" title="title" target="_blank">
+                                <a class="thumb" href="{{ url_for('content', id='6630768') }}" title="title"
+                                   target="_blank">
                                     <img class="quic lazy"
                                          data-original="https://p1-q.mafengwo.net/s10/M00/D6/08/wKgBZ1olDNiAHKsPAAoHBz9v3K004.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100">
                                     <i class="mask"></i>
@@ -122,7 +133,8 @@
                                 </a>
                             </li>
                             <li class="m-item">
-                                <a class="thumb" href="" title="title" target="_blank">
+                                <a class="thumb" href="{{ url_for('content', id='6630768') }}" title="title"
+                                   target="_blank">
                                     <img class="quic lazy"
                                          data-original="http://dimg04.c-ctrip.com/images/300m1700000134vig86F2_C_200_150.jpg">
                                     <i class="mask"></i>
@@ -138,7 +150,6 @@
                         <ul class="rank-list">
                             <li><i>近期热门景点推荐</i></li>
                             {% for item in orderSite[:10] %}
-
                                 <li><i class="{{ 'num num%s' %loop.index }}">{{ loop.index }}</i><b><a
                                         href="{{ url_for('content', id='%s' %item['id']) }}"
                                         title="{{ item['site_name'] }}"
@@ -173,9 +184,6 @@
                                             <div class="icon-br"><span class="label"
                                                                        style="font-size: 16px;">评分{{ siteItem['rank'] }}</span>
                                             </div>
-                                        {% else %}
-                                            <div class="icon-br"><span class="label"
-                                                                       style="font-size: 16px;">评分:无</span></div>
                                         {% endif %}
                                     </a>
                                     <div class="text">

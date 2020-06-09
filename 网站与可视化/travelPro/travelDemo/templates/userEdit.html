@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block nav_head %}
+    <div class="nav-bar-menu pull-left">
+        <ul class="clearfix">
+            <li><a class="item" href="{{ url_for('index') }}">首页</a></li>
+            <li><a class="item" href="{{ url_for('top') }}">数据分析</a></li>
+            {% if username == 'admin' %}
+                <li><a class="item" href="{{ url_for('crawl') }}">启动爬虫</a></li>
+            {% endif %}
+            <li class="nav-bar-active"><a class="item" href="{{ url_for('userList') }}">用户信息</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="warp">
+        <div class="container">
+            <div class="breadcrumb" mod-skin="m20">
+                <a href="{{ url_for('userList') }}">用户信息/<cite>
+                    {{ target_user['username'] }}</cite></a>
+            </div>
+            <!--用户列表-->
+            <form method="post" action="{{ url_for('userEdit', userId=target_user['id']) }}"
+                  style="display: flex; justify-content: center; flex-direction: column">
+                <label class="user-edit" for="userId">用户ID</label>
+                <input class="user-edit" readonly="readonly" name="userId" id="userId"
+                       value="{{ request.form['id'] or target_user['id'] }}" required>
+                <label class="user-edit" for="name">用户名称</label>
+                <input class="user-edit" name="name" id="name"
+                       value="{{ request.form['name'] or target_user['username'] }}" required>
+                <label class="user-edit" for="password">用户新密码</label>
+                <input class="user-edit" name="password" id="password" type="password"
+                       value="{{ request.form['password'] }}" required>
+                <label class="user-edit" for="second_password">确认密码</label>
+                <input class="user-edit" name="second_password" id="second_password"
+                       value="{{ request.form['second_password'] }}"
+                       required type="password">
+                <input class="user-edit" type="submit" value="更新">
+            </form>
+            <hr>
+            {% if username == 'admin' %}
+                <form class="user-edit" action="{{ url_for('userDel', id=target_user['id']) }}" method="post"
+                      style="padding:0px 0px;display: flex; justify-content: center; flex-direction: column">
+                    {#  触发二次弹窗确认?#}
+                    <input class="danger user-edit" type="submit" value="删除" onclick="return confirm('是否确定删除该用户?');">
+                </form>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

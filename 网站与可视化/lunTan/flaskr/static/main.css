@@ -1,0 +1,33 @@
+.book-info： {
+    height: 20px;
+    margin: 0px 5px;
+}
+
+.nav-head {
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.nav-head >a{
+    text-decoration: none;
+}
+
+
+. add-book-option{
+    height: 21px;
+}
+
+.nav-hover{
+    background-color: #377ba8 ;
+    padding: 5px;
+    color: #ffffff;
+}
+
+.author-info{
+    font-size: 14px;
+    color: #bfbfbf;
+}
+
+.comment-txt{
+ font-size: 16px;
+}

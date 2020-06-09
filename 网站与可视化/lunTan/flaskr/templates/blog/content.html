@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}详情页面{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <h3>题目</h3>
+    <div>
+        <p>dddddddddddddddddddd</p>
+    </div>
+    <hr>
+    <div class="lg-container">
+        <div class="comment-group">
+            {#            评论输入框#}
+            <div class="add-comment-group">
+                <h3>发表评论</h3>
+                <script id="editor" type="text/plain" style="height:100px;"></script>
+                <div class="comment-btn-group">
+                    <button class="btn btn-primary" id="comment-btn">发表评论</button>
+                </div>
+            </div>
+            {#            评论列表#}
+            <h3>评论列表</h3>
+            <hr>
+            <ul class="comment-list-group" style="padding-left: 0px;">
+                <li style="display: flex;">
+                    <div class="avatar-group" style="margin: 0px 10px">
+                        <img src="{{ url_for('static',filename='images/user.png') }}" style="width: 60px; height: 60px"
+                             alt="">
+                    </div>
+                    <div class="comment-content">
+                        <div class="author-info">
+                            <span>username</span>
+                            <span>create_time</span>
+                        </div>
+                        <p class="comment-txt">
+                            ddddddddddddddddd
+                        </p>
+                    </div>
+                </li>
+                <li style="display: flex; margin: 10px 0px">
+                    <div class="avatar-group" style="margin: 0px 10px">
+                        <img src="{{ url_for('static',filename='images/user.png') }}" style="width: 60px; height: 60px"
+                             alt="">
+                    </div>
+                    <div class="comment-content">
+                        <div class="author-info">
+                            <span>username</span>
+                            <span>create_time</span>
+                        </div>
+                        <p class="comment-txt">
+                            ddddddddddddddddd
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function () {
+    var ue = UE.getEditor("editor",{
+        'serverUrl': '/ueditor/upload/',
+        //因为是评论，富文本比编辑器不需要那么多功能，所以这里只列出要用的
+        //一个列表代表一行
+        "toolbars": [
+            [
+                'undo', //撤销
+                'redo', //重做
+                'bold', //加粗
+                'italic', //斜体
+                'source', //源代码
+                'blockquote', //引用
+                'selectall', //全选
+                'insertcode', //代码语言
+                'fontfamily', //字体
+                'fontsize', //字号
+                'simpleupload', //单图上传
+                'emotion' //表情
+            ]
+        ]
+    });
+    //把ue设置为全局
+    window.ue = ue;
+});
+
+$(function () {
+    $("#comment-btn").click(function (event) {
+        event.preventDefault();
+        var loginTag = $("#login-tag").attr("data-is-login");
+        if(!loginTag){
+            window.location = '/signin/';
+        }else{
+            var content = window.ue.getContent();
+            var post_id = $("#post-content").attr("data-id");
+            bbsajax.post({
+                'url': '/acomment/',
+                'data':{
+                    'content': content,
+                    'post_id': post_id
+                },
+                'success': function (data) {
+                    if(data['code'] == 200){
+                        window.location.reload();
+                    }else{
+                        xtalert.alertInfo(data['message']);
+                    }
+                }
+            });
+        }
+    });
+});
+    </script>
+{% endblock %}

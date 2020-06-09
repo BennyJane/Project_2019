@@ -1445,7 +1445,7 @@ body, html {
 
 .articleList .card-type-news .text {
     /*margin-left: 184px;*/
-    height: 110px;
+    /*height: 110px;*/
     position: relative
 }
 
@@ -3436,3 +3436,7 @@ body, html {
     margin: 10px auto;
 }
 
+.user-edit{
+    padding: 15px 10px;
+
+}

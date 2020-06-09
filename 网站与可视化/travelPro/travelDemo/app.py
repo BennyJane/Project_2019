@@ -6,7 +6,9 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 
 from datetime import timedelta
-from sqlCore import valid_login, valid_regist, addUser, getSite, getHotel, getManySite, getContent
+from sqlCore import valid_login, valid_regist, addUser, getSite, getHotel, getManySite, getContent, sqlBase
+from crawlCore import crawlCore
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@127.0.0.1:3306/travel?charset=utf8'
@@ -16,6 +18,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 # app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(seconds=1)
 app.secret_key = 'benny jane'
 db = SQLAlchemy(app)
+
+sqlBaseFunc = sqlBase()
 
 
 # 登录  ==> 闭包
@@ -40,7 +44,8 @@ def index():
     allHotel = getHotel()
     allSite = getManySite()
     # print(allSite)
-    return render_template('index.html', allSite=allSite, allHotel=allHotel, orderSite=orderSite, username=session.get('username'))
+    return render_template('index.html', allSite=allSite, allHotel=allHotel, orderSite=orderSite,
+                           username=session.get('username'))
 
 
 @app.route('/content', methods=['GET'])
@@ -59,10 +64,12 @@ def content():
                 itemInfo['comment_category'] = comment_category_text
             else:
                 itemInfo['comment_category'] = ''
-            print(itemInfo)
-            targetList = []
-            return render_template('content.html', itemInfo=itemInfo, targetList=targetList, username=username)
+            # print(itemInfo)
+            commentList = sqlBaseFunc.getComment(siteId)
+
+            return render_template('content.html', itemInfo=itemInfo, commentList=commentList, username=username)
     return redirect(url_for('index'))
+
 
 @app.route('/top')
 @login_required
@@ -70,7 +77,100 @@ def top():
     # 首页
     username = session.get('username')
     print('top', username)
-    return render_template('top.html', username=username)
+    ten_site, ten_hotel, ten_site_info = sqlBaseFunc.topFirst()
+    picData = sqlBaseFunc.picData()
+    if picData:
+        picDataText = json.dumps(picData, ensure_ascii=False)
+    # print(picDataText, '\n', type(picDataText))
+    return render_template('top.html', username=username, ten_site=ten_site, ten_hotel=ten_hotel,
+                           ten_site_info=ten_site_info, picDataText=picDataText)
+
+
+@app.route('/top/hotel')
+@login_required
+def hotelData():
+    # 首页
+    username = session.get('username')
+    picData = sqlBaseFunc.hotelPicData()
+    if picData:
+        picDataText = json.dumps(picData, ensure_ascii=False)
+        # print(picDataText)
+    # print(picData)
+    print(picDataText, '\n', type(picDataText))
+    return render_template('topHotel.html', username=username, picDataText=picDataText)
+
+
+@app.route('/userList', methods=['GET'])
+@login_required
+def userList():
+    username = session.get('username')
+    if username == 'admin':
+        userList = sqlBaseFunc.getUser()
+    else:
+        userList = sqlBaseFunc.getUserByName(username)
+    return render_template('userList.html', username=username, userList=userList)
+
+
+@app.route('/userList/eidt', methods=['GET','POST'])
+@login_required
+def userEdit():
+    error = ''
+    username = session.get('username')
+    if request.method == 'GET':
+        userId = request.args.get('id')
+        if userId:
+            targetUser = sqlBaseFunc.getUserById(userId)
+            if targetUser:
+                target_user = targetUser[0]
+                return render_template('userEdit.html', username=username, target_user=target_user)
+    if request.method == 'POST':
+        print(request.form)
+        userId = request.form.get('userId')
+        name = request.form.get('name')
+        password = request.form.get('password')
+        second_password = request.form.get('second_password')
+        print(userId, name, password)
+        if password != second_password:
+            error = '两次密码不一致'
+        if not error:
+            sqlBaseFunc.updateUserInfo(name, password, userId)
+        else:
+            flash(error)
+    return redirect(url_for('userList'))
+
+
+@app.route('/userList/delete', methods=['POST'])
+@login_required
+def userDel():
+    userId = ''
+
+    try:
+        userId = request.args.get('id')
+    except Exception:
+        pass
+    if userId:
+        sqlBaseFunc.delUserInfo(userId)
+    return redirect(url_for('userList'))
+
+
+@app.route('/crawl', methods=['GET'])
+@login_required
+def crawl():
+    username = session.get('username')
+    targetList = crawlCore.crawlUrls()
+    return render_template('crawl.html', username=username, targetList=targetList)
+
+
+from threading import Thread
+
+
+@app.route('/crawl/start', methods=['GET'])
+@login_required
+def crawlStart():
+    if not crawlCore.isCrawling:
+        crawl_task = Thread(target=crawlCore.first, args=())
+        crawl_task.start()
+    return redirect(url_for('crawl'))
 
 
 @app.route('/login', methods=['GET', 'POST'])
