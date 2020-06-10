@@ -10,15 +10,19 @@
         <div class="content-head">
             <div style="margin: 0 10px">
                 <sapn>点赞</sapn>
-                {% if isLike  %}
-                    <a href="{{ url_for('blog.commentGood', id='%s' %essay['id']) }}"><img src="{{ url_for('static',filename='images/goodUp.png') }}" style="width: 18px"></a>
+                {% if isLike %}
+                    <a href="{{ url_for('blog.commentGood', id='%s' %essay['id']) }}"><img
+                            src="{{ url_for('static',filename='images/goodUp.png') }}" style="width: 18px"></a>
                 {% else %}
-                    <a href="{{ url_for('blog.commentGood', id='%s' %essay['id']) }}"><img src="{{ url_for('static',filename='images/good.png') }}" style="width: 18px"></a>
+                    <a href="{{ url_for('blog.commentGood', id='%s' %essay['id']) }}"><img
+                            src="{{ url_for('static',filename='images/good.png') }}" style="width: 18px"></a>
                 {% endif %}
             </div>
-            <div style="margin: 0 10px" >
+            <div style="margin: 0 10px">
                 <sapn>转发</sapn>
-                <a href=""><img src="{{ url_for('static',filename='images/share.png') }}" style="width: 18px; color: black" ></a></div>
+                <a href="{{ url_for('blog.commentShare', id='%s' %essay['id']) }}"><img
+                        src="{{ url_for('static',filename='images/share.png') }}" style="width: 18px; color: black"></a>
+            </div>
         </div>
     </div>
     <hr>
@@ -28,6 +32,7 @@
             <div class="add-comment-group">
                 <h4>发表评论</h4>
                 <form method="post" action="{{ url_for('blog.commentAdd') }}">
+                    <input name="post_id" id="post_id" style="display: none" value="{{ essay['id'] }}">
                     <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
                     <input type="submit" value="发表评论">
                 </form>
@@ -36,36 +41,24 @@
             <h4>评论列表</h4>
             <hr>
             <ul class="comment-list-group" style="padding-left: 0px;">
-                <li style="display: flex;">
-                    <div class="avatar-group" style="margin: 0px 10px">
-                        <img src="{{ url_for('static',filename='images/user.png') }}" style="width: 60px; height: 60px"
-                             alt="">
-                    </div>
-                    <div class="comment-content">
-                        <div class="author-info">
-                            <span>username</span>
-                            <span>create_time</span>
+                {% for comment in commentList %}
+                    <li style="display: flex;">
+                        <div class="avatar-group" style="margin: 0px 10px">
+                            <img src="{{ url_for('static',filename='images/user.png') }}"
+                                 style="width: 60px; height: 60px"
+                                 alt="">
                         </div>
-                        <p class="comment-txt">
-                            ddddddddddddddddd
-                        </p>
-                    </div>
-                </li>
-                <li style="display: flex; margin: 10px 0px">
-                    <div class="avatar-group" style="margin: 0px 10px">
-                        <img src="{{ url_for('static',filename='images/user.png') }}" style="width: 60px; height: 60px"
-                             alt="">
-                    </div>
-                    <div class="comment-content">
-                        <div class="author-info">
-                            <span>username</span>
-                            <span>create_time</span>
+                        <div class="comment-content">
+                            <div class="author-info">
+                                <span>{{ comment['username'] }}</span>
+                                <span>{{ comment['created_at'] }}</span>
+                            </div>
+                            <p class="comment-txt">
+                                {{ comment['content'] }}
+                            </p>
                         </div>
-                        <p class="comment-txt">
-                            ddddddddddddddddd
-                        </p>
-                    </div>
-                </li>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
     </div>

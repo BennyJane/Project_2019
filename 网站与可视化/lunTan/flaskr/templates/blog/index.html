@@ -5,7 +5,7 @@
         <div style="display: flex; justify-content: left">
             <span ><a class=" nav-hover" href="{{ url_for('blog.index') }}" style="text-decoration: none">论坛主页</a></span>
             <span class="nav-head"><a href="{{ url_for('blog.selfPage') }}">个人帖子</a></span>
-            <span class="nav-head"><a href="{{ url_for('blog.commentList') }}">评论与回复</a></span>
+{#            <span class="nav-head"><a href="{{ url_for('blog.commentList') }}">评论与回复</a></span>#}
         </div>
     </h1>
     {% if g.user %}
@@ -18,7 +18,11 @@
         <article class="post">
             <header>
                 <div>
-                    <a href="{{ url_for('blog.content', id='%s' %post['id']) }}"><h1>{{ post['title'] }}</h1></a>
+                    {% if post['isOriginal'] == 0 %}
+                        <a href="{{ url_for('blog.content', id='%s' %post['id']) }}"><h1>{{ post['title'] }}(转发)</h1></a>
+                    {% else %}
+                        <a href="{{ url_for('blog.content', id='%s' %post['id']) }}"><h1>{{ post['title'] }}</h1></a>
+                    {% endif %}
                     <div class="about">来自 {{ post['username'] }}  {{ post['created'].strftime('%Y-%m-%d %H:%M:%S') }}</div>
                 </div>
                 {% if g.user['id'] == post['author_id'] %}

@@ -20,10 +20,11 @@ def index():
     """Show all the posts, most recent first."""
     db = get_db()
     posts = db.execute(
-        "SELECT p.id, title, body, created, author_id, username"
+        "SELECT p.id, title, body, created, author_id, username, isOriginal"
         " FROM post p JOIN user u ON p.author_id = u.id"
         " ORDER BY created DESC"
     ).fetchall()
+    print(posts)
     return render_template("blog/index.html", posts=posts)
 
 
@@ -187,50 +188,71 @@ def content():
     # userId = session["user_id"]
     user = g.user
     userId = user['id']
-    db = get_db()
     if request.method == 'GET':
         # 获取贴子内容
         post_id = request.args.get('id')
+        db = get_db()
         essay = db.execute(
            "SELECT p.id, title, body, created, author_id, isOriginal, like_users FROM post p where p.id ={}".format(post_id)
         ).fetchone()
-        # 获取评论
+        db.commit()
+        # todo 获取评论
+        db = get_db()
+        commentSql= "select c.content, c.created_at, c.id, p.username from comment c join user p on c.user_id=p.id where c.post_id={} order by c.created_at asc ".format(post_id)
+        print(commentSql)
+        commentList = db.execute(commentSql).fetchall()
+        print(commentList, 'commentlist')
 
         # 获取点赞情况
         isLike = None
         if essay['like_users']:
             like_users_dict = json.loads(essay['like_users'])
             isLike = like_users_dict.get(userId)
-        print(post_id, essay)
-        return render_template("blog/content.html", essay=essay, isLike=isLike)
-    conment = []
+        return render_template("blog/content.html", essay=essay, isLike=isLike, commentList=commentList)
     return redirect(url_for('blog.index'))
 
 
-@bp.route("/content/comment/add")
+@bp.route("/content/comment/add", methods=("POST",'GET'))
 @login_required
 def commentAdd():
     # 添加评论
+    userId = session.get("user_id")
+    if request.method == 'POST':
+        print(request.form)
+        bodyText = request.form.get('body')
+        post_id = request.form.get('post_id')
+        print(bodyText, post_id)
+        if not bodyText:
+            error = '评论内容不能为空！'
+            flash(error)
+        if not post_id:
+            flash('当前用户没有权限评论！')
+        db = get_db()
+        sql = "insert into comment (post_id, user_id, content) VALUES ('{}','{}','{}')".format(post_id, userId, bodyText)
+        db.execute(sql)
+        db.commit()
+        return redirect(url_for('blog.content', id=post_id))
+    return redirect(url_for('blog.index'))
+
+
+
     return ''
 
 @bp.route("/content/good/change")
 @login_required
 def commentGood():
     # 修改点赞状态
-    user = g.user
-    userId = user['id']
+    userId = session.get("user_id")
     db = get_db()
     if request.method == 'GET':
         isLike = None
         post_id = request.args.get('id')
-        print('post_id like', post_id)
         sql = "SELECT p.id, title, body, created, author_id, isOriginal, like_users FROM post p where p.id ={}".format(
                 post_id)
-        print(sql)
         essay = db.execute(sql).fetchone()
         if essay['like_users']:
             like_users_dict = json.loads(essay['like_users'])
-            targetUser = like_users_dict.get(userId)
+            targetUser = like_users_dict.get(str(userId))
             if targetUser:
                 like_users_dict[userId] = ''
             else:
@@ -240,22 +262,32 @@ def commentGood():
             isLike = '1'
             like_users_dict = {userId: '1'}
         newLikes = json.dumps(like_users_dict)
-        print(newLikes)
         db.execute(
             "update post set like_users='{}' where id={}".format(newLikes,post_id)
         )
         db.commit()
-
-        sql = "SELECT p.id, title, body, created, author_id, isOriginal, like_users FROM post p where p.id ={}".format(
-                post_id)
-        essay = db.execute(sql).fetchone()
-        print(essay['like_users'])
-        return render_template("blog/content.html", essay=essay, isLike=isLike)
-    return ''
+        return redirect(url_for('blog.content', id=post_id))
+        # return render_template("blog/content.html", essay=essay, isLike=isLike)
+    return redirect(url_for('blog.index'))
 
 
 @bp.route("/content/share")
 @login_required
 def commentShare():
     # 转发
-    return ''
+    userId = session.get("user_id")
+    if request.method == 'GET':
+        post_id = request.args.get('id')
+        db = get_db()
+        sql = "SELECT p.id, title, body, created, author_id, isOriginal, like_users FROM post p where p.id ={}".format(
+                post_id)
+        targetEssay = db.execute(sql).fetchone()
+
+        sqlTwo = "insert into post (author_id, title, body, isOriginal) values ('{}','{}','{}','{}')".format(
+            userId,targetEssay['title'],targetEssay['body'],0)
+        db.execute(sqlTwo)
+        db.commit()
+        flash('转发成功')
+        return redirect(url_for('blog.content', id=post_id))
+
+    return redirect(url_for('blog.index'))
