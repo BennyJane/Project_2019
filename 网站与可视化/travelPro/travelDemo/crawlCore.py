@@ -19,7 +19,7 @@ class Crawl:
         print('启动爬虫 ==================================')
         self.isCrawling = True
         self.crawledUrl = []
-        for i in range(1, 20):
+        for i in range(1, 19):
             site_url = self.first_url.replace('@', str(i))
             print(site_url)
             if site_url not in self.crawledUrl:
@@ -49,6 +49,7 @@ class Crawl:
                 #     data = [site_id, site_name, description, num_comment, rank, site_img, site_imgs, num_ginfo]
                 #     target = ['id', 'site_name', 'brief', 'num_comment','rank','img', 'imgs', 'num_ginfo']
                 #     site_db.insert_sql(target, data)
+        self.crawledUrl.append('抓取程序结束！')
         self.isCrawling = False
 
     def crawlUrls(self):

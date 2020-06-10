@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block nav_head %}
+    <div class="nav-bar-menu pull-left">
+        <ul class="clearfix">
+            <li><a class="item" href="{{ url_for('index') }}">首页</a></li>
+            <li><a class="item" href="{{ url_for('top') }}">数据分析</a></li>
+            {% if username == 'admin' %}
+                <li><a class="item" href="{{ url_for('crawl') }}">启动爬虫</a></li>
+            {% endif %}
+            <li class="nav-bar-active"><a class="item" href="{{ url_for('userList') }}">用户信息</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="warp">
+        <div class="container">
+            <div class="breadcrumb" mod-skin="m20">
+                <a href="{{ url_for('userList') }}">用户信息/<cite>
+                    {{ username }}</cite></a>
+            </div>
+            <div class="main-inner" mod-size="w1120">
+                <!--用户列表-->
+                <div class="mod-inner mt20" mod-skin="p25">
+                    <div class="mod-main">
+                        <div id="lists" class="articleList">
+                            {% for user in userList %}
+                                <div class="rec-news-item">
+                                    <div class="news-card card-type-news">
+                                        <div class="text"
+                                             style="margin-left: 0px; display: flex; justify-content: space-between">
+                                            <div>
+                                                <h4 class="title ellipsis-1">
+                                                    用户名称： {{ user['username'] }}</h4>
+                                                <span style="font-size: 16px; color: #ababab">id: {{ user['id'] }}, updated at {{ user['update_time'] }}</span>
+                                            </div>
+                                            <div style="align-self: center; font-size: 16px"><a
+                                                    href="{{ url_for('userEdit', id='%s' %user['id']) }}"
+                                                    style="color: #FF443F">编辑</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

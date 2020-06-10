@@ -19,74 +19,64 @@
             <form class="user-edit" action="{{ url_for('crawlStart') }}" method="GET"
                   style="padding:0px 0px;display: flex; justify-content: center; flex-direction: column">
                 {#  触发二次弹窗确认?#}
-                <input class="danger user-edit" type="submit" value="启动爬虫">
+                <input class="danger user-edit" type="submit" value="启动爬虫" onclick="loadXMLDoc()">
             </form>
             <div class="main-inner" mod-size="w1120">
                 <!--用户列表-->
                 <div class="mod-inner mt20" mod-skin="p25">
                     <div class="mod-main">
                         <div id="lists" class="articleList">
-                            {% for crawl in targetList %}
-                                <div class="rec-news-item">
-                                    <div class="news-card card-type-news">
-                                        <div class="text"
-                                             style="margin-left: 0px; display: flex; justify-content: space-between">
-                                            <div>
-                                                <h4 class="title ellipsis-1">
-                                                    抓取的url： {{ crawl }}</h4>
-                                            </div>
+                            <div class="rec-news-item">
+                                <div class="news-card card-type-news">
+                                    <div class="text"
+                                         style="margin-left: 0px; display: flex; justify-content: space-between">
+                                        <div id="crawl-list">
+                                            <h4 class="title ellipsis-1">
+                                                正在抓取的url：</h4>
                                         </div>
                                     </div>
                                 </div>
-                            {% endfor %}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script language="javascript">
-        var xmlhttp;
-
-        //判断浏览器是否支持ActiveX控件
-        if (window.ActiveXObject) {
-        //支持-通过ActiveXObject的一个新实例来创建XMLHttpRequest对象
-            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        //不支持
-        else if (window.XMLHttpRequest) {
-            xmlHttp = new XMLHttpRequest()
-        }
-
-        function getWeather() {
-            //创建异步对象
-            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-            //加载服务器-注意URL参数的使用
-            xmlhttp.Open("GET", "http://127.0.0.1:5000/crawl", false)
-            //异步对象事件挂钩
-            xmlhttp.onreadystatechange = stateChange;
-            //发送请求-无参数
-            xmlhttp.Send(null);
-        }
-
-        function stateChange() {
-            if (xmlhttp.readystate == 4 && xmlhttp.status == 200) {
-                //获取所有返回的数据
-                var data = xmlhttp.responseText;
-                console.log(data)
-                //过滤自己需要的数据
-                {#var begin = data.indexOf("國際各別都市 start");#}
-                {#var end = data.indexOf("國際各別都市 end");#}
-                {#var weather = data.substring(begin + 15, end);#}
-                //填充天气内容
-                document.getElementById("lists").innerHTML = weather;
-                //显示结果
-                {#document.getElementById("divweather").style.visibility = "visible";#}
+    <script type="text/javascript">
+        function loadXMLDoc() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
             }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    let res = xmlhttp.responseText;
+                    let dataList = JSON.parse(res)
+                    let targetNode = document.getElementById('crawl-list')
+                    let nodes = targetNode.childNodes
+                    console.log(dataList.length, nodes.length)
+                    let currentNodes = nodes.length - 4
+                    if (dataList.length > currentNodes) {
+                        let index = dataList.length - 1
+                        let newNode = document.createElement('p')
+                        newNode.setAttribute('class', 'title ellipsis-1')
+                        if (dataList[index] !== undefined) {
+                            newNode.innerText = dataList[index]
+                                targetNode.append(newNode)
+                            if (dataList[index] === '抓取程序结束！'){
+                                clearInterval(timeFunc)
+                            }
+                        }
+                    }
+                }
+            }
+            xmlhttp.open("GET", "/crawl/res", true);
+            xmlhttp.send();
         }
 
-        window.setInterval("getWeather()", 1500);
+        let timeFunc = window.setInterval(loadXMLDoc, 1500)
     </script>
-
 {% endblock %}
