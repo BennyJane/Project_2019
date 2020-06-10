@@ -9,6 +9,8 @@ from werkzeug.exceptions import abort
 
 from flaskr.auth import login_required
 from flaskr.db import get_db
+import json
+
 
 bp = Blueprint("blog", __name__)
 
@@ -181,16 +183,79 @@ def commentList():
 @bp.route("/content")
 @login_required
 def content():
-    """Show all the posts, most recent first."""
     # 当前用户id
     # userId = session["user_id"]
     user = g.user
     userId = user['id']
     db = get_db()
-    posts = db.execute(
-       f"SELECT p.id, title, body, created, author_id, username"
-        " FROM post p JOIN user u ON p.author_id = u.id"
-        " ORDER BY created DESC"
-    ).fetchall()
+    if request.method == 'GET':
+        # 获取贴子内容
+        post_id = request.args.get('id')
+        essay = db.execute(
+           "SELECT p.id, title, body, created, author_id, isOriginal, like_users FROM post p where p.id ={}".format(post_id)
+        ).fetchone()
+        # 获取评论
+
+        # 获取点赞情况
+        isLike = None
+        if essay['like_users']:
+            like_users_dict = json.loads(essay['like_users'])
+            isLike = like_users_dict.get(userId)
+        print(post_id, essay)
+        return render_template("blog/content.html", essay=essay, isLike=isLike)
     conment = []
-    return render_template("blog/content.html", posts=posts)
+    return redirect(url_for('blog.index'))
+
+
+@bp.route("/content/comment/add")
+@login_required
+def commentAdd():
+    # 添加评论
+    return ''
+
+@bp.route("/content/good/change")
+@login_required
+def commentGood():
+    # 修改点赞状态
+    user = g.user
+    userId = user['id']
+    db = get_db()
+    if request.method == 'GET':
+        isLike = None
+        post_id = request.args.get('id')
+        print('post_id like', post_id)
+        sql = "SELECT p.id, title, body, created, author_id, isOriginal, like_users FROM post p where p.id ={}".format(
+                post_id)
+        print(sql)
+        essay = db.execute(sql).fetchone()
+        if essay['like_users']:
+            like_users_dict = json.loads(essay['like_users'])
+            targetUser = like_users_dict.get(userId)
+            if targetUser:
+                like_users_dict[userId] = ''
+            else:
+                isLike = '1'
+                like_users_dict[userId] = '1'
+        else:
+            isLike = '1'
+            like_users_dict = {userId: '1'}
+        newLikes = json.dumps(like_users_dict)
+        print(newLikes)
+        db.execute(
+            "update post set like_users='{}' where id={}".format(newLikes,post_id)
+        )
+        db.commit()
+
+        sql = "SELECT p.id, title, body, created, author_id, isOriginal, like_users FROM post p where p.id ={}".format(
+                post_id)
+        essay = db.execute(sql).fetchone()
+        print(essay['like_users'])
+        return render_template("blog/content.html", essay=essay, isLike=isLike)
+    return ''
+
+
+@bp.route("/content/share")
+@login_required
+def commentShare():
+    # 转发
+    return ''

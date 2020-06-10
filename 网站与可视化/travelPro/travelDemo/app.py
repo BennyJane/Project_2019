@@ -1,7 +1,7 @@
 import json
 from functools import wraps
 
-from flask import Flask, request, render_template, session, redirect, url_for, g, flash
+from flask import Flask, request, render_template, session, redirect, url_for, g, flash, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import os
 
@@ -159,6 +159,12 @@ def crawl():
     username = session.get('username')
     targetList = crawlCore.crawlUrls()
     return render_template('crawl.html', username=username, targetList=targetList)
+
+
+@app.route('/crawl/res', methods=['GET'])
+def crawlRes():
+    targetList = crawlCore.crawlUrls()
+    return jsonify(targetList)
 
 
 from threading import Thread
