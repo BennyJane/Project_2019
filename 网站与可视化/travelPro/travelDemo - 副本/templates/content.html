@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block nav_head %}
+    <div class="nav-bar-menu pull-left">
+        <ul class="clearfix">
+            <li class="nav-bar-active"><a class="item" href="{{ url_for('index') }}">首页</a></li>
+            <li><a class="item" href="{{ url_for('top') }}">数据分析</a></li>
+            {% if username == 'admin' %}
+                <li><a class="item" href="{{ url_for('crawl') }}">启动爬虫</a></li>
+            {% endif %}
+            <li><a class="item" href="{{ url_for('userList') }}">用户列表</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="warp">
+        <div class="container">
+            <div class="breadcrumb" mod-skin="m20">
+                <a href="{{ url_for('index') }}">首页</a><span>/</span><a href="">详情页</a><span>/</span><a><cite>
+                {{ itemInfo['title'] }}</cite></a>
+            </div>
+            <div class="main-inner" mod-size="w1120">
+                <!--景点详情-->
+                <div class="albumDetail clearfix">
+                    <div class="albumDetailMain clearfix">
+
+                        <div class="albumDetailMain-left">
+                            <div class="thumb">
+                                <a href="" title="title" class="thumb-link" target="_blank">
+                                    <img class="quic"
+                                         src="{{ itemInfo['img'] }}"
+                                         alt="img-title">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="albumDetailMain-right">
+                            <h1 class="title"> {{ itemInfo['site_name'] }}</h1>
+                            <!-- 资料 -->
+                            <div class="intro clearfix">
+                                {% if itemInfo['site'] %}
+                                    <p><label>具体位置：</label>{{ itemInfo['site'] }}</p>
+                                {% endif %}
+                                {% if itemInfo['num_comment'] %}
+                                    <p><label>评论数量：</label>{{ itemInfo['num_comment'] }}</p>
+                                {% endif %}
+                                {% if itemInfo['num_ginfo'] %}
+                                    <p><label>游记数量：</label>{{ itemInfo['num_ginfo'] }}</p>
+                                {% endif %}
+                            </div>
+                            <!-- 详情 -->
+                            <p class="intro-desc item-desc-info"><label
+                                    class="color-9">简介：</label>{{ itemInfo['brief'] }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--景点评论-->
+                <div class="mod-inner mt20" mod-skin="p25">
+                    <div class="mod-inner-head">
+                        <div class="title" mod-skin="line">热门评论</div>
+                    </div>
+                    <div class="mod-main">
+                        <div id="lists" class="articleList">
+                            {% for comment in commentList %}
+                                <div class="rec-news-item">
+                                    <div class="news-card card-type-news">
+                                        <div class="text" style="margin-left: 0px">
+                                            <h3 class="title ellipsis-1">游客名称： {{ comment['userName'] }}，
+                                                评分：{{ comment['goal'] }} </h3>
+                                            <div class="des">{{ comment['message'] }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

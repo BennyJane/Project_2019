@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Log In{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="warp">
+    <div class="container">
+        <form class="login-form" id="myform" action="/register" method="post">
+            <div class="mod-login">
+                <h2>注册帐号</h2>
+                <div class="input-group" style="margin-top: 20px">
+                    <i class="iconfont icon-user1"></i>
+                    <input id="usu_phone_name" class="input" type="text" autocomplete="off" placeholder="用戶名"
+                           datatype="m" nullmsg="用戶名" errormsg="用戶名错误" maxlength="11" name="username"/>
+                </div>
+                <div class="input-group">
+                    <i class="iconfont icon-lockopen"></i>
+                    <input class="input" type="password" autocomplete="off" placeholder="密码" datatype="s6-18"
+                           nullmsg="请输入密码" errormsg="密码格式错误" maxlength="18" name="password">
+                </div>
+                <div class="input-group">
+                    <i class="iconfont icon-lockopen"></i>
+                    <input class="input" type="password" autocomplete="off" placeholder="确认密码" datatype="s6-18"
+                           nullmsg="请重复输入新密码" errormsg="两次输入密码不一致" recheck="password" name="password2">
+                </div>
+                <div class="bottom">
+                    <button type="submit" class="button">立即注册</button>
+                    <p>或</p>
+                    <a href="{{ url_for('login') }}" class="button reg">已有账号，直接登录</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

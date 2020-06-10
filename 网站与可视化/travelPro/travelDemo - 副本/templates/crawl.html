@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block nav_head %}
+    <div class="nav-bar-menu pull-left">
+        <ul class="clearfix">
+            <li><a class="item" href="{{ url_for('index') }}">首页</a></li>
+            <li><a class="item" href="{{ url_for('top') }}">数据分析</a></li>
+            {% if username == 'admin' %}
+                <li class="nav-bar-active"><a class="item" href="{{ url_for('crawl') }}">启动爬虫</a></li>
+            {% endif %}
+            <li><a class="item" href="{{ url_for('userList') }}">用户信息</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="warp">
+        <div class="container">
+            <form class="user-edit" action="{{ url_for('crawlStart') }}" method="GET"
+                  style="padding:0px 0px;display: flex; justify-content: center; flex-direction: column">
+                {#  触发二次弹窗确认?#}
+                <input class="danger user-edit" type="submit" value="启动爬虫" onclick="loadXMLDoc()">
+            </form>
+            <div class="main-inner" mod-size="w1120">
+                <!--用户列表-->
+                <div class="mod-inner mt20" mod-skin="p25">
+                    <div class="mod-main">
+                        <div id="lists" class="articleList">
+                            <div class="rec-news-item">
+                                <div class="news-card card-type-news">
+                                    <div class="text"
+                                         style="margin-left: 0px; display: flex; justify-content: space-between">
+                                        <div id="crawl-list">
+                                            <h4 class="title ellipsis-1">
+                                                正在抓取的url：</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function loadXMLDoc() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    let res = xmlhttp.responseText;
+                    let dataList = JSON.parse(res)
+                    let targetNode = document.getElementById('crawl-list')
+                    let nodes = targetNode.childNodes
+                    console.log(dataList.length, nodes.length)
+                    let currentNodes = nodes.length - 4
+                    if (dataList.length > currentNodes) {
+                        let index = dataList.length - 1
+                        let newNode = document.createElement('p')
+                        newNode.setAttribute('class', 'title ellipsis-1')
+                        if (dataList[index] !== undefined) {
+                            newNode.innerText = dataList[index]
+                                targetNode.append(newNode)
+                            if (dataList[index] === '抓取程序结束！'){
+                                clearInterval(timeFunc)
+                            }
+                        }
+                    }
+                }
+            }
+            xmlhttp.open("GET", "/crawl/res", true);
+            xmlhttp.send();
+        }
+
+        let timeFunc = window.setInterval(loadXMLDoc, 1500)
+    </script>
+{% endblock %}

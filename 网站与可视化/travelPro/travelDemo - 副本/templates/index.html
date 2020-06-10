@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+
+{% block nav_head %}
+    <div class="nav-bar-menu pull-left">
+        <ul class="clearfix">
+            <li class="nav-bar-active"><a class="item" href="{{ url_for('index') }}">首页</a></li>
+            <li><a class="item" href="{{ url_for('top') }}">可视化展示</a></li>
+            {% if username == 'admin' %}
+                <li><a class="item" href="{{ url_for('crawl') }}">启动爬虫</a></li>
+            {% endif %}
+            <li><a class="item" href="{{ url_for('userList') }}">用户列表</a></li>
+        </ul>
+    </div>
+{% endblock %}
+{% block content %}
+    <div class="warp">
+        <div class="container">
+            <!--全站推荐-->
+            <div class="mod mt20" mod-skin="p20">
+                <div class="mod pull-left mr20" mod-width="w420">
+                    <div id="banner-slide" class="banner-slide">
+                        <div class="slide-container">
+                            <ul class="clearfix">
+                                <li class="slider-item"><!---->
+                                    <a href="{{ url_for('content', id='29173') }}" title="title" target="_blank">
+                                        <img _src="https://b1-q.mafengwo.net/s1/M00/C0/BF/wKgBm04ZNYCM9X5HAAE_Y1_biG817.jpeg?imageView2%2F2%2Fw%2F420%2Fh%2F220%2Fq%2F90">
+                                        <div class="mask"></div>
+                                        <div class="title"><b class="ellipsis-1">兴城的余辉</b></div>
+                                    </a>
+                                </li>
+                                <li class="slider-item">
+                                    <a href="{{ url_for('content', id='6496369') }}" title="title" target="_blank">
+                                        <img _src="https://n1-q.mafengwo.net/s6/M00/64/B4/wKgB4lOcGb6AVxH5AAFrlkNj06w60.jpeg?imageMogr2%2Fthumbnail%2F%21690x450r%2Fgravity%2FCenter%2Fcrop%2F%21690x450%2Fquality%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cHM6Ly9wMS1xLm1hZmVuZ3dvLm5ldC9zOC9NMDAvNjIvNzkvd0tnQnBWaHVDekNBSWt0SEFBQU5HOEw5QlFNMTYwLnBuZw%3D%3D%2Fgravity%2FNorthWest%2Fdx%2F20%2Fdy%2F21">
+                                        <div class="mask"></div>
+                                        <div class="title"><b class="ellipsis-1">海边</b></div>
+                                    </a>
+                                </li>
+                                <li class="slider-item">
+                                    <a href="{{ url_for('content', id='29173') }}" title="title" target="_blank">
+                                        <img _src="https://b1-q.mafengwo.net/s7/M00/37/DE/wKgB6lPDda6AbklcAAb-qLZVGl058.jpeg?imageMogr2%2Fthumbnail%2F%21690x450r%2Fgravity%2FCenter%2Fcrop%2F%21690x450%2Fquality%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cHM6Ly9wMS1xLm1hZmVuZ3dvLm5ldC9zOC9NMDAvNjIvNzkvd0tnQnBWaHVDekNBSWt0SEFBQU5HOEw5QlFNMTYwLnBuZw%3D%3D%2Fgravity%2FNorthWest%2Fdx%2F20%2Fdy%2F21">
+                                        <div class="mask"></div>
+                                        <div class="title"><b class="ellipsis-1">再见兴城</b></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="switch">
+                            <ul></ul>
+                        </div>
+                    </div>
+                    <script>$("#banner-slide").slide({
+                        titCell: ".switch ul",
+                        mainCell: ".slide-container ul",
+                        effect: "leftLoop",
+                        trigger: "click",
+                        interTime: 5000,
+                        autoPlay: true,
+                        delayTime: 450,
+                        switchLoad: "_src",
+                        autoPage: "<li></li>"
+                    });</script>
+                    <div class="m-list-inner">
+                        <ul class="m-list" mod-width="w440">
+                            <li class="m-item">
+                                <a class="thumb" href="{{ url_for('content', id='29173') }}" title="title"
+                                   target="_blank">
+                                    <img class="quic lazy"
+                                         data-original="http://dimg04.c-ctrip.com/images/300m12000000s91wq9446_C_200_150.jpg">
+                                    <span class="tips">旅游路线</span>
+                                    <i class="mask"></i>
+                                    <span class="title ellipsis-1">锦州+兴城+葫芦岛2日1晚跟团游</span>
+                                </a>
+                            </li>
+                            <li class="m-item">
+                                <a class="thumb" href="{{ url_for('content', id='7690103') }}" title="title"
+                                   target="_blank">
+                                    <img class="quic lazy"
+                                         data-original="http://dimg04.c-ctrip.com/images/300d1g000001h3fuiFD98_C_200_150.jpg">
+                                    <span class="tips">旅游路线</span>
+                                    <i class="mask"></i>
+                                    <span class="title ellipsis-1">辽宁兴城兴城古城+首山+红海滩+龙回头+锦州笔架山+锦州世博园+葫芦古镇旅游度假区2日1晚跟团游</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mod pull-left mr20" mod-width="w420" style="height: 376px;">
+                    <div class="m-list-inner">
+                        <ul class="m-list mt-20" mod-width="w440">
+                            <li class="m-item">
+                                <a class="thumb" href="{{ url_for('content', id='29173') }}" title="title"
+                                   target="_blank">
+                                    <img class="quic lazy"
+                                         data-original="https://p1-q.mafengwo.net/s3/M00/1E/38/wKgIDVxb3IaALRe1ACDwZ8c-4Lw64.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100">
+                                    <i class="mask"></i>
+                                    <span class="title ellipsis-1">兴城古城！</span>
+                                </a>
+                            </li>
+                            <li class="m-item">
+                                <a class="thumb" href="{{ url_for('content', id='30296') }}" title="title"
+                                   target="_blank">
+                                    <img class="quic lazy"
+                                         data-original="https://n1-q.mafengwo.net/s14/M00/D3/76/wKgE2l1nXryALSeeABVGmbeDuVg33.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100">
+                                    <i class="mask"></i>
+                                    <span class="title ellipsis-1">兴城海滨国家风景名胜区</span>
+                                </a>
+                            </li>
+                            <li class="m-item">
+                                <a class="thumb" href="{{ url_for('content', id='6630786') }}" title="title"
+                                   target="_blank">
+                                    <img class="quic lazy"
+                                         data-original="https://b1-q.mafengwo.net/s14/M00/FA/4A/wKgE2l0gqAGAe-9uABB4upe_ayw98.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100">
+                                    <i class="mask"></i>
+                                    <span class="title ellipsis-1">兴海栈道-龙回头</span>
+                                </a>
+                            </li>
+                            <li class="m-item">
+                                <a class="thumb" href="{{ url_for('content', id='7690103') }}" title="title"
+                                   target="_blank">
+                                    <img class="quic lazy"
+                                         data-original="https://b1-q.mafengwo.net/s12/M00/BD/11/wKgED1ubXCWAZuJnAEFN4mvBaNU68.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100">
+                                    <i class="mask"></i>
+                                    <span class="title ellipsis-1">兴城红海滩</span>
+                                </a>
+                            </li>
+                            <li class="m-item">
+                                <a class="thumb" href="{{ url_for('content', id='6630768') }}" title="title"
+                                   target="_blank">
+                                    <img class="quic lazy"
+                                         data-original="https://p1-q.mafengwo.net/s10/M00/D6/08/wKgBZ1olDNiAHKsPAAoHBz9v3K004.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100">
+                                    <i class="mask"></i>
+                                    <span class="title ellipsis-1">兴城海滨</span>
+                                </a>
+                            </li>
+                            <li class="m-item">
+                                <a class="thumb" href="{{ url_for('content', id='6630768') }}" title="title"
+                                   target="_blank">
+                                    <img class="quic lazy"
+                                         data-original="http://dimg04.c-ctrip.com/images/300m1700000134vig86F2_C_200_150.jpg">
+                                    <i class="mask"></i>
+                                    <span class="title ellipsis-1">本溪水洞+红海滩</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--火爆景点排行榜			-->
+                <div class="mod pull-left" mod-size="w200">
+                    <div class="rank">
+                        <ul class="rank-list">
+                            <li><i>近期热门景点推荐</i></li>
+                            {% for item in orderSite[:10] %}
+                                <li><i class="{{ 'num num%s' %loop.index }}">{{ loop.index }}</i><b><a
+                                        href="{{ url_for('content', id='%s' %item['id']) }}"
+                                        title="{{ item['site_name'] }}"
+                                        target="_blank">{{ item['site_name'] }}</a></b><span
+                                        class="down"></span></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--景点-->
+            <div class="mod slideTab mt20" mod-skin="p20">
+                <div class="mod-head clearfix">
+                    <div class="title" mod-skin="line">推荐</div>
+                    <div class="mod-author-list hd">
+                        <ul class="clearfix">
+                            <li class="active">景点推荐</li>
+                            <li>酒店推荐</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mod-main bd">
+                    <div class="m-list-inner">
+                        <ul class="m-list" m-list-skin="film" mod-width="w1100">
+                            {% for siteItem in allSite %}
+                                <li class="m-item">
+                                    <a class="thumb" href="{{ url_for('content', id='%s' %siteItem['id']) }}"
+                                       title="{{ siteItem['title'] }}">
+                                        <img class="quic lazy" src="{{ siteItem['img'] }}"
+                                             data-original="{{ siteItem['img'] }}">
+                                        {% if siteItem['rank'] %}
+                                            <div class="icon-br"><span class="label"
+                                                                       style="font-size: 16px;">评分{{ siteItem['rank'] }}</span>
+                                            </div>
+                                        {% endif %}
+                                    </a>
+                                    <div class="text">
+                                        <h3 class="title ellipsis-1"><a href="" title="title"
+                                                                        target=""> {{ siteItem['site_name'] }}</a></h3>
+                                        <p class="des">简介:{{ siteItem['brief'] }}</p>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="m-list-inner" style="display: none;">
+                        <ul class="m-list" m-list-skin="film" mod-width="w1100">
+                            {% for res in allHotel %}
+                                <li class="m-item">
+                                    <a class="thumb" href="{{ url_for('content', id='%s' %res['id']) }}"
+                                       title="{{ res['hotel_name'] }}">
+                                        <img class="quic lazy" src="../static/htmlimg/blank.png"
+                                             data-original="{{ res['img'] }}">
+                                        <div class="icon-br"><span class="label"
+                                                                   style="font-size: 16px">价格:{{ res['price'] }}</span>
+                                        </div>
+                                    </a>
+                                    <div class="text">
+                                        <h3 class="title ellipsis-1"><a
+                                                href="{{ url_for('content', id='%s' %res['id']) }}"
+                                                title="{{ res['hotel_name'] }}"
+                                                target="_blank">{{ res['hotel_name'] }}</a>
+                                        </h3>
+                                        <p class="des">评论数量:{{ res['comment_num'] }}</p>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(".slideTab").slide({
+                    titCell: ".mod-author-list ul li",
+                    mainCell: ".mod-main",
+                    effect: "fade",
+                    trigger: "click",
+                    switchLoad: "_src",
+                });
+            </script>
+        </div>
+    </div>
+{% endblock %}
